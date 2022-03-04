@@ -1,0 +1,133 @@
+.graphs {
+    padding-top: 20px;
+    position: relative;
+    z-index: 1;
+
+    &__hz {
+        font-size: 12px;
+        font-weight: 500;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        text-align: center;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        width: 36px;
+        user-select: none;
+        z-index: 1;
+
+        &::after {
+            background-color: rgba(#fff, 0.1);
+            content: '';
+            height: calc(100% - 36px);
+            left: 50%;
+            position: absolute;
+            top: 32px;
+            width: 1px;
+            @media(min-width: $fhd) {
+                height: calc(100% - 40px);
+            }
+            @media(min-width: $ufhd) {
+                height: calc(100% - 52px);
+                top: 40px;
+            }
+        }
+
+        &:nth-child(1) {
+            left: 39.69594%;
+        }
+
+        &:nth-child(2) {
+            left: 74.32432%;
+        }
+
+        &:nth-child(3) {
+            left: 89.52702%;
+        }
+    }
+}
+
+.graph {
+    align-items: center;
+    display: flex;
+
+    &:not(:first-child) {
+        margin-top: 4px;
+        @media(min-width: $fhd) {
+            margin-top: 8px;
+        }
+    }
+
+    &:nth-child(10),
+    &:nth-child(9) {
+        @media(max-height: 979px) {
+            display: none;
+        }
+    }
+
+    &__image {
+        height: 32px;
+        width: 32px;
+        @media(min-width: $fhd) {
+            height: 40px;
+            width: 40px;
+        }
+        @media(min-width: $ufhd) {
+            height: 56px;
+            width: 56px;
+        }
+    }
+
+    &__bar-block {
+        border-radius: 0 84px 84px 0;
+        background-color: rgba(#315CB4, 0.1);
+        flex-grow: 1;
+        height: 24px;
+        position: relative;
+        @media(min-width: $ufhd) {
+            height: 32px;
+        }
+    }
+
+    &__bar {
+        border-radius: 0 84px 84px 0;
+        background: linear-gradient(-90deg, #315CB4 0%, #090D11 100%);
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+    &__bar-title {
+        align-items: center;
+        display: flex;
+        font-size: 12px;
+        justify-content: space-between;
+        height: 100%;
+        left: auto;
+        padding-left: 16px;
+        padding-right: 16px;
+        position: absolute;
+        top: 0;
+        white-space: nowrap;
+        z-index: 2;
+
+        span {
+            &:first-child {
+                font-weight: 800;
+            }
+
+            &:last-child {
+                padding-left: 16px;
+                font-weight: 500;
+
+                b {
+                    @media(min-width: $ufhd) {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

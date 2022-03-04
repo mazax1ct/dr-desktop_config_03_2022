@@ -1,0 +1,140 @@
+.header {
+    align-items: center;
+    display: flex;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: relative;
+    @media(min-width: $fhd) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__back {
+        left: 0;
+        position: absolute;
+        transform: translateX(calc(-100% - 8px));
+        top: calc(100% + 12px);
+        @media(min-width: $fhd) {
+            transform: translateX(calc(-100% - 16px));
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+            svg {
+                fill: #D43C38;
+            }
+        }
+
+        svg {
+            fill: #fff;
+            height: 32px;
+            transition: fill 0.3s;
+            width: 32px;
+            @media(min-width: $fhd) {
+                height: 48px;
+                width: 48px;
+            }
+        }
+    }
+
+    &__logo {
+        height: 40px;
+        margin-right: 16px;
+        width: 40px;
+        @media(min-width: $fhd) {
+            height: 56px;
+            margin-right: 32px;
+            width: 56px;
+        }
+    }
+
+    &__menu {
+        font-size: 16px;
+        line-height: 1.25;
+        @media(min-width: $fhd) {
+            font-size: 20px;
+            line-height: 1.2;
+        }
+    }
+
+    &__menu-list {
+        align-items: center;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__menu-list-item {
+        &:not(:last-child) {
+            margin-right: 24px;
+            @media(min-width: $fhd) {
+                margin-right: 32px;
+            }
+        }
+    }
+
+    &__menu-link {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: #D43C38;
+        }
+    }
+
+    &__note {
+        font-size: 24px;
+        font-weight: 900;
+        left: 50%;
+        letter-spacing: 1px;
+        line-height: 1;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        text-transform: uppercase;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        @media(min-width: $fhd) {
+            font-size: 32px;
+        }
+    }
+
+    &__icons {
+        align-items: center;
+        display: flex;
+        margin-left: auto;
+    }
+
+    &__icons-link {
+        &:not(:last-child) {
+            margin-right: 24px;
+            @media(min-width: $ufhd) {
+                margin-right: 32px;
+            }
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+            svg {
+                fill: #D43C38;
+            }
+        }
+
+        svg {
+            fill: #fff;
+            height: 32px;
+            transition: fill 0.3s;
+            width: 32px;
+            @media(min-width: $ufhd) {
+                height: 40px;
+                width: 40px;
+            }
+        }
+    }
+}
