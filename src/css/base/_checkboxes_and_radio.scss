@@ -44,6 +44,7 @@
         font-weight: 700;
         justify-content: center;
         line-height: 1.33333;
+        letter-spacing: 0.1px;
         min-height: 32px;
         min-width: 80px;
         padding: 6px 16px;
@@ -56,6 +57,10 @@
             min-height: 40px;
             padding-left: 24px;
             padding-right: 24px;
+        }
+
+        &:hover {
+            background-color: rgba(#5474B4, 0.5);
         }
     }
 }
@@ -121,24 +126,14 @@
         }
     }
 }
-
+*/
 .switch {
     align-items: center;
     cursor: pointer;
     display: inline-flex;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.33333;
-    letter-spacing: 0.18px;
-    margin-bottom: 24px;
     text-align: left;
-    text-transform: uppercase;
     vertical-align: top;
     user-select: none;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
 
     input {
         position: absolute;
@@ -148,12 +143,12 @@
         width: 1px;
 
         &:checked + .switch__icon {
-            background-color: rgba($main_color, 0.3);
-            border-color: rgba($main_color, 0.5);
+            background-color: rgba(#D43C38, 0.3);
+            border-color: rgba(#D43C38, 0.5);
 
             &::before {
-                background-color: $main_color;
-                box-shadow: 0 0 6px 0 $main_color;
+                background-color: #D43C38;
+                box-shadow: 0 0 6px 0 #D43C38;
                 left: 30px;
             }
         }
@@ -186,7 +181,7 @@
         }
     }
 }
-
+/*
 .radio-group {
     border-radius: 20px;
     background-color: rgba($main_color, 0.3);

@@ -1,102 +1,1605 @@
 <ul class="sections">
-    <li class="sections__item"><button class="sections__button is-active" type="button">Платформа</button></li>
-    <li class="sections__item"><button class="sections__button" type="button">Хранение данных</button></li>
-    <li class="sections__item"><button class="sections__button" type="button">Опции</button></li>
-    <li class="sections__item"><button class="sections__button" type="button">Внешний вид</button></li>
-    <li class="sections__item"><button class="sections__button" type="button">Сервис</button></li>
+    <li class="sections__item"><button class="sections__button is-active" type="button" data-target="1">Платформа</button></li>
+    <li class="sections__item"><button class="sections__button" type="button" data-target="2">Хранение данных</button></li>
+    <li class="sections__item"><button class="sections__button" type="button" data-target="3">Опции</button></li>
+    <li class="sections__item"><button class="sections__button" type="button" data-target="4">Внешний вид</button></li>
+    <li class="sections__item"><button class="sections__button" type="button" data-target="5">Сервис</button></li>
 </ul>
 
-<ul class="components">
-    <li class="components__item">
-        <button class="component" type="button">
-            <span class="component__image">
-                <svg aria-hidden="true">
-                    <use xlink:href="#cpu" />
-                </svg>
-            </span>
-            <span class="component__text">
-                <span class="component__title">i5-12500 3.0GHz</span>
-                <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
-            </span>
-            <span class="component__logo"><img src="images/content/logo.png" srcset="images/content/logo@2x.png 2x" alt="название"></span>
-        </button>
-    </li>
-    <li class="components__item">
-        <button class="component" type="button">
-            <span class="component__image">
-                <svg aria-hidden="true">
-                    <use xlink:href="#gpu" />
-                </svg>
-            </span>
-            <span class="component__text">
-                <span class="component__title">GTX 1650 4GB</span>
-                <span class="component__info">NVIDIA<br> GeForce</span>
-            </span>
-            <span class="component__qnt">
-                <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+<div class="js-tab" data-target="1">
+    <ul class="components">
+        <li class="components__item">
+            <div class="components-dropdown">
+                <div class="components-dropdown__top">
+                    <button class="js-components-list-closer components-dropdown__close" type="button" title="Закрыть">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#close" />
+                        </svg>
+                    </button>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__icon"></span>
+                        Показать спец. серии
+                    </label>
+                </div>
+                <div class="components-dropdown__list-outer">
+                    <ul class="components-dropdown__list">
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2 is-active" type="button">
+                                <span class="component__rgb">rgb</span>
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__rgb">rgb</span>
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__rgb">rgb</span>
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
                     <svg aria-hidden="true">
-                        <use xlink:href="#minus" />
+                        <use xlink:href="#cpu" />
                     </svg>
-                </a>
-                <span class="component__qnt-num">1</span>
-                <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                </span>
+                <span class="component__text">
+                    <span class="component__title">i5-12500 3.0GHz</span>
+                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                </span>
+                <span class="component__logo"><img src="images/content/logo.png" srcset="images/content/logo@2x.png 2x" alt="название"></span>
+            </button>
+        </li>
+        <li class="components__item">
+            <div class="components-dropdown">
+                <div class="components-dropdown__top">
+                    <button class="js-components-list-closer components-dropdown__close" type="button" title="Закрыть">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#close" />
+                        </svg>
+                    </button>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__icon"></span>
+                        Показать спец. серии
+                    </label>
+                </div>
+                <div class="components-dropdown__list-outer">
+                    <ul class="components-dropdown__list">
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2 is-active" type="button">
+                                <span class="component__rgb">rgb</span>
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__rgb">rgb</span>
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__rgb">rgb</span>
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
                     <svg aria-hidden="true">
-                        <use xlink:href="#plus" />
+                        <use xlink:href="#gpu" />
                     </svg>
-                </a>
-            </span>
-        </button>
-    </li>
-    <li class="components__item">
-        <button class="component" type="button">
-            <span class="component__image">
-                <svg aria-hidden="true">
-                    <use xlink:href="#mb" />
-                </svg>
-            </span>
-            <span class="component__text">
-                <span class="component__title">B660</span>
-                <span class="component__info">mATX 4xDDR4<br> 2xM.2 / 1xPCI-E x16</span>
-            </span>
-        </button>
-    </li>
-    <li class="components__item">
-        <button class="component" type="button">
-            <span class="component__image">
-                <svg aria-hidden="true">
-                    <use xlink:href="#ram" />
-                </svg>
-            </span>
-            <span class="component__text">
-                <span class="component__title">32GB RGB</span>
-                <span class="component__info">DDR4 3200Mhz<br> 2 x 16Gb</span>
-            </span>
-            <span class="component__qnt">
-                <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                </span>
+                <span class="component__text">
+                    <span class="component__title">GTX 1650 4GB</span>
+                    <span class="component__info">NVIDIA<br> GeForce</span>
+                </span>
+                <span class="component__qnt">
+                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#minus" />
+                        </svg>
+                    </a>
+                    <span class="component__qnt-num">1</span>
+                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#plus" />
+                        </svg>
+                    </a>
+                </span>
+                <span class="component__logo"><img src="images/content/logo.png" srcset="images/content/logo@2x.png 2x" alt="название"></span>
+            </button>
+        </li>
+        <li class="components__item">
+            <div class="components-dropdown">
+                <div class="components-dropdown__top">
+                    <button class="js-components-list-closer components-dropdown__close" type="button" title="Закрыть">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#close" />
+                        </svg>
+                    </button>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__icon"></span>
+                        Показать спец. серии
+                    </label>
+                </div>
+                <div class="components-dropdown__list-outer">
+                    <ul class="components-dropdown__list">
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2 is-active" type="button">
+                                <span class="component__rgb">rgb</span>
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__rgb">rgb</span>
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__rgb">rgb</span>
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
                     <svg aria-hidden="true">
-                        <use xlink:href="#minus" />
+                        <use xlink:href="#mb" />
                     </svg>
-                </a>
-                <span class="component__qnt-num">1</span>
-                <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                </span>
+                <span class="component__text">
+                    <span class="component__title">B660</span>
+                    <span class="component__info">mATX 4xDDR4<br> 2xM.2 / 1xPCI-E x16</span>
+                </span>
+            </button>
+        </li>
+        <li class="components__item">
+            <div class="components-dropdown">
+                <div class="components-dropdown__top">
+                    <button class="js-components-list-closer components-dropdown__close" type="button" title="Закрыть">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#close" />
+                        </svg>
+                    </button>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__icon"></span>
+                        Показать спец. серии
+                    </label>
+                </div>
+                <div class="components-dropdown__list-outer">
+                    <ul class="components-dropdown__list">
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2 is-active" type="button">
+                                <span class="component__rgb">rgb</span>
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__rgb">rgb</span>
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__rgb">rgb</span>
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
                     <svg aria-hidden="true">
-                        <use xlink:href="#plus" />
+                        <use xlink:href="#ram" />
                     </svg>
-                </a>
-            </span>
-        </button>
-    </li>
-    <li class="components__item">
-        <button class="component" type="button">
-            <span class="component__image">
-                <svg aria-hidden="true">
-                    <use xlink:href="#pb" />
-                </svg>
-            </span>
-            <span class="component__text">
-                <span class="component__title">550W</span>
-                <span class="component__info">Сертификат BRONZE</span>
-            </span>
-        </button>
-    </li>
-</ul>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">32GB RGB</span>
+                    <span class="component__info">DDR4 3200Mhz<br> 2 x 16Gb</span>
+                </span>
+                <span class="component__qnt">
+                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#minus" />
+                        </svg>
+                    </a>
+                    <span class="component__qnt-num">1</span>
+                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#plus" />
+                        </svg>
+                    </a>
+                </span>
+            </button>
+        </li>
+        <li class="components__item">
+            <div class="components-dropdown">
+                <div class="components-dropdown__top">
+                    <button class="js-components-list-closer components-dropdown__close" type="button" title="Закрыть">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#close" />
+                        </svg>
+                    </button>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__icon"></span>
+                        Показать спец. серии
+                    </label>
+                </div>
+                <div class="components-dropdown__list-outer">
+                    <ul class="components-dropdown__list">
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2 is-active" type="button">
+                                <span class="component__rgb">rgb</span>
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__rgb">rgb</span>
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__rgb">rgb</span>
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                        <li class="components-dropdown__list-item">
+                            <button class="component component--type_2" type="button">
+                                <span class="component__image">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#ram" />
+                                    </svg>
+                                </span>
+                                <span class="component__text">
+                                    <span class="component__title">i5-12500 3.0GHz</span>
+                                    <span class="component__info">Intel Core<br> 6 ядер / 12 потоков</span>
+                                </span>
+                                <span class="component__qnt">
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#minus" />
+                                        </svg>
+                                    </a>
+                                    <span class="component__qnt-num">1</span>
+                                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#plus" />
+                                        </svg>
+                                    </a>
+                                </span>
+                                <a class="component__details" href="#" title="Подробнее...">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#quest" />
+                                    </svg>
+                                </a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#pb" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">550W</span>
+                    <span class="component__info">Сертификат BRONZE</span>
+                </span>
+            </button>
+        </li>
+    </ul>
+</div>
+<div class="js-tab" data-target="2" style="display:none">
+    <ul class="components">
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#ssd" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">250Gb NVMe</span>
+                    <span class="component__info">Скорость W/R:<br> 1150/2100 Мб/с</span>
+                </span>
+                <span class="component__logo"><img src="images/content/logo.png" srcset="images/content/logo@2x.png 2x" alt="название"></span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#ssd_nvme" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">250Gb NVMe</span>
+                    <span class="component__info">Скорость W/R:<br> 1150/2100 Мб/с</span>
+                </span>
+                <span class="component__qnt">
+                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#minus" />
+                        </svg>
+                    </a>
+                    <span class="component__qnt-num">1</span>
+                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#plus" />
+                        </svg>
+                    </a>
+                </span>
+                <span class="component__logo"><img src="images/content/logo.png" srcset="images/content/logo@2x.png 2x" alt="название"></span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#ssd_sata" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">512Gb 2,5"</span>
+                    <span class="component__info">Kingston W/R:<br> 520/550 Мб/с</span>
+                </span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#hdd" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">1TB HDD</span>
+                    <span class="component__info">Скорость W/R<br> 195/195 МБ/с</span>
+                </span>
+                <span class="component__qnt">
+                    <a class="component__qnt-button" href="javascript:void(0)" title="Уменьшить">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#minus" />
+                        </svg>
+                    </a>
+                    <span class="component__qnt-num">1</span>
+                    <a class="component__qnt-button" href="javascript:void(0)" title="Увеличить">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#plus" />
+                        </svg>
+                    </a>
+                </span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#raid" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">Raid 10</span>
+                    <span class="component__info">Высокая скорость<br> и отказоустойчивость</span>
+                </span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#ssd_sata" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">512Gb 2,5"</span>
+                    <span class="component__info">Kingston W/R:<br> 520/550 Мб/с</span>
+                </span>
+            </button>
+        </li>
+    </ul>
+</div>
+<div class="js-tab" data-target="3" style="display:none">
+    <ul class="components">
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#video" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">4K60 Pro</span>
+                    <span class="component__info">Плата видеозахвата</span>
+                </span>
+                <span class="component__logo"><img src="images/content/logo.png" srcset="images/content/logo@2x.png 2x" alt="название"></span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#audio" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">7.1 PCI-E</span>
+                    <span class="component__info">Звуковая карта</span>
+                </span>
+                <span class="component__logo"><img src="images/content/logo.png" srcset="images/content/logo@2x.png 2x" alt="название"></span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#os" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">Win11 Pro</span>
+                    <span class="component__info">C образом<br> для восстановления</span>
+                </span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#office" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">Офис</span>
+                    <span class="component__info">MC office</span>
+                </span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#wifi" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">Wi-fi</span>
+                    <span class="component__info">AMD Ryzen R5 3600 6-и ядерный 3.6 GHz</span>
+                </span>
+            </button>
+        </li>
+    </ul>
+</div>
+<div class="js-tab" data-target="4" style="display:none">
+    <ul class="components">
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#gpu_turn" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">Поворот GPU</span>
+                    <span class="component__info">С поворотом видеокарты</span>
+                </span>
+                <span class="component__logo"><img src="images/content/logo.png" srcset="images/content/logo@2x.png 2x" alt="название"></span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#cable" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">Зеленая</span>
+                    <span class="component__info">Кастомная<br> оплетка проводов</span>
+                </span>
+                <span class="component__logo"><img src="images/content/logo.png" srcset="images/content/logo@2x.png 2x" alt="название"></span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#rgb" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">ARGB</span>
+                    <span class="component__info">Подсветка адресная<br> 256 цветов с эффектами</span>
+                </span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#cooler" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">3x 120/140</span>
+                    <span class="component__info">Дополнительные<br> бесшумные кулера</span>
+                </span>
+            </button>
+        </li>
+    </ul>
+</div>
+<div class="js-tab" data-target="5" style="display:none">
+    <ul class="components">
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#dp" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">DP - DP</span>
+                    <span class="component__info">Видео кабель<br> 1 метр v1.2</span>
+                </span>
+                <span class="component__logo"><img src="images/content/logo.png" srcset="images/content/logo@2x.png 2x" alt="название"></span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#guarantee" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">36 месяцев</span>
+                    <span class="component__info">Гарантия</span>
+                </span>
+                <span class="component__logo"><img src="images/content/logo.png" srcset="images/content/logo@2x.png 2x" alt="название"></span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#test" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">48 часов</span>
+                    <span class="component__info">Стресс-тест</span>
+                </span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#works" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">10-14 дней</span>
+                    <span class="component__info">Срок сборки<br> кастомных систем</span>
+                </span>
+            </button>
+        </li>
+        <li class="components__item">
+            <button class="js-components-list-opener component component--type_1" type="button">
+                <span class="component__image">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#box" />
+                    </svg>
+                </span>
+                <span class="component__text">
+                    <span class="component__title">Деревянный ящик</span>
+                    <span class="component__info">Дополнительно</span>
+                </span>
+            </button>
+        </li>
+    </ul>
+</div>

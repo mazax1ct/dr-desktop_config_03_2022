@@ -10,26 +10,29 @@
     }
 
     &__back {
+        border-radius: 4px;
+        height: 32px;
         left: 0;
         position: absolute;
         transform: translateX(calc(-100% - 8px));
         top: calc(100% + 12px);
+        transition: background-color 0.3s;
+        width: 32px;
         @media(min-width: $fhd) {
+            height: 48px;
             transform: translateX(calc(-100% - 16px));
+            width: 48px;
         }
 
         &:active,
         &:focus,
         &:hover {
-            svg {
-                fill: #D43C38;
-            }
+            background-color: rgba(#fff, 0.3);
         }
 
         svg {
             fill: #fff;
             height: 32px;
-            transition: fill 0.3s;
             width: 32px;
             @media(min-width: $fhd) {
                 height: 48px;

@@ -1,8 +1,11 @@
 .filter {
     display: flex;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     position: relative;
     z-index: 2;
+    @media(min-width: $fhd) {
+        margin-bottom: 16px;
+    }
 
     &__item {
         &:not(:last-child) {
@@ -51,10 +54,15 @@
         font-weight: 700;
         justify-content: center;
         line-height: 1.33333;
+        letter-spacing: 0.1px;
         min-height: 32px;
         padding-left: 8px;
         padding-right: 8px;
         transition: background-color 0.3s;
+        @media(min-width: $fhd) {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
         @media(min-width: $ufhd) {
             font-size: 16px;
             min-height: 48px;
