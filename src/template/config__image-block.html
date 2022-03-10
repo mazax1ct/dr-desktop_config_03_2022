@@ -7,13 +7,15 @@
             </svg>
             4.9
         </p>
+        <br class="card__title-br">
         <p class="card__label card__label--type_1">Под заказ 4-5 д.</p>
         <p class="card__label card__label--type_2">Смотрят сейчас 7 человек</p>
         <p class="card__label card__label--type_3">Бесплатная доставка</p>
     </div>
-    <div class="card__image">
+    <div class="card__middle-block">
+        <div class="card__image"><img src="images/content/img.png" srcset="images/content/img@2x.png 2x" alt="alt"></div>
         <div class="card__buttons">
-            <button class="card__button" type="button" title="Поделиться">
+            <button class="js-popup-opener card__button" type="button" title="Поделиться" data-popup="js-popup-share">
                 <svg aria-hidden="true">
                     <use xlink:href="#share"></use>
                 </svg>
@@ -24,10 +26,32 @@
                 </svg>
             </button>
         </div>
-        <img src="images/content/img.png" srcset="images/content/img@2x.png 2x" alt="alt">
+    </div>
+    <div class="card__colors">
+        <p class="card__colors-title">Красный цвет корпуса</p>
+        <ul class="card__colors-list">
+            <li class="card__colors-list-item">
+                <button class="card__color is-active" type="button" style="background-color: #D43C38" title="Красный"></button>
+            </li>
+            <li class="card__colors-list-item">
+                <button class="card__color" type="button" style="background-color: #EAAC52" title="Желтый"></button>
+            </li>
+            <li class="card__colors-list-item">
+                <button class="card__color" type="button" style="background-color: #777777" title="Серый"></button>
+            </li>
+            <li class="card__colors-list-item">
+                <button class="card__color" type="button" style="background-color: #5474B4" title="Синий"></button>
+            </li>
+            <li class="card__colors-list-item">
+                <button class="card__color" type="button" style="background-color: #FFFFFF" title="Белый"></button>
+            </li>
+            <li class="card__colors-list-item">
+                <button class="card__color" type="button" style="background-color: #AF17D5" title="Фиолетовый"></button>
+            </li>
+        </ul>
     </div>
     <div class="card__buttons-2">
-        <button class="card__button-2" type="button">
+        <button class="js-popup-opener card__button-2" type="button" title="Смотреть спецификацию" data-popup="js-popup-spec">
             <svg aria-hidden="true">
                 <use xlink:href="#download"></use>
             </svg>
@@ -39,7 +63,7 @@
             </svg>
             <span>Консультация</span>
         </button>
-        <button class="card__button-2" type="button">
+        <button class="js-popup-opener card__button-2" type="button" title="Сохранить конфигурацию" data-popup="js-popup-save">
             <svg aria-hidden="true">
                 <use xlink:href="#save"></use>
             </svg>
@@ -64,6 +88,6 @@
                 36 777 / мес.
             </p>
         </div>
-        <a class="card__buy-button" href="#">Купить</a>
+        <a class="js-popup-opener card__buy-button" href="#" data-popup="js-popup-cart">Купить</a>
     </div>
 </div>

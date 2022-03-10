@@ -33,3 +33,19 @@ $(document).on('click', '.sections__button', function () {
   $('.js-tab[data-target="'+$(this).attr("data-target")+'"]').show();
   return false;
 });
+
+//открытие попапа
+$(document).on('click', '.js-popup-opener', function () {
+  var popup = $(this).attr('data-popup');
+  $('.popup').hide();
+  $('.' + popup).show();
+  $('.popup-shade').fadeIn();
+  return false;
+});
+
+//закрытие попапа
+$(document).on('click', '.js-popup-closer', function () {
+  $('.popup-shade').fadeOut();
+  $('.popup').hide();
+  return false;
+});

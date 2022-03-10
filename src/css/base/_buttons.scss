@@ -1,0 +1,44 @@
+.button {
+    align-items: center;
+    border-radius: 2px;
+    border: 2px solid;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 18px;
+    font-weight: 700;
+    height: 56px;
+    justify-content: center;
+    padding: 12px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+
+    svg {
+        fill: #fff;
+        height: 32px;
+        margin-right: 8px;
+        min-width: 32px;
+        width: 32px;
+    }
+
+    &--type_1 {
+        border: 2px solid #5474B4;
+        background-color: #5474B4;
+
+        &:active,
+        &:hover {
+            background-color: rgba(#5474B4, 0.3);
+        }
+    }
+
+    &--type_2 {
+        border: 2px solid #D43C38;
+        background-color: #D43C38;
+
+        &:active,
+        &:hover {
+            background-color: rgba(#D43C38, 0.3);
+        }
+    }
+}

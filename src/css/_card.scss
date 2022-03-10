@@ -2,30 +2,25 @@
     background-color: #0C1117;
     background: radial-gradient(51.84% 58.28% at 42.63% 71.6%, #3A3C59 0%, #0C1117 100%);
     border-radius: 8px;
-    height: 100%;
     margin-left: auto;
     max-width: 1086px;
-    max-height: 540px;
-    padding: 16px 16px 8px;
+    padding: 16px 12px;
     @media(min-width: $fhd) {
         border-radius: 20px;
-        max-height: 800px;
-        padding-bottom: 24px;
-        padding-top: 32px;
+        padding: 24px;
     }
     @media(min-width: $ufhd) {
         max-height: 1086px;
     }
 
     &__title-block {
-        align-items: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        font-size: 0;
+        text-align: center;
     }
 
     &__title {
         color: #fff;
+        display: inline-block;
         font-size: 24px;
         font-weight: 900;
         line-height: 1.33333;
@@ -33,6 +28,7 @@
         margin: 0 0 4px;
         text-transform: uppercase;
         text-align: center;
+        vertical-align: middle;
         @media(min-width: $fhd) {
             font-size: 32px;
             line-height: 1.75;
@@ -49,11 +45,12 @@
 
     &__rating {
         align-items: center;
-        display: flex;
+        display: inline-flex;
         font-size: 18px;
         font-weight: 600;
         line-height: 1.33333;
         margin: 0 12px 4px;
+        vertical-align: middle;
         @media(min-width: $fhd) {
             margin-left: 0;
         }
@@ -74,13 +71,19 @@
         }
     }
 
+    &__title-br {
+        @media(min-width: $fhd) {
+            display: none;
+        }
+    }
+
     &__label {
         align-items: center;
         border-radius: 44px;
         border-width: 2px;
         border-style: solid;
         color: #fff;
-        display: flex;
+        display: inline-flex;
         font-size: 12px;
         font-weight: 600;
         height: 24px;
@@ -88,6 +91,7 @@
         margin: 0 2px 4px;
         padding-left: 8px;
         padding-right: 8px;
+        vertical-align: middle;
         @media(min-width: $ufhd) {
             font-size: 16px;
             height: 32px;
@@ -126,7 +130,6 @@
         z-index: 1;
         @media(min-width: $fhd) {
             top: 56px;
-            transform: translateX(calc(100% + 16px));
         }
     }
 
@@ -166,19 +169,95 @@
         }
     }
 
+    &__middle-block {
+        position: relative;
+        z-index: 1;
+        @media(min-width: $fhd) {
+            margin-top: -32px;
+        }
+        @media(min-width: $ufhd) {
+            margin-top: -48px;
+        }
+    }
+
     &__image {
         margin-left: auto;
         margin-right: auto;
-        position: relative;
         width: 308px;
         @media(min-width: $fhd) {
-            margin-top: -24px;
             width: 560px;
         }
         @media(min-width: $ufhd) {
-            margin-bottom: 56px;
-            margin-top: -48px;
             width: 716px;
+        }
+    }
+
+    &__colors {
+        margin: -32px auto 16px;
+        position: relative;
+        z-index: 2;
+        @media(min-width: $fhd) {
+            margin-top: -96px;
+        }
+        @media(min-width: $ufhd) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__colors-title {
+        color: #fff;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.11111;
+        margin-top: 0;
+        margin-bottom: 8px;
+        text-align: center;
+        @media(min-width: $fhd) {
+            font-size: 16px;
+        }
+        @media(min-width: $ufhd) {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__colors-list {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__colors-list-item {
+        margin-left: 4px;
+        margin-right: 4px;
+        @media(min-width: $ufhd) {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+    }
+
+    &__color {
+        border-radius: 50%;
+        border: 2px solid transparent;
+        cursor: pointer;
+        height: 32px;
+        transition: border-color 0.3s;
+        width: 32px;
+        @media(min-width: $fhd) {
+            height: 40px;
+            width: 40px;
+        }
+        @media(min-width: $ufhd) {
+            height: 64px;
+            width: 64px;
+        }
+
+        &.is-active {
+            border-color: #fff;
         }
     }
 
@@ -297,6 +376,12 @@
 
         .info {
             margin-right: 4px;
+        }
+
+        .info__popover {
+            font-size: 14px;
+            padding: 6px 12px;
+            width: 120px;
         }
     }
 

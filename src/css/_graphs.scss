@@ -58,9 +58,20 @@
         }
     }
 
-    &:nth-child(10),
+    &:nth-child(10) {
+        @media(max-height: 714px) {
+            display: none;
+        }
+        @media(min-width: $fhd) and (max-height: 960px) {
+            display: none;
+        }
+    }
+
     &:nth-child(9) {
-        @media(max-height: 979px) {
+        @media(max-height: 699px) {
+            display: none;
+        }
+        @media(min-width: $fhd) and (max-height: 960px) {
             display: none;
         }
     }

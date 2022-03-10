@@ -19,7 +19,7 @@
         flex-grow: 1;
         padding-top: 8px;
         @media(min-width: $ufhd) {
-            padding-top: 56px;
+            padding-top: 48px;
         }
     }
 
@@ -38,7 +38,6 @@
     }
 
     &__right-block {
-        padding-bottom: 32px;
         width: 32.0946%;
         @media(min-width: $fhd) {
             width: 41.02272%;
