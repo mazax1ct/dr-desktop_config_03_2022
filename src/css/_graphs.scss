@@ -53,7 +53,7 @@
 
     &:not(:first-child) {
         margin-top: 4px;
-        @media(min-width: $fhd) {
+        @media(min-width: $fhd) and (min-height: 980px) {
             margin-top: 8px;
         }
     }
@@ -62,7 +62,7 @@
         @media(max-height: 714px) {
             display: none;
         }
-        @media(min-width: $fhd) and (max-height: 960px) {
+        @media(min-width: $fhd) and (max-height: 936px) {
             display: none;
         }
     }
@@ -71,7 +71,7 @@
         @media(max-height: 699px) {
             display: none;
         }
-        @media(min-width: $fhd) and (max-height: 960px) {
+        @media(min-width: $fhd) and (max-height: 900px) {
             display: none;
         }
     }

@@ -1,4 +1,7 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10 13.333L3.36 7.8C3.132 7.61 3 7.328 3 7.032V4.5C3 3.948 3.448 3.5 4 3.5H20C20.552 3.5 21 3.948 21 4.5V7.032C21 7.329 20.868 7.61 20.64 7.8L14 13.333V17.882C14 18.261 13.786 18.607 13.447 18.776L10.723 20.138C10.391 20.304 10 20.063 10 19.691V13.333Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M3.12012 7.5H20.8801" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<path d="M10.5,20.7c-0.2,0-0.4,0-0.5-0.2c-0.3-0.2-0.5-0.5-0.5-0.8v-6.1L3,8.2C2.7,7.9,2.5,7.5,2.5,7V4.5C2.5,3.7,3.2,3,4,3h16c0.8,0,1.5,0.7,1.5,1.5V7c0,0.4-0.2,0.9-0.5,1.2l-6.5,5.4v4.3c0,0.6-0.3,1.1-0.8,1.3l-2.7,1.4C10.8,20.7,10.7,20.7,10.5,20.7z M4,4C3.7,4,3.5,4.2,3.5,4.5V7c0,0.1,0.1,0.3,0.2,0.4l6.6,5.5c0.1,0.1,0.2,0.2,0.2,0.4v6.4l2.7-1.4c0.2-0.1,0.3-0.3,0.3-0.4v-4.5c0-0.1,0.1-0.3,0.2-0.4l6.6-5.5c0.1-0.1,0.2-0.2,0.2-0.4V4.5C20.5,4.2,20.3,4,20,4H4z"/>
+<path d="M20.9,8H3.1C2.8,8,2.6,7.8,2.6,7.5S2.8,7,3.1,7h17.8c0.3,0,0.5,0.2,0.5,0.5S21.2,8,20.9,8z"/>
 </svg>

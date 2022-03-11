@@ -265,6 +265,8 @@
         display: flex;
         justify-content: center;
         margin-bottom: 12px;
+        position: relative;
+        z-index: 2;
         @media(min-width: $fhd) {
             margin-bottom: 24px;
         }

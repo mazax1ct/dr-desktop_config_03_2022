@@ -40,6 +40,10 @@ $(document).on('click', '.js-popup-opener', function () {
   $('.popup').hide();
   $('.' + popup).show();
   $('.popup-shade').fadeIn();
+  if(popup === 'js-popup-test') {
+    //обновление свайпера
+    testsSlider.update();
+  }
   return false;
 });
 
@@ -48,4 +52,26 @@ $(document).on('click', '.js-popup-closer', function () {
   $('.popup-shade').fadeOut();
   $('.popup').hide();
   return false;
+});
+
+//откртие фильтра
+$(document).on('click', '.js-filter-opener', function () {
+  $('.tests-filter').addClass('is-open');
+  return false;
+});
+
+//закрытие фильтра
+$(document).on('click', '.js-filter-closer', function () {
+  $('.tests-filter').removeClass('is-open');
+  return false;
+});
+
+const testsSlider = new Swiper('.js-tests-slider', {
+    loop: true,
+    navigation: {
+        nextEl: '.js-tests-next',
+        prevEl: '.js-tests-prev',
+    },
+    slidesPerView: 10,
+    spaceBetween: 12
 });
