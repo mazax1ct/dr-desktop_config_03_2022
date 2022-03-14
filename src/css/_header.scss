@@ -9,38 +9,6 @@
         padding-bottom: 20px;
     }
 
-    &__back {
-        border-radius: 4px;
-        height: 32px;
-        left: 0;
-        position: absolute;
-        transform: translateX(calc(-100% - 8px));
-        top: calc(100% + 12px);
-        transition: background-color 0.3s;
-        width: 32px;
-        @media(min-width: $fhd) {
-            height: 48px;
-            transform: translateX(calc(-100% - 16px));
-            width: 48px;
-        }
-
-        &:active,
-        &:focus,
-        &:hover {
-            background-color: rgba(#fff, 0.3);
-        }
-
-        svg {
-            fill: #fff;
-            height: 32px;
-            width: 32px;
-            @media(min-width: $fhd) {
-                height: 48px;
-                width: 48px;
-            }
-        }
-    }
-
     &__logo {
         height: 40px;
         margin-right: 16px;
@@ -87,23 +55,6 @@
         &:focus,
         &:hover {
             color: #D43C38;
-        }
-    }
-
-    &__note {
-        font-size: 24px;
-        font-weight: 900;
-        left: 50%;
-        letter-spacing: 1px;
-        line-height: 1;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        text-transform: uppercase;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        @media(min-width: $fhd) {
-            font-size: 32px;
         }
     }
 

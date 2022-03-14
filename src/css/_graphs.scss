@@ -1,6 +1,7 @@
 .graphs {
     padding-top: 20px;
     position: relative;
+    width: 100%;
     z-index: 1;
 
     &__hz {
@@ -53,13 +54,16 @@
 
     &:not(:first-child) {
         margin-top: 4px;
-        @media(min-width: $fhd) and (min-height: 980px) {
+        @media(min-height: 720px) {
             margin-top: 8px;
+        }
+        @media(min-height: 1280px) {
+            margin-top: 12px;
         }
     }
 
     &:nth-child(10) {
-        @media(max-height: 714px) {
+        @media(max-height: 739px) {
             display: none;
         }
         @media(min-width: $fhd) and (max-height: 936px) {
@@ -68,7 +72,16 @@
     }
 
     &:nth-child(9) {
-        @media(max-height: 699px) {
+        @media(max-height: 659px) {
+            display: none;
+        }
+        @media(min-width: $fhd) and (max-height: 900px) {
+            display: none;
+        }
+    }
+
+    &:nth-child(8) {
+        @media(max-height: 600px) {
             display: none;
         }
         @media(min-width: $fhd) and (max-height: 900px) {

@@ -142,7 +142,7 @@
         <div class="js-tests-slider swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <button class="test test--type_1" type="button" title="Выбрать">
+                    <button class="test test--type_1 is-active" type="button" title="Выбрано">
                         <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
                         <svg aria-hidden="true">
                             <use xlink:href="#add"></use>
@@ -284,6 +284,41 @@
     </div>
 
     <p class="tests-title">Игры на графиках</p>
+
+    <div class="filter">
+        <div class="filter__item">
+            <div class="btns-group">
+                <label class="btns-group__item">
+                    <input type="radio" name="res" value="1" checked>
+                    <span class="btns-group__item-inner">1080P</span>
+                </label>
+                <label class="btns-group__item">
+                    <input type="radio" name="res" value="2" disabled>
+                    <span class="btns-group__item-inner">2K</span>
+                </label>
+                <label class="btns-group__item">
+                    <input type="radio" name="res" value="3">
+                    <span class="btns-group__item-inner">4K</span>
+                </label>
+            </div>
+        </div>
+        <div class="filter__item">
+            <div class="btns-group">
+                <label class="btns-group__item">
+                    <input type="radio" name="quality" value="1" checked>
+                    <span class="btns-group__item-inner">Standart</span>
+                </label>
+                <label class="btns-group__item">
+                    <input type="radio" name="quality" value="2">
+                    <span class="btns-group__item-inner">High</span>
+                </label>
+                <label class="btns-group__item">
+                    <input type="radio" name="quality" value="3">
+                    <span class="btns-group__item-inner">Ultra</span>
+                </label>
+            </div>
+        </div>
+    </div>
 
     <div class="tests">
         <div class="tests__list">

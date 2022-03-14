@@ -2,15 +2,15 @@
     background-color: #0C1117;
     background: radial-gradient(51.84% 58.28% at 42.63% 71.6%, #3A3C59 0%, #0C1117 100%);
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     margin-left: auto;
     max-width: 1086px;
     padding: 16px 12px;
     @media(min-width: $fhd) {
         border-radius: 20px;
         padding: 24px;
-    }
-    @media(min-width: $ufhd) {
-        max-height: 1086px;
     }
 
     &__title-block {
@@ -170,25 +170,24 @@
     }
 
     &__middle-block {
+        margin-bottom: auto;
+        margin-top: auto;
         position: relative;
         z-index: 1;
-        @media(min-width: $fhd) {
-            margin-top: -32px;
-        }
-        @media(min-width: $ufhd) {
-            margin-top: -48px;
-        }
     }
 
     &__image {
         margin-left: auto;
         margin-right: auto;
         width: 308px;
+        @media(min-width: 1500px) {
+            width: 380px;
+        }
         @media(min-width: $fhd) {
-            width: 560px;
+            width: 520px;
         }
         @media(min-width: $ufhd) {
-            width: 716px;
+            width: 700px;
         }
     }
 
