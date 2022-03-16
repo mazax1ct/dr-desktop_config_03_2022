@@ -41,6 +41,10 @@
         height: 48px;
         width: 48px;
     }
+    @media(min-width: $q) and (min-height: 1700px) {
+        height: 56px;
+        width: 56px;
+    }
 
     &.is-active,
     &:active,
@@ -54,6 +58,10 @@
         fill: #fff;
         height: 24px;
         width: 24px;
+        @media(min-width: $q) and (min-height: 1700px) {
+            height: 32px;
+            width: 32px;
+        }
     }
 
     &:disabled {

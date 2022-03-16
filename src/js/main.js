@@ -43,6 +43,7 @@ $(document).on('click', '.js-popup-opener', function () {
   if(popup === 'js-popup-test') {
     //обновление свайпера
     testsSlider.update();
+    testsSlider2.update();
   }
   return false;
 });
@@ -74,4 +75,27 @@ const testsSlider = new Swiper('.js-tests-slider', {
     },
     slidesPerView: 10,
     spaceBetween: 12
+});
+
+const testsSlider2 = new Swiper('.js-tests-slider-2', {
+    loop: true,
+    navigation: {
+        nextEl: '.js-tests-next',
+        prevEl: '.js-tests-prev',
+    },
+    slidesPerView: 10,
+    spaceBetween: 12
+});
+
+//переключение тестов
+$(document).on('click', '.js-tests', function () {
+  $('.js-tests').removeClass('is-active');
+  $(this).addClass('is-active');
+
+  $('.js-tests-section').hide();
+  $('.js-tests-section[data-target="'+$(this).attr("data-target")+'"]').show();
+
+  testsSlider.update();
+  testsSlider2.update();
+  return false;
 });

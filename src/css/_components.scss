@@ -14,6 +14,11 @@
         margin-left: -6px;
         margin-right: -6px;
     }
+    @media(min-width: $q) and (min-height: 1700px) {
+        margin-left: -8px;
+        margin-right: -8px;
+        max-width: 1320px;
+    }
 
     &__item {
         padding-right: 4px;
@@ -29,6 +34,11 @@
             padding-left: 6px;
             padding-right: 6px;
             margin-bottom: 16px;
+        }
+        @media(min-width: $q) and (min-height: 1700px) {
+            padding-left: 8px;
+            padding-right: 8px;
+            max-width: 440px;
         }
 
         &:nth-child(2),
@@ -64,6 +74,9 @@
     z-index: 1;
     @media(min-width: $fhd) {
         width: 692px;
+    }
+    @media(min-width: $q) and (min-height: 1700px) {
+        width: 910px;
     }
 
     &__top {
@@ -160,6 +173,9 @@
     @media(min-width: $fhd) {
         min-height: 88px;
     }
+    @media(min-width: $q) {
+        min-height: 126px;
+    }
 
     &--type_1 {
         &::after {
@@ -179,6 +195,12 @@
                 right: 12px;
                 top: 12px;
                 width: 14px;
+            }
+            @media(min-width: $q) and (min-height: 1700px) {
+                height: 20px;
+                right: 16px;
+                top: 16px;
+                width: 20px;
             }
         }
 
@@ -210,6 +232,9 @@
             padding: 12px;
             @media(min-width: $fhd) {
                 padding: 12px 16px;
+            }
+            @media(min-width: $q) and (min-height: 1700px) {
+                padding: 20px;
             }
         }
     }
@@ -278,6 +303,10 @@
             height: 88px;
             padding: 20px 16px 20px 20px;
         }
+        @media(min-width: $q) and (min-height: 1700px) {
+            height: 126px;
+            padding: 35px 16px 35px 20px;
+        }
 
         svg {
             fill: #fff;
@@ -286,6 +315,10 @@
             @media(min-width: $fhd) {
                 height: 48px;
                 width: 48px;
+            }
+            @media(min-width: $q) and (min-height: 1700px) {
+                height: 56px;
+                width: 56px;
             }
         }
     }
@@ -296,6 +329,10 @@
         @media(min-width: $fhd) {
             padding-top: 16px;
             padding-bottom: 16px;
+        }
+        @media(min-width: $q) and (min-height: 1700px) {
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
     }
 
@@ -309,6 +346,10 @@
             font-size: 18px;
             line-height: 1.11111;
         }
+        @media(min-width: $q) and (min-height: 1700px) {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
     }
 
     &__info {
@@ -318,6 +359,9 @@
         @media(min-width: $fhd) {
             font-size: 12px;
             line-height: 1.33333;
+        }
+        @media(min-width: $q) and (min-height: 1700px) {
+            font-size: 16px;
         }
     }
 
@@ -347,6 +391,9 @@
         @media(min-width: $fhd) {
             margin: auto 12px 12px auto;
         }
+        @media(min-width: $q) and (min-height: 1700px) {
+            margin: auto 16px 16px auto;
+        }
     }
 
     &__qnt-button {
@@ -357,6 +404,10 @@
         padding: 0;
         position: relative;
         width: 16px;
+        @media(min-width: $q) and (min-height: 1700px) {
+            height: 24px;
+            width: 24px;
+        }
 
         &::after {
             cursor: pointer;
@@ -383,6 +434,10 @@
             height: 16px;
             transition: fill 0.3s;
             width: 16px;
+            @media(min-width: $q) and (min-height: 1700px) {
+                height: 24px;
+                width: 24px;
+            }
         }
     }
 
@@ -391,6 +446,10 @@
         font-weight: 700;
         text-align: center;
         width: 20px;
+        @media(min-width: $q) and (min-height: 1700px) {
+            font-size: 20px;
+            width: 24px;
+        }
     }
 
     &__details {
@@ -403,11 +462,19 @@
             right: 12px;
             top: 12px;
         }
+        @media(min-width: $q) and (min-height: 1700px) {
+            right: 16px;
+            top: 16px;
+        }
 
         svg {
             fill: #fff;
             height: 16px;
             width: 16px;
+            @media(min-width: $q) and (min-height: 1700px) {
+                height: 24px;
+                width: 24px;
+            }
         }
 
         &::before {

@@ -14,15 +14,18 @@
         padding-left: 80px;
         padding-right: 80px;
     }
+    @media(min-width: $q) and (min-height: 1700px) {
+        max-width: 3080px;
+    }
 
     &__inner {
         display: flex;
         flex-grow: 1;
         @media(min-width: $ufhd) and (min-height: 1200px) {
-            padding-top: 32px;
-        }
-        @media(min-width: $ufhd) and (min-height: 1280px) {
-            padding-top: 48px;
+            flex-grow: 0;
+            margin-top: auto;
+            margin-bottom: auto;
+            padding-top: 16px;
         }
     }
 
@@ -68,6 +71,10 @@
         }
         @media(min-width: $ufhd) {
             font-size: 32px;
+        }
+        @media(min-width: $q) and (min-height: 1700px) {
+            font-size: 48px;
+            margin-bottom: 32px;
         }
     }
 
