@@ -52,6 +52,7 @@
 
     &__menu-link {
         color: #fff;
+        position: relative;
         text-decoration: none;
         transition: color 0.3s;
 
@@ -60,6 +61,23 @@
         &:hover {
             color: #D43C38;
         }
+    }
+
+    &__menu-link-qnt {
+        align-items: center;
+        border-radius: 50%;
+        background-color: #5474B4;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        height: 18px;
+        left: auto;
+        position: absolute;
+        right: -10px;
+        top: -8px;
+        width: 18px;
     }
 
     &__icons {
