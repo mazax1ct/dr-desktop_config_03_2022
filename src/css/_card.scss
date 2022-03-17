@@ -203,15 +203,21 @@
         margin-right: auto;
         width: 308px;
         @media(min-width: 1500px) {
-            width: 380px;
+            width: 370px;
         }
         @media(min-width: $fhd) {
-            width: 520px;
+            width: 500px;
         }
         @media(min-width: $ufhd) {
             width: 700px;
         }
-        @media(min-width: $q) {
+        @media(min-width: $q) and (min-height: 1300px) {
+            width: 730px;
+        }
+        @media(min-width: $q) and (min-height: 1400px) {
+            width: 800px;
+        }
+        @media(min-width: $q) and (min-height: 1700px) {
             width: 920px;
         }
     }

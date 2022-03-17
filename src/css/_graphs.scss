@@ -3,10 +3,16 @@
     position: relative;
     width: 100%;
     z-index: 1;
-    @media(min-width: $ufhd) and (min-height: 1240px) {
-        padding-bottom: 16px;
+    @media(min-width: $fhd) and (min-height: 940px) {
+        padding-bottom: 12px;
     }
-    @media(min-height: 1300px) {
+    @media(min-width: $fhd) and (min-height: 1000px) {
+        padding-bottom: 24px;
+    }
+    @media(min-width: $fhd) and (min-height: 1300px) {
+        padding-bottom: 32px;
+    }
+    @media(min-width: $fhd) and (min-height: 1400px) {
         padding-bottom: 56px;
     }
 
