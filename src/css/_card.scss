@@ -208,11 +208,8 @@
         @media(min-width: $fhd) {
             width: 500px;
         }
-        @media(min-width: $ufhd) {
-            width: 700px;
-        }
-        @media(min-width: $q) and (min-height: 1300px) {
-            width: 730px;
+        @media(min-width: $ufhd) and (min-height: 1300px) {
+            width: 600px;
         }
         @media(min-width: $q) and (min-height: 1400px) {
             width: 800px;

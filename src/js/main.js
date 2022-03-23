@@ -15,6 +15,8 @@ $(document).on('click', '.js-components-list-opener', function () {
 
   $(this).addClass('is-active');
   $(this).closest('.components__item').find('.components-dropdown').show();
+
+  tabsSlider.update();
   return false;
 });
 
@@ -98,4 +100,15 @@ $(document).on('click', '.js-tests', function () {
   testsSlider.update();
   testsSlider2.update();
   return false;
+});
+
+const tabsSlider = new Swiper('.js-components-tabs', {
+    direction: 'horizontal',
+    loop: false,
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
 });

@@ -100,6 +100,14 @@
         margin-top: 0;
         margin-bottom: 64px;
         text-align: center;
+
+        &--type_1 {
+            margin-bottom: 16px;
+        }
+
+        &--type_2 {
+            margin-bottom: 0;
+        }
     }
 
     &__big-title {
@@ -711,5 +719,45 @@
         svg {
             opacity: 1;
         }
+    }
+}
+
+.consult-form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 355px;
+
+    &__button-block {
+        text-align: center;
+    }
+
+    .input-label {
+        margin-bottom: 16px;
+    }
+
+    .textarea-label {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+
+    .button {
+        max-width: 318px;
+        width: 100%;
+    }
+}
+
+.consult-finish {
+    &__image {
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__button-block {
+        text-align: center;
+    }
+
+    .button {
+        width: 162px;
     }
 }

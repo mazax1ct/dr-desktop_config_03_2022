@@ -72,7 +72,7 @@
         @media(min-height: 960px) {
             margin-top: 8px;
         }
-        @media(min-height: 1280px) {
+        @media(min-width: $ufhd) and (min-height: 1500px) {
             margin-top: 12px;
         }
         @media(min-height: 1800px) {
@@ -84,7 +84,10 @@
         @media(max-height: 739px) {
             display: none;
         }
-        @media(min-width: $fhd) and (max-height: 936px) {
+        @media(min-width: $fhd) and (max-height: 930px) {
+            display: none;
+        }
+        @media(min-width: $ufhd) and (max-height: 1160px) {
             display: none;
         }
     }
@@ -96,13 +99,16 @@
         @media(min-width: $fhd) and (max-height: 900px) {
             display: none;
         }
+        @media(min-width: $ufhd) and (max-height: 1080px) {
+            display: none;
+        }
     }
 
     &:nth-child(8) {
         @media(max-height: 600px) {
             display: none;
         }
-        @media(min-width: $fhd) and (max-height: 900px) {
+        @media(min-width: $fhd) and (max-height: 860px) {
             display: none;
         }
     }
@@ -115,6 +121,10 @@
             width: 40px;
         }
         @media(min-width: $ufhd) {
+            height: 48px;
+            width: 48px;
+        }
+        @media(min-width: $ufhd) and (min-height: 1200px) {
             height: 56px;
             width: 56px;
         }
