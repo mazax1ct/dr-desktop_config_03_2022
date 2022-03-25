@@ -1,0 +1,11 @@
+.cart-buttons {
+    text-align: center;
+
+    .button {
+        min-width: 250px;
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+}

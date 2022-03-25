@@ -22,8 +22,8 @@
         //= template/header.html
 
         <div class="compare__sections">
-            <button class="js-section compare__section-button is-active" type="button" data-target="1">Графики</button>
-            <button class="js-section compare__section-button" type="button" data-target="2">Спецификации</button>
+            <button class="js-section compare__section-button is-active" type="button" data-section="1">Графики</button>
+            <button class="js-section compare__section-button" type="button" data-section="2">Спецификации</button>
         </div>
 
         <div class="compare__list">
@@ -189,13 +189,610 @@
         </div>
 
         <div class="compare__results-outer">
+            <div class="js-tab compare__graphs" data-section="1">
+                <div class="compare__filter">
+                    <div class="compare__filter-item">
+                        <p class="compare__filter-title">
+                            <span class="info">
+                                <button class="info__button" type="button">
+                                    <svg aria-hidden="true">
+                                        <use xlink:href="#info"></use>
+                                    </svg>
+                                </button>
+                                <span class="info__popover">
+                                    <span><span></span></span>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dolorum inventore sit natus distinctio voluptas, nam adipisci totam sapiente.
+                                </span>
+                            </span>
+                            На графиках
+                        </p>
+                        <div class="btns-group">
+                            <label class="btns-group__item">
+                                <input type="radio" name="type" value="1" checked>
+                                <span class="js-graphs btns-group__item-inner" data-graphs="1">Игры</span>
+                            </label>
+                            <label class="btns-group__item">
+                                <input type="radio" name="type" value="2">
+                                <span class="js-graphs btns-group__item-inner" data-graphs="2">Синтетика</span>
+                            </label>
+                            <label class="btns-group__item">
+                                <input type="radio" name="type" value="3">
+                                <span class="js-graphs btns-group__item-inner" data-graphs="3">Стоимость</span>
+                            </label>
+                            <label class="btns-group__item">
+                                <input type="radio" name="type" value="4">
+                                <span class="js-graphs btns-group__item-inner" data-graphs="4">Шум</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="compare__filter-item">
+                        <button class="js-popup-opener tests-opener" type="button" data-popup="js-popup-test" title="Изменить тесты">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#settings"></use>
+                            </svg>
+                            Параметры
+                        </button>
+                    </div>
+                </div>
+                <div class="js-graphs-section compare__graphs-section" data-graphs="1">
+                    <div class="compare__graphs-block">
+                        <p class="compare__graphs-title">Forza Horizon 4</p>
+                        <div class="graph graph--type_1">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 70%">
+                                    <div>100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                            <div class="graph__delta graph__delta--plus">+15%</div>
+                        </div>
+                        <div class="graph graph--type_2">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 40%">
+                                    <div>70 <span>FPS</span></div>
+                                </div>
+                            </div>
+                            <div class="graph__delta graph__delta--minus">+15%</div>
+                        </div>
+                        <div class="graph graph--type_3">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 20%">
+                                    <div>40 <span>FPS</span></div>
+                                </div>
+                            </div>
+                            <div class="graph__delta graph__delta--minus">+15%</div>
+                        </div>
+                    </div>
+                    <div class="compare__graphs-block">
+                        <p class="compare__graphs-title">Forza Horizon 4</p>
+                        <div class="graph graph--type_1">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 70%">
+                                    <div>100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                            <div class="graph__delta graph__delta--plus">+15%</div>
+                        </div>
+                        <div class="graph graph--type_2">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 40%">
+                                    <div>70 <span>FPS</span></div>
+                                </div>
+                            </div>
+                            <div class="graph__delta graph__delta--minus">+15%</div>
+                        </div>
+                        <div class="graph graph--type_3">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 20%">
+                                    <div>40 <span>FPS</span></div>
+                                </div>
+                            </div>
+                            <div class="graph__delta graph__delta--minus">+15%</div>
+                        </div>
+                    </div>
+                    <div class="compare__graphs-block">
+                        <p class="compare__graphs-title">Forza Horizon 4</p>
+                        <div class="graph graph--type_1">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 70%">
+                                    <div>100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                            <div class="graph__delta graph__delta--plus">+15%</div>
+                        </div>
+                        <div class="graph graph--type_2">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 40%">
+                                    <div>70 <span>FPS</span></div>
+                                </div>
+                            </div>
+                            <div class="graph__delta graph__delta--minus">+15%</div>
+                        </div>
+                        <div class="graph graph--type_3">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 20%">
+                                    <div>40 <span>FPS</span></div>
+                                </div>
+                            </div>
+                            <div class="graph__delta graph__delta--minus">+15%</div>
+                        </div>
+                    </div>
+                    <div class="compare__graphs-block">
+                        <p class="compare__graphs-title">Forza Horizon 4</p>
+                        <div class="graph graph--type_1">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 70%">
+                                    <div>100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                            <div class="graph__delta graph__delta--plus">+15%</div>
+                        </div>
+                        <div class="graph graph--type_2">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 40%">
+                                    <div>70 <span>FPS</span></div>
+                                </div>
+                            </div>
+                            <div class="graph__delta graph__delta--minus">+15%</div>
+                        </div>
+                        <div class="graph graph--type_3">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 20%">
+                                    <div>40 <span>FPS</span></div>
+                                </div>
+                            </div>
+                            <div class="graph__delta graph__delta--minus">+15%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="js-graphs-section compare__graphs-section" data-graphs="2" style="display: none">
+                    <div class="compare__graphs-block">
+                        <p class="compare__graphs-title">CineBench R20</p>
+                        <div class="graph graph--type_1">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 70%">
+                                    <div>9200 <span>PTS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_2">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 40%">
+                                    <div>4800 <span>PTS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_3">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 20%">
+                                    <div>2800 <span>PTS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compare__graphs-block">
+                        <p class="compare__graphs-title">CineBench R20</p>
+                        <div class="graph graph--type_1">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 70%">
+                                    <div>9200 <span>PTS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_2">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 40%">
+                                    <div>4800 <span>PTS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_3">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 20%">
+                                    <div>2800 <span>PTS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compare__graphs-block">
+                        <p class="compare__graphs-title">CineBench R20</p>
+                        <div class="graph graph--type_1">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 70%">
+                                    <div>9200 <span>PTS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_2">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 40%">
+                                    <div>4800 <span>PTS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_3">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 20%">
+                                    <div>2800 <span>PTS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compare__graphs-block">
+                        <p class="compare__graphs-title">CineBench R20</p>
+                        <div class="graph graph--type_1">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 70%">
+                                    <div>9200 <span>PTS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_2">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 40%">
+                                    <div>4800 <span>PTS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_3">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 20%">
+                                    <div>2800 <span>PTS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="js-graphs-section compare__graphs-section" data-graphs="3" style="display: none">
+                    <div class="compare__graphs-block">
+                        <p class="compare__graphs-title">Forza Horizon 4</p>
+                        <div class="graph graph--type_1">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 70%">
+                                    <div>1 441 300 ₽ / 100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_2">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 40%">
+                                    <div>441 300 ₽ / 100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_3">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 20%">
+                                    <div>1 441 300 ₽ / 100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compare__graphs-block">
+                        <p class="compare__graphs-title">Forza Horizon 4</p>
+                        <div class="graph graph--type_1">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 70%">
+                                    <div>1 441 300 ₽ / 100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_2">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 40%">
+                                    <div>441 300 ₽ / 100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_3">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 20%">
+                                    <div>1 441 300 ₽ / 100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compare__graphs-block">
+                        <p class="compare__graphs-title">Forza Horizon 4</p>
+                        <div class="graph graph--type_1">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 70%">
+                                    <div>1 441 300 ₽ / 100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_2">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 40%">
+                                    <div>441 300 ₽ / 100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_3">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 20%">
+                                    <div>1 441 300 ₽ / 100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="compare__graphs-block">
+                        <p class="compare__graphs-title">Forza Horizon 4</p>
+                        <div class="graph graph--type_1">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 70%">
+                                    <div>1 441 300 ₽ / 100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_2">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 40%">
+                                    <div>441 300 ₽ / 100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="graph graph--type_3">
+                            <div class="graph__image"><img src="images/content/game_logo2.png" srcset="images/content/game_logo2@2x.png 2x" alt="alt"></div>
+                            <div class="graph__bar-block">
+                                <div class="graph__bar" style="width: 20%">
+                                    <div>1 441 300 ₽ / 100 <span>FPS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="js-graphs-section compare__graphs-section" data-graphs="4" style="display: none">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div class="js-tab compare__spec" data-section="2" style="display:none">
+                <div class="compare__spec-title-block">
+                    <p class=" compare__spec-title">Комплектующие</p>
+                    <label class="js-diff switch">
+                        различающиеся
+                        <input type="checkbox">
+                        <span class="switch__icon"></span>
+                    </label>
+                </div>
 
+                <table class="compare__spec-table compare__spec-table--no_diffs">
+                    <tr class="diff">
+                        <td>Видеокарта</td>
+                        <td>GIGABYTE GeForce RTX 3025 GAMING</td>
+                        <td>GIGABYTE GeForce RTX 3025 GAMING</td>
+                        <td>GIGABYTE GeForce RTX 3025 GAMING</td>
+                    </tr>
+                    <tr>
+                        <td>Процессор</td>
+                        <td>AMD Ryzen 5 5600X </td>
+                        <td>AMD Ryzen 5 5600X </td>
+                        <td>AMD Ryzen 5 5600X </td>
+                    </tr>
+                    <tr class="diff">
+                        <td>Мат. плата</td>
+                        <td>GIGABYTE B525M S2H </td>
+                        <td>GIGABYTE B525M S2H </td>
+                        <td>GIGABYTE B525M S2H </td>
+                    </tr>
+                    <tr class="diff">
+                        <td>Охлаждение</td>
+                        <td>WaterCooling 120 RGB</td>
+                        <td>WaterCooling 120 RGB</td>
+                        <td>WaterCooling 120 RGB</td>
+                    </tr>
+                    <tr>
+                        <td>Опер. память</td>
+                        <td>16GB RGB DDR4-3600 (2 x 8GB)</td>
+                        <td>16GB RGB DDR4-3600 (2 x 8GB)</td>
+                        <td>16GB RGB DDR4-3600 (2 x 8GB)</td>
+                    </tr>
+                    <tr class="diff">
+                        <td>SSD системный</td>
+                        <td>250GB M.2</td>
+                        <td>250GB M.2</td>
+                        <td>250GB M.2</td>
+                    </tr>
+                    <tr>
+                        <td>Накопитель 1</td>
+                        <td>2TB Seagate BarraCuda</td>
+                        <td>2TB Seagate BarraCuda</td>
+                        <td>2TB Seagate BarraCuda</td>
+                    </tr>
+                    <tr>
+                        <td>Накопитель 2</td>
+                        <td>2TB Seagate BarraCuda</td>
+                        <td>2TB Seagate BarraCuda</td>
+                        <td>2TB Seagate BarraCuda</td>
+                    </tr>
+                    <tr>
+                        <td>Блок питания</td>
+                        <td>Cooler Master MWE Bronze 700W </td>
+                        <td>Cooler Master MWE Bronze 700W </td>
+                        <td>Cooler Master MWE Bronze 700W </td>
+                    </tr>
+                </table>
+
+                <div class="compare__spec-title-block">
+                    <p class="compare__spec-title">Модинг</p>
+                </div>
+
+                <table class="compare__spec-table compare__spec-table--no_diffs">
+                    <tr class="diff">
+                        <td>Корпусные кулера</td>
+                        <td>2 дополнительных ARGB</td>
+                        <td>2 дополнительных ARGB</td>
+                        <td>2 дополнительных ARGB</td>
+                    </tr>
+                    <tr>
+                        <td>Цветная оплётка</td>
+                        <td>Lian li Красная оплетка</td>
+                        <td>Lian li Красная оплетка</td>
+                        <td>Lian li Красная оплетка</td>
+                    </tr>
+                    <tr class="diff">
+                        <td>Подсветка</td>
+                        <td>Светодиодная ARGB подсветка корпуса</td>
+                        <td>Светодиодная ARGB подсветка корпуса</td>
+                        <td>Светодиодная ARGB подсветка корпуса</td>
+                    </tr>
+                    <tr class="diff">
+                        <td>Стандартный</td>
+                        <td>Стандартный</td>
+                        <td>Стандартный</td>
+                        <td>Стандартный</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="popup-shade">
+            <div class="popup-shade__inner">
+                //= template/popup-test.html
+            </div>
         </div>
     </div>
 </body>
 
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/swiper-bundle.min.js"></script>
-<script src="js/main.js"></script>
+<script src="js/compare.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const labels = [
+        '0',
+        '10',
+        '20',
+        '30',
+        '40',
+        '50',
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            backgroundColor: 'rgb(255, 255, 255)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [{
+                    x: 0,
+                    y: 0
+                },
+                {
+                    x: 10,
+                    y: 40
+                },
+                {
+                    x: 15,
+                    y: 60
+                },
+                {
+                    x: 17,
+                    y: 70
+                },
+                {
+                    x: 19,
+                    y: 100
+                },
+            ],
+            //cubicInterpolationMode: 'monotone'
+        }]
+    };
+
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    position: 'nearest',
+                    xAlign: 'left',
+                    yAlign: 'center',
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    displayColors: false,
+                    bodyColor: '#000'
+                }
+            },
+            scales: {
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Нагрузка, %',
+                        color: 'rgba(255, 255, 255, 0.75)',
+                    },
+                    beginAtZero: true,
+                    ticks: {
+                        color: 'rgba(255, 255, 255, 0.5)',
+                    },
+                    grid: {
+                        color: 'rgba(255, 255, 255, 0.1)',
+                        borderColor: 'rgba(255, 255, 255, 0.75)',
+                        borderDash: [5]
+                    },
+                    min: 0,
+                    max: 100
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Шум, дБА',
+                        color: 'rgba(255, 255, 255, 0.75)',
+                    },
+                    beginAtZero: true,
+                    ticks: {
+                        color: 'rgba(255, 255, 255, 0.5)',
+                    },
+                    grid: {
+                        borderColor: 'rgba(255, 255, 255, 0.75)',
+                    },
+                    min: 0,
+                    max: 50
+                }
+            }
+        }
+    };
+
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+</script>
 
 </html>

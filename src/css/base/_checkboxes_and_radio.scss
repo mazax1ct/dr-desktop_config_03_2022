@@ -177,6 +177,11 @@
         transition: background-color 0.3s, border-color 0.3s;
         width: 64px;
 
+        &:last-child {
+            margin-left: 16px;
+            margin-right: 0;
+        }
+
         &::before {
             background-color: #fff;
             border-radius: 32px;

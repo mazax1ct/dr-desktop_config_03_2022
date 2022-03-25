@@ -1,0 +1,50 @@
+.specification {
+    display: flex;
+    font-size: 14px;
+    line-height: 1.71428;
+    padding-left: 52px;
+    padding-right: 52px;
+
+    &__block {
+        width: 50%;
+
+        &:first-child {
+            padding-right: 16px;
+        }
+
+        &:last-child {
+            padding-left: 16px;
+        }
+    }
+
+    &__section {
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__section-title {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+
+    p {
+        margin-top: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.specification-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+
+    .button {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}

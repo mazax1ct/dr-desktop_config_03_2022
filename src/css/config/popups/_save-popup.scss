@@ -1,0 +1,11 @@
+.save-buttons {
+    text-align: center;
+
+    .button {
+        min-width: 318px;
+
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.share-buttons {
+    text-align: center;
+
+    .button {
+        min-width: 318px;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.share-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.share-link {
+    align-items: center;
+    border-radius: 4px;
+    border: 2px solid #D43C38;
+    background-color: #D43C38;
+    box-shadow: 0 0 4px 0 #D43C38;
+    display: flex;
+    justify-content: center;
+    height: 44px;
+    margin-left: 12px;
+    margin-right: 12px;
+    transition: background-color 0.3s;
+    width: 44px;
+
+    &:active,
+    &:hover {
+        background-color: rgba(#D43C38, 0.3);
+    }
+
+    svg {
+        fill: #fff;
+        height: 32px;
+        width: 32px;
+    }
+}
