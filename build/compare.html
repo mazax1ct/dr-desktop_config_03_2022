@@ -1867,26 +1867,27 @@
     const data = {
         labels: labels,
         datasets: [{
+            radius: 5,
             backgroundColor: 'rgb(255, 255, 255)',
             borderColor: 'rgb(255, 99, 132)',
             data: [{
-                    x: 0,
+                    x: 1,
                     y: 0
                 },
                 {
-                    x: 10,
+                    x: 2,
                     y: 40
                 },
                 {
-                    x: 15,
+                    x: 3,
                     y: 60
                 },
                 {
-                    x: 17,
+                    x: 4,
                     y: 70
                 },
                 {
-                    x: 19,
+                    x: 5,
                     y: 100
                 },
             ],
@@ -1898,6 +1899,9 @@
         type: 'line',
         data: data,
         options: {
+            layout: {
+                padding: 20
+            },
             plugins: {
                 legend: {
                     display: false
@@ -1922,6 +1926,7 @@
                     beginAtZero: true,
                     ticks: {
                         color: 'rgba(255, 255, 255, 0.5)',
+                        font: "'Montserrat', 'Arial', sans-serif",
                     },
                     grid: {
                         color: 'rgba(255, 255, 255, 0.1)',
@@ -1940,6 +1945,7 @@
                     beginAtZero: true,
                     ticks: {
                         color: 'rgba(255, 255, 255, 0.5)',
+                        font: "'Montserrat', 'Arial', sans-serif",
                     },
                     grid: {
                         borderColor: 'rgba(255, 255, 255, 0.75)',
