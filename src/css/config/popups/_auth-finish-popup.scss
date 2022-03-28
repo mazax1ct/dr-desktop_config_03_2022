@@ -1,0 +1,15 @@
+.auth-finish {
+    &__image {
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__button-block {
+        text-align: center;
+    }
+
+    .button {
+        width: 162px;
+    }
+}

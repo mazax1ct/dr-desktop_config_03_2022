@@ -62,7 +62,22 @@
     &--type_3 {
         max-height: 600px;
         padding-top: 56px;
+        padding-bottom: 16px;
         width: 478px;
+    }
+
+    &--type_4 {
+        max-height: 500px;
+        padding-top: 105px;
+        padding-bottom: 24px;
+        width: 900px;
+    }
+
+    &--type_5 {
+        max-height: 700px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        width: 900px;
     }
 
     &__close {
@@ -107,6 +122,12 @@
 
         &--type_2 {
             margin-bottom: 0;
+        }
+
+        &--type_3 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 32px;
         }
     }
 

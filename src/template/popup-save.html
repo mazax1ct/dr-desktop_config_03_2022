@@ -20,11 +20,30 @@
             </svg>
             Прислать на почту
         </button>
-        <button class="button button--type_1" type="button">
+        <button class="js-popup-opener button button--type_1" type="button" data-popup="js-popup-pdf">
             <svg aria-hidden="true">
                 <use xlink:href="#pdf"></use>
             </svg>
             Сохранить в PDF
         </button>
+    </div>
+</div>
+
+<div class="js-popup-pdf popup popup--type_3">
+    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+        <svg aria-hidden="true">
+            <use xlink:href="#close"></use>
+        </svg>
+    </button>
+
+    <p class="popup__title popup__title--type_1">Скачать PDF</p>
+
+    <div class="auth-finish">
+        <div class="auth-finish__image">
+            <img src="images/content/pdf-download.png" srcset="images/content/pdf-download@2x.png 2x" alt="alt">
+        </div>
+        <div class="auth-finish__button-block">
+            <a class="js-popup-closer button button--type_2">Скачать</a>
+        </div>
     </div>
 </div>

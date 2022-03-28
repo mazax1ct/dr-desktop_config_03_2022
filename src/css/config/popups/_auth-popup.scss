@@ -1,0 +1,21 @@
+.auth-form {
+    .input-label {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 64px;
+        max-width: 280px;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+
+        .button {
+            font-size: 12px;
+            height: 40px;
+            margin-left: 24px;
+            margin-right: 24px;
+            width: 196px;
+        }
+    }
+}

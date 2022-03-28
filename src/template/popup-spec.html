@@ -60,7 +60,7 @@
 
     </div>
     <div class="specification-buttons">
-        <button class="button button--type_1" type="button">
+        <button class="js-popup-opener button button--type_1" type="button" data-popup="js-popup-spec-save">
             <svg aria-hidden="true">
                 <use xlink:href="#save"></use>
             </svg>
@@ -72,5 +72,31 @@
             </svg>
             Консультация
         </button>
+    </div>
+</div>
+
+<div class="js-popup-spec-save popup popup--type_3">
+    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+        <svg aria-hidden="true">
+            <use xlink:href="#close"></use>
+        </svg>
+    </button>
+
+    <p class="popup__title">Оставьте свой Email,<br> мы отправим вам<br> спецификацию</p>
+
+    <div class="spec-save">
+        <label class="input-label">
+            <span class="input-label__text">Email*</span>
+            <input class="js-email-mask input" type="text">
+        </label>
+
+        <label class="input-label">
+            <span class="input-label__text">Имя*</span>
+            <input class="input" type="text">
+        </label>
+
+        <div class="spec-save__button-block">
+            <button class="button button--type_1" type="button">Отправить</button>
+        </div>
     </div>
 </div>

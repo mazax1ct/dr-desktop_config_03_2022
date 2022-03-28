@@ -515,7 +515,7 @@
                         <use xlink:href="#help" />
                     </svg>
                 </a>
-                <a class="header__icons-link" href="#" title="Личный кабинет">
+                <a class="js-popup-opener header__icons-link" href="#" title="Личный кабинет" data-popup="js-popup-auth">
                     <svg aria-hidden="true">
                         <use xlink:href="#personal" />
                     </svg>
@@ -2896,7 +2896,7 @@
                 
                     </div>
                     <div class="specification-buttons">
-                        <button class="button button--type_1" type="button">
+                        <button class="js-popup-opener button button--type_1" type="button" data-popup="js-popup-spec-save">
                             <svg aria-hidden="true">
                                 <use xlink:href="#save"></use>
                             </svg>
@@ -2908,6 +2908,32 @@
                             </svg>
                             Консультация
                         </button>
+                    </div>
+                </div>
+                
+                <div class="js-popup-spec-save popup popup--type_3">
+                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                
+                    <p class="popup__title">Оставьте свой Email,<br> мы отправим вам<br> спецификацию</p>
+                
+                    <div class="spec-save">
+                        <label class="input-label">
+                            <span class="input-label__text">Email*</span>
+                            <input class="js-email-mask input" type="text">
+                        </label>
+                
+                        <label class="input-label">
+                            <span class="input-label__text">Имя*</span>
+                            <input class="input" type="text">
+                        </label>
+                
+                        <div class="spec-save__button-block">
+                            <button class="button button--type_1" type="button">Отправить</button>
+                        </div>
                     </div>
                 </div>
 
@@ -3759,12 +3785,31 @@
                             </svg>
                             Прислать на почту
                         </button>
-                        <button class="button button--type_1" type="button">
+                        <button class="js-popup-opener button button--type_1" type="button" data-popup="js-popup-pdf">
                             <svg aria-hidden="true">
                                 <use xlink:href="#pdf"></use>
                             </svg>
                             Сохранить в PDF
                         </button>
+                    </div>
+                </div>
+                
+                <div class="js-popup-pdf popup popup--type_3">
+                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                
+                    <p class="popup__title popup__title--type_1">Скачать PDF</p>
+                
+                    <div class="auth-finish">
+                        <div class="auth-finish__image">
+                            <img src="images/content/pdf-download.png" srcset="images/content/pdf-download@2x.png 2x" alt="alt">
+                        </div>
+                        <div class="auth-finish__button-block">
+                            <a class="js-popup-closer button button--type_2">Скачать</a>
+                        </div>
                     </div>
                 </div>
 
@@ -3833,6 +3878,112 @@
                         <a class="button button--type_2" href="#">Оформить</a>
                 
                         <a class="button button--type_2" href="#">Выбрать ещё</a>
+                    </div>
+                </div>
+
+                <div class="js-popup-auth popup popup--type_4">
+                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                
+                    <p class="popup__title popup__title--type_3">Чтобы продолжить, авторизуйтесь</p>
+                
+                    <div class="auth-form">
+                        <label class="input-label">
+                            <span class="input-label__text">Email*</span>
+                            <input class="js-email-mask input" type="text">
+                        </label>
+                
+                        <div class="auth-form__buttons">
+                            <button class="js-popup-opener button button--type_1" type="button" data-popup="js-popup-register">Нет аккаунта</button>
+                            <button class="js-popup-opener button button--type_2" type="button" data-popup="js-popup-code">Отправить код</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="js-popup-code popup popup--type_4">
+                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                
+                    <p class="popup__title popup__title--type_3">Введите код подтверждения</p>
+                
+                    <p class="code-note">Код подтверждения должен состоять из 6-ти цифр</p>
+                
+                    <div class="code-form">
+                        <label class="input-label">
+                            <input class="input" type="text">
+                        </label>
+                
+                        <div class="code-form__buttons">
+                            <button class="js-popup-opener button button--type_2" type="button" data-popup="js-popup-auth-finish">Войти</button>
+                            <button class="button button--type_1" type="button">Повторить попытку</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="js-popup-auth-finish popup popup--type_3">
+                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                
+                    <p class="popup__title popup__title--type_1">Успешно!</p>
+                
+                    <div class="auth-finish">
+                        <div class="auth-finish__image">
+                            <img src="images/content/auth-finish.png" srcset="images/content/auth-finish@2x.png 2x" alt="alt">
+                        </div>
+                        <div class="auth-finish__button-block">
+                            <button class="js-popup-closer button button--type_2" type="button">Хорошо</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="js-popup-register popup popup--type_5">
+                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                        <svg aria-hidden="true">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+                
+                    <p class="popup__title popup__title--type_3">Регистрация</p>
+                
+                    <div class="register-form">
+                        <label class="input-label error">
+                            <span class="input-label__text">Email*</span>
+                            <input class="js-email-mask input" type="text">
+                            <span class="input-label__error">Email не может содержать символы (!*№£#)</span>
+                        </label>
+                
+                        <label class="input-label valid">
+                            <span class="input-label__text">Имя*</span>
+                            <input class="input" type="text">
+                        </label>
+                
+                        <label class="input-label">
+                            <span class="input-label__text">Фамилия*</span>
+                            <input class="input" type="text">
+                        </label>
+                
+                        <label class="input-label">
+                            <span class="input-label__text">Дата рождения</span>
+                            <input class="input" type="text">
+                        </label>
+                
+                        <label class="input-label">
+                            <span class="input-label__text">Телефон*</span>
+                            <input class="js-phone-mask input" type="text">
+                        </label>
+                
+                        <div class="register-form__buttons">
+                            <button class="button button--type_2" type="button">Отправить код</button>
+                        </div>
                     </div>
                 </div>
 

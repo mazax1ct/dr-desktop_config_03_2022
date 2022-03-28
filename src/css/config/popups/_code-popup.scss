@@ -1,0 +1,35 @@
+.code-note {
+    color: rgba(#fff, 0.7);
+    font-size: 12px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.code-form {
+    text-align: center;
+
+    .input-label {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 32px;
+        max-width: 280px;
+    }
+
+    &__buttons {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        .button {
+            height: 40px;
+            margin-left: 24px;
+            margin-right: 24px;
+            width: 196px;
+
+            &:last-child {
+                font-size: 12px;
+                margin-top: 12px;
+            }
+        }
+    }
+}

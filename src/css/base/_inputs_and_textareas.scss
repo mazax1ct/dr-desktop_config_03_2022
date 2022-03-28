@@ -8,6 +8,39 @@
         line-height: 1.33333;
         margin-bottom: 4px;
     }
+
+    &__error {
+        color: #D43C38;
+        display: block;
+        font-size: 12px;
+        line-height: 1.33333;
+        margin-top: 4px;
+        text-align: right;
+    }
+
+    &.error {
+        .input-label__text {
+            color: #D43C38;
+        }
+
+        .input,
+        .textarea {
+            border-color: #D43C38;
+            color: #D43C38;
+        }
+    }
+
+    &.valid {
+        .input-label__text {
+            color: #5474B4;
+        }
+
+        .input,
+        .textarea {
+            border-color: #5474B4;
+            color: #5474B4;
+        }
+    }
 }
 
 .input,
