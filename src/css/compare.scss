@@ -10,4 +10,8 @@
 @import "_info.scss";
 @import "_popups.scss";
 @import "_tests.scss";
+@import "popups/_auth-popup.scss";
+@import "popups/_code-popup.scss";
+@import "popups/_auth-finish-popup.scss";
+@import "popups/_register-popup.scss";
 @import "plugins/swiper-bundle.min.scss";

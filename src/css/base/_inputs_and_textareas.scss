@@ -18,6 +18,22 @@
         text-align: right;
     }
 
+    &__input-container {
+        display: block;
+        position: relative;
+
+        svg {
+            fill: #fff;
+            height: 24px;
+            left: auto;
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+        }
+    }
+
     &.error {
         .input-label__text {
             color: #D43C38;
@@ -27,6 +43,10 @@
         .textarea {
             border-color: #D43C38;
             color: #D43C38;
+        }
+
+        svg {
+            fill: #D43C38;
         }
     }
 
@@ -39,6 +59,10 @@
         .textarea {
             border-color: #5474B4;
             color: #5474B4;
+        }
+
+        svg {
+            fill: #5474B4;
         }
     }
 }
