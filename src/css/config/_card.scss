@@ -366,29 +366,25 @@
         justify-content: center;
     }
 
-    &__price-block {
-        margin-right: 16px;
-        @media(min-width: $fhd) {
-            margin-right: 24px;
-        }
-        @media(min-width: $ufhd) {
-            margin-right: 40px;
-        }
-    }
+    &__price-block {}
 
     &__price {
         color: #fff;
         font-size: 24px;
         font-weight: 900;
         line-height: 1;
+        min-width: 160px;
         margin-top: 0;
         margin-bottom: 4px;
+        white-space: nowrap;
         @media(min-width: $fhd) {
             font-size: 32px;
+            min-width: 210px;
             margin-bottom: 8px;
         }
         @media(min-width: $ufhd) {
             font-size: 48px;
+            min-width: 316px;
         }
     }
 
