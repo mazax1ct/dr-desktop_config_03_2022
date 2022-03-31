@@ -25,7 +25,7 @@
     border-radius: 8px;
     color: #fff;
     display: none;
-    height: 96%;
+    max-height: 96%;
     margin: auto;
     overflow-y: auto;
     position: relative;
@@ -60,21 +60,22 @@
     }
 
     &--type_3 {
-        max-height: 600px;
-        padding-top: 56px;
-        padding-bottom: 16px;
+        //max-height: 600px;
+        min-height: 600px;
+        padding-top: 48px;
+        padding-bottom: 48px;
         width: 478px;
     }
 
     &--type_4 {
-        max-height: 500px;
-        padding-top: 105px;
-        padding-bottom: 24px;
+        //max-height: 500px;
+        padding-top: 60px;
+        padding-bottom: 60px;
         width: 900px;
     }
 
     &--type_5 {
-        max-height: 700px;
+        //max-height: 700px;
         padding-top: 24px;
         padding-bottom: 24px;
         width: 900px;
