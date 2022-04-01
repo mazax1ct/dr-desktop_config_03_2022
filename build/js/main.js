@@ -112,3 +112,13 @@ const tabsSlider = new Swiper('.js-components-tabs', {
       prevEl: '.swiper-button-prev',
     },
 });
+
+Array.from(
+  document.querySelectorAll('.component '),
+  function(el) {
+    el.addEventListener('mousemove',function(e){
+      var rect = el.getBoundingClientRect()
+      el.style.setProperty('--px', e.clientX - rect.left);
+      el.style.setProperty('--py', e.clientY - rect.top);
+    });
+  });

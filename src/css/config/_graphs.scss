@@ -28,6 +28,10 @@
         width: 36px;
         user-select: none;
         z-index: 1;
+        @media(min-width: $q) and (min-height: 1700px) {
+            font-size: 16px;
+            width: 56px;
+        }
 
         &::after {
             background-color: rgba(#fff, 0.1);
@@ -76,7 +80,7 @@
             margin-top: 12px;
         }
         @media(min-height: 1800px) {
-            margin-top: 16px;
+            margin-top: 24px;
         }
     }
 
@@ -115,6 +119,8 @@
 
     &__image {
         border-radius: 50%;
+        background-color: rgba(#315CB4, 0.2);
+        border: 1px solid #fff;
         height: 32px;
         overflow: hidden;
         width: 32px;
@@ -131,12 +137,15 @@
             width: 56px;
         }
         @media(min-width: $q) and (min-height: 1700px) {
-            height: 64px;
-            width: 64px;
+            height: 80px;
+            width: 80px;
+        }
+
+        &:empty {
+            border-color: rgba(#fff, 0.1);
         }
 
         img {
-            border: 1px solid #fff;
             border-radius: 50%;
             display: block;
             width: 100%;
@@ -153,7 +162,7 @@
             height: 32px;
         }
         @media(min-width: $q) and (min-height: 1700px) {
-            height: 40px;
+            height: 60px;
         }
     }
 
@@ -181,7 +190,7 @@
         white-space: nowrap;
         z-index: 2;
         @media(min-width: $q) and (min-height: 1700px) {
-            font-size: 18px;
+            font-size: 24px;
         }
 
         span {

@@ -30,19 +30,19 @@
     overflow-y: auto;
     position: relative;
     scrollbar-width: thin;
-    scrollbar-color: #D43C38 rgba(#D43C38, 0.2);
+    scrollbar-color: #5793ea rgba(#5793ea, 0.2);
 
     &::-webkit-scrollbar {
         width: 6px;
     }
 
     &::-webkit-scrollbar-track {
-        background-color: rgba(#D43C38, 0.2);
+        background-color: rgba(#5793ea, 0.2);
         border-radius: 3px;
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: #D43C38;
+        background-color: #5793ea;
         border-radius: 3px;
     }
 
@@ -54,13 +54,12 @@
     }
 
     &--type_2 {
-        max-height: 700px;
+        max-height: 720px;
         padding: 32px 54px;
         width: 1216px;
     }
 
     &--type_3 {
-        //max-height: 600px;
         min-height: 600px;
         padding-top: 48px;
         padding-bottom: 48px;
@@ -68,14 +67,12 @@
     }
 
     &--type_4 {
-        //max-height: 500px;
         padding-top: 60px;
         padding-bottom: 60px;
         width: 900px;
     }
 
     &--type_5 {
-        //max-height: 700px;
         padding-top: 24px;
         padding-bottom: 24px;
         width: 900px;

@@ -19,6 +19,9 @@
         margin-right: -8px;
         max-width: 1320px;
     }
+    @media(min-width: $q) and (min-height: 1700px) {
+        max-width: 1500px !important;
+    }
 
     &__item {
         padding-right: 4px;
@@ -39,6 +42,9 @@
             padding-left: 8px;
             padding-right: 8px;
             max-width: 440px;
+        }
+        @media(min-width: $q) and (min-height: 1700px) {
+            max-width: 500px !important;
         }
 
         &:nth-child(2),
@@ -82,6 +88,9 @@
     @media(min-width: $q) {
         left: 8px;
         max-width: 1210px;
+    }
+    @media(min-width: $q) and (min-height: 1700px) {
+        max-width: 1460px !important;
     }
 
     &__top {
@@ -128,25 +137,38 @@
         max-height: 316px;
         overflow: auto;
         scrollbar-width: thin;
-        scrollbar-color: #D43C38 rgba(#D43C38, 0.2);
+        scrollbar-color: #5793ea rgba(#5793ea, 0.2);
         scrollbar-gutter: stable both-edges;
         @media(min-width: $q) and (min-height: 1400px) {
-            max-height: 426px;
+            max-height: 760px;
         }
 
         &::-webkit-scrollbar {
             height: 6px;
+            opacity: 0;
             width: 6px;
         }
 
         &::-webkit-scrollbar-track {
-            background-color: rgba(#D43C38, 0.2);
+            background-color: transparent;
             border-radius: 3px;
+            transition: background-color 0.3s;
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color: #D43C38;
+            background-color: transparent;
             border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+
+        &:hover {
+            &::-webkit-scrollbar-track {
+                background-color: rgba(#5793ea, 0.2);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #5793ea;
+            }
         }
     }
 
@@ -237,11 +259,14 @@
     display: flex;
     min-height: 56px;
     min-width: 232px;
+    overflow: hidden;
     position: relative;
     padding: 0;
     text-align: left;
     transition: box-shadow 0.3s;
+    user-select: none;
     width: 100%;
+    z-index: 2;
     @media(min-width: $fhd) {
         min-height: 88px;
         min-width: 334px;
@@ -252,34 +277,11 @@
     @media(min-width: $q) and (min-height: 1400px) {
         min-height: 126px;
     }
+    @media(min-width: $q) and (min-height: 1700px) {
+        min-width: 464px !important;
+    }
 
     &--type_1 {
-        &::after {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3Cpolygon fill='%23fff' points='14.6,8.4 8,1.7 1.4,8.4 0.6,7.6 8,0.3 15.4,7.6'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-size: 100% auto;
-            background-position: 50% 50%;
-            content: '';
-            height: 9px;
-            left: auto;
-            position: absolute;
-            right: 6px;
-            top: 6px;
-            width: 9px;
-            @media(min-width: $fhd) {
-                height: 14px;
-                right: 12px;
-                top: 12px;
-                width: 14px;
-            }
-            @media(min-width: $q) {
-                height: 20px;
-                right: 16px;
-                top: 16px;
-                width: 20px;
-            }
-        }
-
         .component__qnt {
             opacity: 0;
             transition: opacity 0.3s;
@@ -291,16 +293,16 @@
     }
 
     &--type_2 {
-        border: 1px solid transparent;
+        //border: 1px solid transparent;
         box-shadow: 0 0 8px 0 rgba(#fff, 0.3);
 
         &.is-active {
-            border-color: #D43C38;
-            box-shadow: 0 0 6px 0 #D43C38;
+            border-color: #5793ea;
+            box-shadow: 0 0 6px 0 #5793ea;
 
             &:focus,
             &:hover {
-                box-shadow: 0 0 6px 0 #D43C38;
+                box-shadow: 0 0 6px 0 #5793ea;
             }
         }
 
@@ -315,9 +317,50 @@
         }
     }
 
+    &::after,
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: opacity 0.1s linear;
+    }
+
+    &::before {
+        width: 180px;
+        height: 180px;
+        background: radial-gradient(circle at center, #FFF 0%, transparent 60%);
+        opacity: 0;
+        mix-blend-mode: screen;
+        transform: translate(calc(var(--px) * 1px), calc(var(--py) * 1px)) translate(-50%, -50%);
+    }
+
+    &::after {
+        background: inherit;
+        border-radius: 4px;
+        //margin: 2px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transition-delay: 0.05s;
+    }
+
     &:focus,
     &:hover {
         box-shadow: 0 0 6px 0 #fff;
+        //background-color: rgba(56,56,56,0.9);
+        &::before {
+            opacity: 0.6;
+        }
+
+        &::after {
+            opacity: 0.8;
+            transition-delay: 0s;
+        }
     }
 
     &:focus,
@@ -426,6 +469,9 @@
             font-size: 20px;
             margin-bottom: 12px;
         }
+        @media(min-width: $q) and (min-height: 1700px) {
+            font-size: 24px !important;
+        }
     }
 
     &__info {
@@ -438,6 +484,34 @@
         }
         @media(min-width: $q) and (min-height: 1400px) {
             font-size: 16px;
+        }
+        @media(min-width: $q) and (min-height: 1700px) {
+            font-size: 20px !important;
+        }
+    }
+
+    &__arrow {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3Cpolygon fill='%23fff' points='14.6,8.4 8,1.7 1.4,8.4 0.6,7.6 8,0.3 15.4,7.6'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: 50% 50%;
+        height: 9px;
+        left: auto;
+        position: absolute;
+        right: 6px;
+        top: 6px;
+        width: 9px;
+        @media(min-width: $fhd) {
+            height: 14px;
+            right: 12px;
+            top: 12px;
+            width: 14px;
+        }
+        @media(min-width: $q) {
+            height: 20px;
+            right: 16px;
+            top: 16px;
+            width: 20px;
         }
     }
 

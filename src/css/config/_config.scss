@@ -15,7 +15,7 @@
         padding-right: 80px;
     }
     @media(min-width: $q) and (min-height: 1500px) {
-        max-width: 3080px;
+        max-width: 3200px;
     }
 
     &__inner {
@@ -36,12 +36,13 @@
         padding-right: 32px;
         width: 68%;
         @media(min-width: 1500px) {
+            padding-right: 64px;
             width: 62%;
         }
-        @media(min-width: $ufhd) {
+        /*@media(min-width: $ufhd) {
             padding-right: 128px;
             width: 54.75%;
-        }
+        }*/
     }
 
     &__right-block {
