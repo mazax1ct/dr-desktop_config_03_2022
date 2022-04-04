@@ -16,6 +16,8 @@ $(document).on('click', '.js-components-list-opener', function () {
   $(this).addClass('is-active');
   $(this).closest('.components__item').find('.components-dropdown').show();
 
+  $('.config').addClass('blur');
+
   tabsSlider.update();
   return false;
 });
@@ -23,6 +25,8 @@ $(document).on('click', '.js-components-list-opener', function () {
 $(document).on('click', '.js-components-list-closer', function () {
   $('.components-dropdown').hide();
   $('.js-components-list-opener').removeClass('is-active');
+
+  $('.config').removeClass('blur');
   return false;
 });
 

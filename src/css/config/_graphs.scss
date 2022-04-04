@@ -4,16 +4,16 @@
     width: 100%;
     z-index: 1;
     @media(min-width: $fhd) and (min-height: 940px) {
-        padding-bottom: 12px;
+        margin-bottom: 12px;
     }
     @media(min-width: $fhd) and (min-height: 1000px) {
-        padding-bottom: 24px;
+        margin-bottom: 24px;
     }
     @media(min-width: $fhd) and (min-height: 1300px) {
-        padding-bottom: 32px;
+        margin-bottom: 32px;
     }
-    @media(min-width: $fhd) and (min-height: 1400px) {
-        padding-bottom: 56px;
+    @media(min-width: $q) and (min-height: 1900px) {
+        margin-bottom: 56px;
     }
 
     &__hz {
@@ -80,6 +80,9 @@
             margin-top: 12px;
         }
         @media(min-height: 1800px) {
+            margin-top: 20px;
+        }
+        @media(min-height: 1900px) {
             margin-top: 24px;
         }
     }
@@ -119,11 +122,13 @@
 
     &__image {
         border-radius: 50%;
-        background-color: rgba(#315CB4, 0.2);
+        background-color: #293356;
         border: 1px solid #fff;
         height: 32px;
         overflow: hidden;
+        position: relative;
         width: 32px;
+        z-index: 2;
         @media(min-width: $fhd) {
             height: 40px;
             width: 40px;
@@ -157,7 +162,9 @@
         background-color: rgba(#315CB4, 0.1);
         flex-grow: 1;
         height: 24px;
+        margin-left: -30px;
         position: relative;
+        z-index: 1;
         @media(min-width: $ufhd) {
             height: 32px;
         }
@@ -182,9 +189,9 @@
         font-size: 12px;
         justify-content: space-between;
         height: 100%;
-        left: auto;
-        padding-left: 16px;
-        padding-right: 16px;
+        left: 0;
+        padding-left: 46px;
+        padding-right: 46px;
         position: absolute;
         top: 0;
         white-space: nowrap;

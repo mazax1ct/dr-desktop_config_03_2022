@@ -18,6 +18,16 @@
         max-width: 3200px;
     }
 
+    &.blur {
+        .config__right-block,
+        .config__title,
+        .graphs,
+        .header {
+            filter: blur(20px);
+            opacity: 0.6;
+        }
+    }
+
     &__inner {
         display: flex;
         flex-grow: 1;
