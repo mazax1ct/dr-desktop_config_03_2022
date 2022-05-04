@@ -114,6 +114,7 @@
 
     &__icons-link {
         display: block;
+        position: relative;
 
         &:not(:last-child) {
             margin-right: 24px;
@@ -146,6 +147,30 @@
                 height: 56px;
                 width: 56px;
             }
+        }
+    }
+
+    &__icons-link-qnt {
+        align-items: center;
+        border-radius: 50%;
+        background-color: #5474B4;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        height: 18px;
+        left: auto;
+        position: absolute;
+        right: -10px;
+        top: -8px;
+        width: 18px;
+        @media(min-width: $q) and (min-height: 1800px) {
+            font-size: 18px;
+            height: 32px;
+            right: -16px;
+            top: -12px;
+            width: 32px;
         }
     }
 }

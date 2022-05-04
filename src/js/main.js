@@ -126,3 +126,9 @@ Array.from(
       el.style.setProperty('--py', e.clientY - rect.top);
     });
   });
+
+//информер
+$(document).on('click', '.js-informer-opener', function () {
+  $('.informer').addClass('is-active');
+  return false;
+});
