@@ -1,90 +1,107 @@
 <div class="config__config">
     <p class="config__title">Конфигурация</p>
 
-    <ul class="sections">
-        <li class="sections__item"><button class="sections__button is-active" type="button" data-target="1">Платформа</button></li>
-        <li class="sections__item"><button class="sections__button" type="button" data-target="2">Хранение данных</button></li>
-        <li class="sections__item"><button class="sections__button" type="button" data-target="3">Опции</button></li>
-        <li class="sections__item"><button class="sections__button" type="button" data-target="4">Внешний вид</button></li>
-        <li class="sections__item"><button class="sections__button" type="button" data-target="5">Сервис</button></li>
-    </ul>
+    <!--TODO-->
+    <div class="sections-wrapper">
+        <div class="sections">
+            <div class="sections__inner">
+                <ul class="sections__list">
+                    <li class="sections__item"><button class="sections__button is-active" type="button" data-target="1">Платформа</button></li>
+                    <li class="sections__item"><button class="sections__button" type="button" data-target="2">Хранение данных</button></li>
+                    <li class="sections__item"><button class="sections__button" type="button" data-target="3">Опции</button></li>
+                    <li class="sections__item"><button class="sections__button" type="button" data-target="4">Внешний вид</button></li>
+                    <li class="sections__item"><button class="sections__button" type="button" data-target="5">Сервис</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--TODO-->
 
     <div class="js-tab" data-target="1">
         <ul class="components">
             <li class="components__item">
                 <div class="components-dropdown">
-                    <div class="components-dropdown__top">
-                        <button class="js-components-list-closer components-dropdown__close" type="button" title="Закрыть">
-                            <svg aria-hidden="true">
-                                <use xlink:href="#close" />
-                            </svg>
-                        </button>
-                        <!--TODO-->
-                        <button class="components-dropdown__reset" type="button">
-                            <svg aria-hidden="true">
-                                <use xlink:href="#delete_trash_2" />
-                            </svg>
-                            <span>Очистить</span>
-                        </button>
-                        <!--TODO-->
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="switch__icon"></span>
-                            Показать спец. серии
-                        </label>
-                    </div>
-                    <div class="components-dropdown__tabs">
-                        <div class="js-components-tabs swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <button class="components-dropdown__tab is-active" type="button">MSI</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="components-dropdown__tab" type="button">Aorus</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="components-dropdown__tab" type="button">Rog</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="components-dropdown__tab" type="button">Tuf</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="components-dropdown__tab" type="button">MSI</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="components-dropdown__tab" type="button">Aorus</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="components-dropdown__tab" type="button">Rog</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="components-dropdown__tab" type="button">Tuf</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="components-dropdown__tab" type="button">MSI</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="components-dropdown__tab" type="button">Aorus</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="components-dropdown__tab" type="button">Rog</button>
-                                </div>
-                                <div class="swiper-slide">
-                                    <button class="components-dropdown__tab" type="button">Tuf</button>
+
+                    <!--TODO-->
+                    <div class="components-dropdown__top-wrapper">
+                        <div class="components-dropdown__top">
+                            <button class="js-components-list-closer components-dropdown__close" type="button" title="Закрыть">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#close" />
+                                </svg>
+                            </button>
+
+                            <p class="components-dropdown__top-title">Материнские платы</p>
+
+                            <button class="components-dropdown__reset" type="button">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#delete_trash_2" />
+                                </svg>
+                                <span>Очистить</span>
+                            </button>
+
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="switch__icon"></span>
+                                Показать спец. серии
+                            </label>
+                        </div>
+
+                        <div class="components-dropdown__tabs">
+                            <div class="js-components-tabs swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab is-active" type="button">MSI</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Aorus</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Rog</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Tuf</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">MSI</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Aorus</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Rog</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Tuf</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">MSI</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Aorus</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Rog</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Tuf</button>
+                                    </div>
                                 </div>
                             </div>
+                            <button class="swiper-button-prev" type="button" title="Назад">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#arrow_left" />
+                                </svg>
+                            </button>
+                            <button class="swiper-button-next" type="button" title="Вперёд">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#arrow_right" />
+                                </svg>
+                            </button>
                         </div>
-                        <button class="swiper-button-prev" type="button" title="Назад">
-                            <svg aria-hidden="true">
-                                <use xlink:href="#arrow_left" />
-                            </svg>
-                        </button>
-                        <button class="swiper-button-next" type="button" title="Вперёд">
-                            <svg aria-hidden="true">
-                                <use xlink:href="#arrow_right" />
-                            </svg>
-                        </button>
                     </div>
+                    <!--TODO-->
+
                     <div class="components-dropdown__list-outer">
                         <ul class="components-dropdown__list">
                             <li class="components-dropdown__list-item">
@@ -640,26 +657,92 @@
             </li>
             <li class="components__item">
                 <div class="components-dropdown">
-                    <div class="components-dropdown__top">
-                        <button class="js-components-list-closer components-dropdown__close" type="button" title="Закрыть">
-                            <svg aria-hidden="true">
-                                <use xlink:href="#close" />
-                            </svg>
-                        </button>
-                        <!--TODO-->
-                        <button class="components-dropdown__reset" type="button">
-                            <svg aria-hidden="true">
-                                <use xlink:href="#delete_trash_2" />
-                            </svg>
-                            <span>Очистить</span>
-                        </button>
-                        <!--TODO-->
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="switch__icon"></span>
-                            Показать спец. серии
-                        </label>
+
+                    <!--TODO-->
+                    <div class="components-dropdown__top-wrapper">
+                        <div class="components-dropdown__top">
+                            <button class="js-components-list-closer components-dropdown__close" type="button" title="Закрыть">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#close" />
+                                </svg>
+                            </button>
+
+                            <p class="components-dropdown__top-title">Видеокарта</p>
+
+                            <button class="components-dropdown__reset" type="button">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#delete_trash_2" />
+                                </svg>
+                                <span>Очистить</span>
+                            </button>
+
+                            <div class="components-dropdown__tabs-2">
+                                <button class="components-dropdown__tab is-active" type="button">INTEL</button>
+                                <button class="components-dropdown__tab" type="button">AMD</button>
+                            </div>
+
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="switch__icon"></span>
+                                Показать спец. серии
+                            </label>
+                        </div>
+
+                        <div class="components-dropdown__tabs">
+                            <div class="js-components-tabs swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab is-active" type="button">MSI</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Aorus</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Rog</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Tuf</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">MSI</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Aorus</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Rog</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Tuf</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">MSI</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Aorus</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Rog</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="components-dropdown__tab" type="button">Tuf</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="swiper-button-prev" type="button" title="Назад">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#arrow_left" />
+                                </svg>
+                            </button>
+                            <button class="swiper-button-next" type="button" title="Вперёд">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#arrow_right" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
+                    <!--TODO-->
+
                     <div class="components-dropdown__list-outer">
                         <ul class="components-dropdown__list">
                             <li class="components-dropdown__list-item">
@@ -912,26 +995,32 @@
             </li>
             <li class="components__item">
                 <div class="components-dropdown">
-                    <div class="components-dropdown__top">
-                        <button class="js-components-list-closer components-dropdown__close" type="button" title="Закрыть">
-                            <svg aria-hidden="true">
-                                <use xlink:href="#close" />
-                            </svg>
-                        </button>
-                        <!--TODO-->
-                        <button class="components-dropdown__reset" type="button">
-                            <svg aria-hidden="true">
-                                <use xlink:href="#delete_trash_2" />
-                            </svg>
-                            <span>Очистить</span>
-                        </button>
-                        <!--TODO-->
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="switch__icon"></span>
-                            Показать спец. серии
-                        </label>
+                    <!--TODO-->
+                    <div class="components-dropdown__top-wrapper">
+                        <div class="components-dropdown__top">
+                            <button class="js-components-list-closer components-dropdown__close" type="button" title="Закрыть">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#close" />
+                                </svg>
+                            </button>
+
+                            <p class="components-dropdown__top-title">Процессор</p>
+
+                            <button class="components-dropdown__reset" type="button">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#delete_trash_2" />
+                                </svg>
+                                <span>Очистить</span>
+                            </button>
+
+                            <div class="components-dropdown__tabs-2">
+                                <button class="components-dropdown__tab is-active" type="button">INTEL</button>
+                                <button class="components-dropdown__tab" type="button">AMD</button>
+                            </div>
+                        </div>
                     </div>
+                    <!--TODO-->
+
                     <div class="components-dropdown__list-outer">
                         <ul class="components-dropdown__list">
                             <li class="components-dropdown__list-item">
@@ -1389,18 +1478,33 @@
             </li>
             <li class="components__item">
                 <div class="components-dropdown">
-                    <div class="components-dropdown__top">
-                        <button class="js-components-list-closer components-dropdown__close" type="button" title="Закрыть">
-                            <svg aria-hidden="true">
-                                <use xlink:href="#close" />
-                            </svg>
-                        </button>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="switch__icon"></span>
-                            Показать спец. серии
-                        </label>
+
+                    <!--TODO-->
+                    <div class="components-dropdown__top-wrapper">
+                        <div class="components-dropdown__top">
+                            <button class="js-components-list-closer components-dropdown__close" type="button" title="Закрыть">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#close" />
+                                </svg>
+                            </button>
+
+                            <p class="components-dropdown__top-title">Процессор</p>
+
+                            <button class="components-dropdown__reset" type="button">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#delete_trash_2" />
+                                </svg>
+                                <span>Очистить</span>
+                            </button>
+
+                            <div class="components-dropdown__tabs-2">
+                                <button class="components-dropdown__tab is-active" type="button">INTEL</button>
+                                <button class="components-dropdown__tab" type="button">AMD</button>
+                            </div>
+                        </div>
                     </div>
+                    <!--TODO-->
+
                     <div class="components-dropdown__list-outer">
                         <ul class="components-dropdown__list">
                             <li class="components-dropdown__list-item">
@@ -1528,18 +1632,33 @@
             </li>
             <li class="components__item">
                 <div class="components-dropdown">
-                    <div class="components-dropdown__top">
-                        <button class="js-components-list-closer components-dropdown__close" type="button" title="Закрыть">
-                            <svg aria-hidden="true">
-                                <use xlink:href="#close" />
-                            </svg>
-                        </button>
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="switch__icon"></span>
-                            Показать спец. серии
-                        </label>
+
+                    <!--TODO-->
+                    <div class="components-dropdown__top-wrapper">
+                        <div class="components-dropdown__top">
+                            <button class="js-components-list-closer components-dropdown__close" type="button" title="Закрыть">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#close" />
+                                </svg>
+                            </button>
+
+                            <p class="components-dropdown__top-title">Процессор</p>
+
+                            <button class="components-dropdown__reset" type="button">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#delete_trash_2" />
+                                </svg>
+                                <span>Очистить</span>
+                            </button>
+
+                            <div class="components-dropdown__tabs-2">
+                                <button class="components-dropdown__tab is-active" type="button">INTEL</button>
+                                <button class="components-dropdown__tab" type="button">AMD</button>
+                            </div>
+                        </div>
                     </div>
+                    <!--TODO-->
+
                     <div class="components-dropdown__list-outer">
                         <ul class="components-dropdown__list">
                             <li class="components-dropdown__list-item">

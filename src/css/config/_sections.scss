@@ -1,51 +1,157 @@
-.sections {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 16px 0 0;
-    position: relative;
-    z-index: 1;
-    @media(min-width: $fhd) {
-        margin-bottom: 8px;
+.sections-wrapper {
+    background-color: #0C1117;
+    min-height: 84px;
+    margin-bottom: 16px;
+    @media(min-width: $hd) {
+        background-color: transparent;
+        margin-bottom: 0;
+        min-height: 0;
     }
-    @media(min-width: $ufhd) {
-        margin-bottom: 20px;
+}
+
+.sections {
+    background-color: #0C1117;
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 12px;
+    @media(min-width: $hd) {
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+    }
+
+    &.fixed {
+        left: 0;
+        position: fixed;
+        padding: 12px 24px;
+        right: 0;
+        top: 0;
+        z-index: 3;
+        @media(min-width: $hd) {
+            left: auto;
+            position: static;
+            padding: 0;
+            right: auto;
+            top: auto;
+            z-index: auto;
+        }
+    }
+
+    &__inner {
+        background-color: #0C1117;
+        border-radius: 30px;
+        box-shadow: 0 0 8px 0 rgba(#fff, 0.7);
+        height: 60px;
+        padding: 8px 32px;
+        position: relative;
+        z-index: 1;
+        @media(min-width: $hd) {
+            background-color: transparent;
+            border-radius: 0;
+            box-shadow: none;
+            height: auto;
+            margin: 0;
+            padding: 16px 0 0;
+        }
+        @media(min-width: $fhd) {
+            margin-bottom: 8px;
+        }
+        @media(min-width: $ufhd) {
+            margin-bottom: 20px;
+        }
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 10px;
+            height: 10px;
+            border-bottom: 2px solid #fff;
+            border-left: 2px solid #fff;
+            @media(min-width: $hd) {
+                display: none;
+            }
+        }
+
+        &::before {
+            left: 22px;
+            transform: translate(-50%,-50%) rotate(45deg);
+        }
+
+        &::after {
+            left: auto;
+            right: 22px;
+            transform: translate(50%,-50%) rotate(-135deg);
+        }
+    }
+
+    &__list {
+        align-items: center;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        overflow-x: auto;
+        position: relative;
+        padding: 0;
+        scrollbar-width: none;
+        @media(min-width: $hd) {
+            flex-wrap: wrap;
+            overflow-x: visible;
+        }
     }
 
     &__item {
-        margin-bottom: 12px;
+        flex-grow: 1;
+        @media(min-width: $hd) {
+            flex-grow: 0;
+            margin-bottom: 12px;
+        }
 
         &:not(:last-child) {
-            margin-right: 16px;
+            margin-right: 12px;
+            @media(min-width: $hd) {
+                margin-right: 16px;
+            }
         }
     }
 
     &__button {
-        background-color: rgba(#5474B4, 0.2);
+        background-color: rgba(#5793EA, 0.2);
         border: 2px solid transparent;
-        border-radius: 48px;
+        border-radius: 22px;
         color: #fff;
         cursor: pointer;
-        font-size: 12px;
+        font-size: 16px;
         font-weight: 600;
-        height: 24px;
-        line-height: 1,66666;
-        padding: 0 13px;
+        height: 44px;
+        line-height: 1.66666;
+        padding: 0 20px;
         transition: background-color 0.3s, border-color 0.3s;
+        white-space: nowrap;
+        width: 100%;
+        @media(min-width: $hd) {
+            border-radius: 12px;
+            font-size: 12px;
+            height: 24px;
+            line-height: 1.66666;
+            padding: 0 13px;
+        }
         @media(min-width: $fhd) {
+            border-radius: 20px;
             font-size: 18px;
             height: 40px;
             line-height: 1.11111;
             padding: 0 32px;
         }
         @media(min-width: $ufhd) {
+            border-radius: 28px;
             font-size: 20px;
             height: 56px;
             line-height: 1.2;
         }
         @media(min-width: $q) and (min-height: 1800px) {
+            border-radius: 32px;
             font-size: 24px;
             height: 64px;
         }
@@ -53,7 +159,7 @@
         &:active,
         &:focus,
         &:hover {
-            border-color: #5474B4;
+            border-color: #5793EA;
         }
 
         &.is-active {

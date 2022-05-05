@@ -1,12 +1,15 @@
 .components {
-    display: flex;
-    flex-wrap: wrap;
     list-style: none;
     margin: 0 -4px;
-    max-width: 740px;
     padding: 0;
-    position: relative;
-    z-index: 2;
+    @media(min-width: $hd) {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 740px;
+        padding: 0;
+        position: relative;
+        z-index: 2;
+    }
     @media(min-width: $fhd) {
         max-width: 1060px;
     }
@@ -27,9 +30,14 @@
         padding-right: 4px;
         padding-left: 4px;
         margin-bottom: 12px;
-        max-width: 244px;
-        position: relative;
-        width: calc(100% / 3);
+        @media(min-width: $hd) {
+            padding-right: 4px;
+            padding-left: 4px;
+            margin-bottom: 12px;
+            max-width: 244px;
+            position: relative;
+            width: calc(100% / 3);
+        }
         @media(min-width: $fhd) {
             max-width: 352px;
         }
@@ -50,34 +58,63 @@
         &:nth-child(2),
         &:nth-child(5) {
             .components-dropdown {
-                left: 50%;
-                transform: translate(-50%, -100%);
+                @media(min-width: $hd) {
+                    left: 50%;
+                    transform: translate(-50%, -100%);
+                }
             }
         }
 
         &:nth-child(3),
         &:nth-child(6) {
             .components-dropdown {
-                left: auto;
-                right: 0;
+                @media(min-width: $hd) {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+
+        &:last-child {
+            @media(max-width: $hd - 1) {
+                margin-bottom: 0;
             }
         }
     }
 }
 
 .components-dropdown {
+    bottom: 0;
     background-color: #0C1117;
-    box-shadow: 0 0 8px 0 rgba(#fff, 0.3);
+    box-shadow: 0 0 12px 0 #5474B4;
     border-radius: 8px;
     display: none;
-    left: 4px;
-    max-width: 750px;
-    position: absolute;
-    padding-top: 4px;
+    height: calc(100% - 12px);
+    left: 0;
+    overflow-y: auto;
+    position: fixed;
     padding-bottom: 4px;
-    transform: translateY(-100%);
-    top: -20px;
-    z-index: 2;
+    right: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+    top: auto;
+    z-index: 100;
+    @media(min-width: $hd) {
+        bottom: auto;
+        box-shadow: 0 0 8px 0 rgba(#fff, 0.3);
+        border-radius: 8px;
+        display: none;
+        height: auto;
+        left: 4px;
+        max-width: 750px;
+        overflow-y: visible;
+        position: absolute;
+        padding-bottom: 4px;
+        right: auto;
+        transform: translateY(-100%);
+        top: -20px;
+        z-index: 2;
+    }
     @media(min-width: $fhd) {
         min-width: 354px;
         max-width: 1054px;
@@ -93,15 +130,44 @@
         max-width: 1460px !important;
     }
 
+    &.is-open {
+        transform: translateY(0);
+        @media(min-width: $hd) {
+            transform: translateY(-100%);
+        }
+    }
+
+    &__top-wrapper {
+        background-color: #0C1117;
+        border-radius: 8px 8px 0 0;
+        padding: 0 8px 8px;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        @media(min-width: $hd) {
+            background-color: transparent;
+            border-radius: 0;
+            position: static;
+            z-index: auto;
+        }
+    }
+
     &__top {
         align-items: center;
         display: flex;
         flex-direction: row-reverse;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding-left: 8px;
-        padding-right: 8px;
-        padding-bottom: 8px;
+    }
+
+    &__top-title {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 8px 0 0;
+        white-space: nowrap;
+        @media(min-width: $hd) {
+            display: none;
+        }
     }
 
     &__close {
@@ -111,13 +177,18 @@
         background-color: rgba(#fff, 0.1);
         cursor: pointer;
         display: flex;
-        height: 32px;
+        height: 40px;
         justify-content: center;
-        min-width: 32px;
+        min-width: 40px;
         margin-top: 8px;
         padding: 0;
         transition: background-color 0.3s;
-        width: 32px;
+        width: 40px;
+        @media(min-width: $hd) {
+            height: 32px;
+            min-width: 32px;
+            width: 32px;
+        }
 
         &:hover {
             background-color: rgba(#fff, 0.3);
@@ -125,8 +196,12 @@
 
         svg {
             fill: #fff;
-            height: 12px;
-            width: 12px;
+            height: 14px;
+            width: 14px;
+            @media(min-width: $hd) {
+                height: 12px;
+                width: 12px;
+            }
         }
     }
 
@@ -134,21 +209,27 @@
         align-items: center;
         border-radius: 2px;
         border: none;
-        background-color: rgba(#fff, 0.2);
+        background-color: rgba(#fff, 0.1);
         color: #fff;
         cursor: pointer;
         display: flex;
         font-size: 12px;
         font-weight: 700;
-        height: 32px;
+        height: 40px;
         justify-content: center;
-        min-width: 32px;
+        min-width: 40px;
         margin-top: 8px;
-        margin-left: auto;
-        margin-right: 24px;
-        padding: 4px 16px;
+        padding: 0;
         transition: background-color 0.3s;
-        width: 128px;
+        width: 40px;
+        @media(min-width: $hd) {
+            background-color: rgba(#fff, 0.2);
+            height: 32px;
+            margin-left: auto;
+            margin-right: 24px;
+            padding: 4px 16px;
+            width: 128px;
+        }
 
         &:hover {
             background-color: rgba(#fff, 0.3);
@@ -156,12 +237,20 @@
 
         svg {
             fill: #fff;
-            height: 24px;
-            width: 24px;
+            height: 30px;
+            width: 30px;
+            @media(min-width: $hd) {
+                height: 24px;
+                width: 24px;
+            }
         }
 
         span {
+            display: none;
             margin-left: 10px;
+            @media(min-width: $hd) {
+                display: block;
+            }
         }
     }
 
@@ -176,41 +265,53 @@
     }
 
     &__list-outer {
-        display: flex;
-        max-height: 316px;
-        overflow: auto;
-        scrollbar-width: thin;
-        scrollbar-color: #5793ea rgba(#5793ea, 0.2);
-        scrollbar-gutter: stable both-edges;
+        @media(min-width: $hd) {
+            display: flex;
+            max-height: 316px;
+            overflow: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #5793ea rgba(#5793ea, 0.2);
+            scrollbar-gutter: stable both-edges;
+        }
         @media(min-width: $q) and (min-height: 1400px) {
             max-height: 760px;
         }
 
         &::-webkit-scrollbar {
-            height: 6px;
-            opacity: 0;
-            width: 6px;
+            @media(min-width: $hd) {
+                height: 6px;
+                opacity: 0;
+                width: 6px;
+            }
         }
 
         &::-webkit-scrollbar-track {
-            background-color: transparent;
-            border-radius: 3px;
-            transition: background-color 0.3s;
+            @media(min-width: $hd) {
+                background-color: transparent;
+                border-radius: 3px;
+                transition: background-color 0.3s;
+            }
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color: transparent;
-            border-radius: 3px;
-            transition: background-color 0.3s;
+            @media(min-width: $hd) {
+                background-color: transparent;
+                border-radius: 3px;
+                transition: background-color 0.3s;
+            }
         }
 
         &:hover {
             &::-webkit-scrollbar-track {
-                background-color: rgba(#5793ea, 0.2);
+                @media(min-width: $hd) {
+                    background-color: rgba(#5793ea, 0.2);
+                }
             }
 
             &::-webkit-scrollbar-thumb {
-                background-color: #5793ea;
+                @media(min-width: $hd) {
+                    background-color: #5793ea;
+                }
             }
         }
     }
@@ -226,9 +327,11 @@
     }
 
     &__tabs {
-        max-width: 360px;
-        padding: 4px 36px 8px;
+        padding: 8px 36px;
         position: relative;
+        @media(min-width: $hd) {
+            max-width: 360px;
+        }
 
         .swiper-container {
             margin: 0;
@@ -291,6 +394,22 @@
             background-color: rgba(#fff, 0.2);
         }
     }
+
+    &__tabs-2 {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+        width: 100%;
+        @media(min-width: $hd) {
+            display: none;
+        }
+
+        .components-dropdown__tab {
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+    }
 }
 
 .component {
@@ -300,8 +419,7 @@
     color: #fff;
     cursor: pointer;
     display: flex;
-    min-height: 56px;
-    min-width: 232px;
+    min-height: 80px;
     overflow: hidden;
     position: relative;
     padding: 0;
@@ -310,6 +428,10 @@
     user-select: none;
     width: 100%;
     z-index: 2;
+    @media(min-width: $hd) {
+        min-height: 56px;
+        min-width: 232px;
+    }
     @media(min-width: $fhd) {
         min-height: 88px;
         min-width: 334px;
@@ -325,9 +447,18 @@
     }
 
     &--type_1 {
+        .component__logo {
+            @media(max-width: $hd - 1) {
+                display: none;
+            }
+        }
+
         .component__qnt {
             opacity: 0;
             transition: opacity 0.3s;
+            @media(max-width: $hd - 1) {
+                opacity: 1;
+            }
         }
 
         &.is-active {
@@ -336,7 +467,6 @@
     }
 
     &--type_2 {
-        //border: 1px solid transparent;
         box-shadow: 0 0 8px 0 rgba(#fff, 0.3);
 
         &.is-active {
@@ -383,7 +513,6 @@
     &::after {
         background: inherit;
         border-radius: 4px;
-        //margin: 2px;
         top: 0;
         right: 0;
         bottom: 0;
@@ -395,7 +524,7 @@
     &:focus,
     &:hover {
         box-shadow: 0 0 6px 0 #fff;
-        //background-color: rgba(56,56,56,0.9);
+
         &::before {
             opacity: 0.6;
         }
@@ -459,8 +588,12 @@
         align-items: center;
         display: flex;
         justify-content: center;
-        height: 56px;
-        padding: 12px 8px 12px 12px;
+        height: 80px;
+        padding: 8px;
+        @media(min-width: $hd) {
+            height: 56px;
+            padding: 20px 16px 20px 20px;
+        }
         @media(min-width: $fhd) {
             height: 88px;
             padding: 20px 16px 20px 20px;
@@ -472,8 +605,12 @@
 
         svg {
             fill: #fff;
-            height: 32px;
-            width: 32px;
+            height: 40px;
+            width: 40px;
+            @media(min-width: $hd) {
+                height: 32px;
+                width: 32px;
+            }
             @media(min-width: $fhd) {
                 height: 48px;
                 width: 48px;
@@ -486,8 +623,12 @@
     }
 
     &__text {
-        padding-top: 6px;
-        padding-bottom: 6px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        @media(min-width: $hd) {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
         @media(min-width: $fhd) {
             padding-top: 16px;
             padding-bottom: 16px;
@@ -500,10 +641,14 @@
 
     &__title {
         display: block;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 700;
         line-height: 1.33333;
-        margin-bottom: 4px;
+        margin-bottom: 8px;
+        @media(min-width: $hd) {
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
         @media(min-width: $fhd) {
             font-size: 18px;
             line-height: 1.11111;
@@ -519,8 +664,12 @@
 
     &__info {
         display: block;
-        font-size: 8px;
-        line-height: 1.5;
+        font-size: 12px;
+        line-height: 1.33333;
+        @media(min-width: $hd) {
+            font-size: 8px;
+            line-height: 1.5;
+        }
         @media(min-width: $fhd) {
             font-size: 12px;
             line-height: 1.33333;

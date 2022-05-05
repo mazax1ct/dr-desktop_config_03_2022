@@ -1,6 +1,13 @@
 <div class="card">
     <div class="card__title-block">
         <p class="card__title">PROGAMING M</p>
+        <!--TODO-->
+        <button class="js-graphs-opener card__graphs-opener" type="button" title="Графики производительности">
+            <svg aria-hidden="true">
+                <use xlink:href="#graphs"></use>
+            </svg>
+        </button>
+        <!--TODO-->
         <p class="card__rating">
             <svg aria-hidden="true">
                 <use xlink:href="#star"></use>
@@ -100,6 +107,51 @@
                 36 777 / мес.
             </p>
         </div>
-        <a class="js-popup-opener card__buy-button" href="#" data-popup="js-popup-cart">Купить</a>
+
+        <!--TODO-->
+        <button class="card__chat-button" type="button">
+            <svg aria-hidden="true">
+                <use xlink:href="#chat"></use>
+            </svg>
+        </button>
+        <!--TODO-->
+
+        <a class="js-popup-opener card__buy-button" href="#" data-popup="js-popup-cart">
+            <svg aria-hidden="true">
+                <use xlink:href="#cart"></use>
+            </svg>
+            <span>Купить</span>
+        </a>
+
+        <!--TODO-->
+        <div class="card__omni-block">
+            <button class="js-omni-toggler card__omni-opener" type="button">
+                <svg aria-hidden="true">
+                    <use xlink:href="#kebab"></use>
+                </svg>
+            </button>
+            <div class="card__omni-dropdown">
+                <button class="card__omni-button" type="button">Следить за ценой</button>
+                <button class="js-popup-opener card__omni-button" type="button" data-popup="js-popup-save">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#save"></use>
+                    </svg>
+                    Сохранить
+                </button>
+                <button class="js-popup-opener card__omni-button" type="button" data-popup="js-popup-share">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#share"></use>
+                    </svg>
+                    Поделиться
+                </button>
+                <button class="js-popup-opener card__omni-button" type="button" data-popup="js-popup-consult">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#consult"></use>
+                    </svg>
+                    Консультация
+                </button>
+            </div>
+        </div>
+        <!--TODO-->
     </div>
 </div>

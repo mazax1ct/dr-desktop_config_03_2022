@@ -5,17 +5,24 @@
     border-right: none;
     color: #fff;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.5;
+    letter-spacing: 0.2px;
     left: auto;
     max-width: 590px;
     position: fixed;
     padding: 24px;
     right: 0;
-    transform: translateX(100%);
-    top: 64px;
+    transform: translate(100%, -50%);
+    top: 50%;
     transition: transform 0.3s, box-shadow 0.3s;
+    width: 77.86666%;
     z-index: 10;
+    @media(min-width: $hd) {
+        font-weight: 700;
+        top: 64px;
+        transform: translate(100%, 0);
+    }
     @media(min-width: 2500px) {
         font-size: 20px;
         top: 128px;
@@ -23,7 +30,10 @@
 
     &.is-active {
         box-shadow: 0 4px 8px 0 #5474B4;
-        transform: translateX(0);
+        transform: translate(0, -50%);
+        @media(min-width: $hd) {
+            transform: translate(0, 0);
+        }
     }
 
     &__buttons {

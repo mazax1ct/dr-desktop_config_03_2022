@@ -15,8 +15,15 @@ html {
 
 body {
     background-color: #020405;
-    background: radial-gradient(75.27% 79.03% at 24.73% -1.56%, #020405 0%, #2D2E45 47.19%, #242739 56.71%, #020405 100%);
     min-height: 100vh;
+    overflow-x: hidden;
+    @media(min-width: $hd) {
+        background: radial-gradient(75.27% 79.03% at 24.73% -1.56%, #020405 0%, #2D2E45 47.19%, #242739 56.71%, #020405 100%);
+    }
+}
+
+.overflow {
+    overflow: hidden;
 }
 
 *,
