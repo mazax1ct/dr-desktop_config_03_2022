@@ -1,11 +1,21 @@
 .cart-buttons {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
 
     .button {
-        min-width: 250px;
+        min-width: 148px;
+        @media(min-width: $hd) {
+            min-width: 250px;
+        }
 
         &:not(:last-child) {
-            margin-bottom: 32px;
+            margin-bottom: 24px;
+            @media(min-width: $hd) {
+                margin-bottom: 32px;
+            }
         }
     }
 }

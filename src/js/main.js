@@ -49,55 +49,132 @@ $(document).on('click', '.sections__button', function () {
 
 //открытие попапа
 $(document).on('click', '.js-popup-opener', function () {
+  $('body').addClass('overflow');
   var popup = $(this).attr('data-popup');
-  $('.popup').hide();
-  $('.' + popup).show();
   $('.popup-shade').fadeIn();
-  if(popup === 'js-popup-test') {
-    //обновление свайпера
-    testsSlider.update();
-    testsSlider2.update();
-  }
+
+  $('.popup').removeClass('is-open').fadeOut(300, function () {
+    setTimeout(function() {
+      $('.' + popup).fadeIn(300, function () {
+        $(this).addClass('is-open');
+
+        if(popup === 'js-popup-test') {
+          //обновление свайпера
+          testsSlider.update();
+          testsSlider2.update();
+          testsSlider3.update();
+          testsSlider4.update();
+        }
+      });
+    },300);
+  });
+
   return false;
 });
 
 //закрытие попапа
 $(document).on('click', '.js-popup-closer', function () {
+  $('body').removeClass('overflow');
   $('.popup-shade').fadeOut();
-  $('.popup').hide();
+  $('.popup').removeClass('is-open').fadeOut();
   return false;
 });
 
-//откртие фильтра
+//открытие фильтра
 $(document).on('click', '.js-filter-opener', function () {
-  $('.tests-filter').addClass('is-open');
+  $('.popup').scrollTop(0);
+  setTimeout(function() {
+    $('.popup').addClass('overflow');
+    $('.tests-filter').addClass('is-open');
+  },300);
   return false;
 });
 
 //закрытие фильтра
 $(document).on('click', '.js-filter-closer', function () {
   $('.tests-filter').removeClass('is-open');
+  $('.popup').removeClass('overflow');
   return false;
 });
 
 const testsSlider = new Swiper('.js-tests-slider', {
     loop: true,
     navigation: {
-        nextEl: '.js-tests-next',
-        prevEl: '.js-tests-prev',
+        nextEl: '#tests_1_next',
+        prevEl: '#tests_1_prev',
     },
-    slidesPerView: 10,
-    spaceBetween: 12
+    slidesPerView: 5,
+    spaceBetween: 8,
+    breakpoints: {
+      768: {
+        slidesPerView: 7,
+        spaceBetween: 9
+      },
+      1200: {
+        slidesPerView: 10,
+        spaceBetween: 12,
+      }
+    }
 });
 
 const testsSlider2 = new Swiper('.js-tests-slider-2', {
     loop: true,
     navigation: {
-        nextEl: '.js-tests-next',
-        prevEl: '.js-tests-prev',
+      nextEl: '#tests_2_next',
+      prevEl: '#tests_2_prev',
     },
-    slidesPerView: 10,
-    spaceBetween: 12
+    slidesPerView: 5,
+    spaceBetween: 8,
+    breakpoints: {
+      768: {
+        slidesPerView: 7,
+        spaceBetween: 9
+      },
+      1200: {
+        slidesPerView: 10,
+        spaceBetween: 12,
+      }
+    }
+});
+
+const testsSlider3 = new Swiper('.js-tests-slider-3', {
+    loop: false,
+    navigation: {
+      nextEl: '#tests_3_next',
+      prevEl: '#tests_3_prev',
+    },
+    slidesPerView: 5,
+    spaceBetween: 8,
+    breakpoints: {
+      768: {
+        slidesPerView: 7,
+        spaceBetween: 9
+      },
+      1200: {
+        slidesPerView: 10,
+        spaceBetween: 12,
+      }
+    }
+});
+
+const testsSlider4 = new Swiper('.js-tests-slider-4', {
+    loop: false,
+    navigation: {
+      nextEl: '#tests_4_next',
+      prevEl: '#tests_4_prev',
+    },
+    slidesPerView: 5,
+    spaceBetween: 8,
+    breakpoints: {
+      768: {
+        slidesPerView: 7,
+        spaceBetween: 9
+      },
+      1200: {
+        slidesPerView: 10,
+        spaceBetween: 12,
+      }
+    }
 });
 
 //переключение тестов
@@ -110,6 +187,8 @@ $(document).on('click', '.js-tests', function () {
 
   testsSlider.update();
   testsSlider2.update();
+  testsSlider3.update();
+  testsSlider4.update();
   return false;
 });
 
@@ -161,7 +240,7 @@ $(document).on('click', '.js-graphs-closer', function () {
 //омниблок в карточке
 $(document).on('click', '.js-omni-toggler', function () {
   $('.card__omni-dropdown').toggleClass('is-open');
-  return falsel
+  return false;
 });
 
 //залипание секций на мобиле

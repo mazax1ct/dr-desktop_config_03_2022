@@ -444,6 +444,14 @@
             <path d="M13.2,19.6c-0.2,0-0.4-0.1-0.5-0.2c-3.5-3.5-4.4-6.9-2.3-9c0.3-0.3,0.8-0.3,1.1,0c0.3,0.3,0.3,0.8,0,1.1c-1.7,1.7,0.2,4.7,2.3,6.9c0.3,0.3,0.3,0.8,0,1.1C13.6,19.5,13.4,19.6,13.2,19.6z" />
             <path d="M17.5,18.8c-0.1,0-0.3,0-0.4-0.1c-0.7-0.4-1.4-1-2.1-1.7c-0.7-0.7-1.2-1.4-1.7-2.1c-0.2-0.4-0.1-0.8,0.2-1c0.3-0.2,0.8-0.1,1,0.2c0.4,0.6,0.9,1.2,1.5,1.8c0.6,0.6,1.2,1.1,1.8,1.5c0.3,0.2,0.5,0.7,0.2,1C18,18.7,17.7,18.8,17.5,18.8z" />
         </symbol>
+        <symbol id="vk" viewBox="0 0 24 24">
+            <path d="M16.5,21.8h-9c-2.9,0-5.2-2.4-5.2-5.2v-9c0-2.9,2.4-5.3,5.3-5.3h9c2.9,0,5.2,2.4,5.2,5.2v9C21.8,19.4,19.4,21.8,16.5,21.8z M7.5,3.8c-2.1,0-3.8,1.7-3.8,3.8v9c0,2.1,1.7,3.7,3.7,3.7h9c2.1,0,3.7-1.7,3.7-3.7v-9c0-2.1-1.7-3.7-3.7-3.7H7.5z" />
+            <path
+              d="M11.9,16.5c-1.6,0-3.1-0.9-4.2-2.5c-1.5-2-2-3.7-2-4.3c0-0.4,0.3-0.8,0.8-0.8s0.8,0.3,0.8,0.8c0,0.2,0.4,1.6,1.7,3.5c0.6,0.9,1.4,1.5,2.2,1.7l0-4.5h-0.5c-0.4,0-0.8-0.3-0.8-0.8s0.3-0.8,0.8-0.8h1.2c0.4,0,0.8,0.3,0.8,0.8v6.1C12.6,16.1,12.3,16.5,11.9,16.5z" />
+            <path
+              d="M16.7,16.5c-0.3,0-0.5-0.2-0.7-0.4c0,0-0.4-0.9-1.2-1.8c-0.4-0.5-1.1-0.8-1.6-0.8c-0.4,0-0.8-0.3-0.8-0.8c0-0.4,0.3-0.8,0.8-0.8c0.6,0,1.2-0.3,1.6-0.8c0.8-0.9,1.2-1.8,1.2-1.8C16.2,9,16.6,8.8,17,9c0.4,0.2,0.5,0.6,0.4,1c0,0-0.5,1-1.5,2.1c-0.2,0.2-0.4,0.4-0.6,0.6c0.2,0.2,0.4,0.4,0.6,0.6c0.9,1.1,1.4,2.1,1.4,2.1c0.2,0.4,0,0.8-0.4,1C16.9,16.4,16.8,16.5,16.7,16.5z" />
+            <path d="M13.1,13.4h-1.2c-0.4,0-0.8-0.3-0.8-0.7c0-0.4,0.3-0.8,0.8-0.8h1.2c0.4,0,0.8,0.3,0.8,0.8C13.9,13.1,13.5,13.4,13.1,13.4z" />
+        </symbol>
         <symbol id="filter" viewBox="0 0 24 24">
             <path
               d="M10.5,20.7c-0.2,0-0.4,0-0.5-0.2c-0.3-0.2-0.5-0.5-0.5-0.8v-6.1L3,8.2C2.7,7.9,2.5,7.5,2.5,7V4.5C2.5,3.7,3.2,3,4,3h16c0.8,0,1.5,0.7,1.5,1.5V7c0,0.4-0.2,0.9-0.5,1.2l-6.5,5.4v4.3c0,0.6-0.3,1.1-0.8,1.3l-2.7,1.4C10.8,20.7,10.7,20.7,10.5,20.7z M4,4C3.7,4,3.5,4.2,3.5,4.5V7c0,0.1,0.1,0.3,0.2,0.4l6.6,5.5c0.1,0.1,0.2,0.2,0.2,0.4v6.4l2.7-1.4c0.2-0.1,0.3-0.3,0.3-0.4v-4.5c0-0.1,0.1-0.3,0.2-0.4l6.6-5.5c0.1-0.1,0.2-0.2,0.2-0.4V4.5C20.5,4.2,20.3,4,20,4H4z" />
@@ -819,7 +827,7 @@
                                 </svg>
                             </button>
                             <div class="card__omni-dropdown">
-                                <button class="card__omni-button" type="button">Следить за ценой</button>
+                                <button class="js-popup-opener card__omni-button" type="button" data-popup="js-popup-price">Следить за ценой</button>
                                 <button class="js-popup-opener card__omni-button" type="button" data-popup="js-popup-save">
                                     <svg aria-hidden="true">
                                         <use xlink:href="#save"></use>
@@ -3201,15 +3209,19 @@
             <div class="popup-shade__inner">
 
                 <div class="js-popup-spec popup popup--type_1">
-                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </button>
+                    <!--TODO-->
+                    <div class="popup__title-block ">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
                 
-                    <p class="popup__big-title">Спецификация</p>
+                        <p class="popup__title">Спецификация</p>
+                    </div>
+                    <!--TODO-->
+                
                     <div class="specification">
-                
                         <div class="specification__section">
                             <p>
                                 <b>Процессор:</b> AMD Ryzen R5 3600 6-и ядерный 3.6 GHz<br>
@@ -3259,7 +3271,6 @@
                         <div class="specification__section">
                             <p class="specification__section-title">Бесплатная доставка</p>
                         </div>
-                
                     </div>
                     <div class="specification-buttons">
                         <button class="js-popup-opener button button--type_1" type="button" data-popup="js-popup-spec-save">
@@ -3278,13 +3289,17 @@
                 </div>
                 
                 <div class="js-popup-spec-save popup popup--type_3">
-                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </button>
+                    <!--TODO-->
+                    <div class="popup__title-block">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
                 
-                    <p class="popup__title">Оставьте свой Email,<br> мы отправим вам<br> спецификацию</p>
+                        <p class="popup__title">Оставьте свой Email,<br> мы отправим вам<br> спецификацию</p>
+                    </div>
+                    <!--TODO-->
                 
                     <div class="spec-save">
                         <label class="input-label">
@@ -3304,13 +3319,17 @@
                 </div>
 
                 <div class="js-popup-consult popup popup--type_3">
-                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </button>
+                    <!--TODO-->
+                    <div class="popup__title-block">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
                 
-                    <p class="popup__title popup__title--type_1">Оставьте свой номер,<br> мы вам перезвоними</p>
+                        <p class="popup__title">Оставьте свой номер,<br> мы вам перезвоними</p>
+                    </div>
+                    <!--TODO-->
                 
                     <div class="consult-form">
                         <label class="input-label">
@@ -3331,13 +3350,17 @@
                 </div>
                 
                 <div class="js-popup-consult-finish popup popup--type_3">
-                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </button>
+                    <!--TODO-->
+                    <div class="popup__title-block">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
                 
-                    <p class="popup__title popup__title--type_1">Наш офис работает<br> с 10:00 до 20:00<br> Мы свяжемся с вами<br> в рабочее время</p>
+                        <p class="popup__title">Наш офис работает<br> с 10:00 до 20:00<br> Мы свяжемся с вами<br> в рабочее время</p>
+                    </div>
+                    <!--TODO-->
                 
                     <div class="consult-finish">
                         <div class="consult-finish__image">
@@ -3350,14 +3373,20 @@
                 </div>
 
                 <div class="js-popup-detail popup popup--type_1">
-                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </button>
+                    <!--TODO-->
+                    <div class="popup__title-block">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
                 
-                    <p class="popup__big-title">Технические характеристики</p>
+                        <p class="popup__title">Технические характеристики</p>
+                    </div>
+                    <!--TODO-->
+                
                     <p class="component-title">RTX 3070 8GB</p>
+                
                     <p class="component-code">Код производителя: KF436C17BBAK2/16CL</p>
                 
                     <div class="component-chars">
@@ -3473,19 +3502,27 @@
                 </div>
 
                 <div class="js-popup-test popup popup--type_2">
-                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </button>
+                    <!--TODO-->
+                    <div class="popup__title-block">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
                 
-                    <p class="popup__big-title">Тесты</p>
-                
-                    <div class="tests-sections">
-                        <button class="js-tests tests-sections__button is-active" type="button" data-target="1">Игры</button>
-                        <button class="js-tests tests-sections__button" type="button" data-target="2">Синтетика</button>
-                        <button class="js-tests tests-sections__button" type="button" data-target="3">Создание контента</button>
+                        <p class="popup__big-title">Тесты</p>
                     </div>
+                    <!--TODO-->
+                
+                    <!--TODO-->
+                    <div class="tests-sections">
+                        <div class="tests-sections__list">
+                            <button class="js-tests tests-sections__button is-active" type="button" data-target="1">Игры</button>
+                            <button class="js-tests tests-sections__button" type="button" data-target="2">Синтетика</button>
+                            <button class="js-tests tests-sections__button" type="button" data-target="3">Создание контента</button>
+                        </div>
+                    </div>
+                    <!--TODO-->
                 
                     <div class="js-tests-section" data-target="1">
                         <div class="tests-title-block">
@@ -3497,15 +3534,21 @@
                                     </svg>
                                     Фильтр игр
                                 </button>
+                
                                 <div class="tests-filter">
-                                    <button class="js-filter-closer tests-filter__close" type="button" title="Закрыть">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#close" />
-                                        </svg>
-                                    </button>
+                                    <!--TODO-->
+                                    <div class="tests-filter__title-block">
+                                        <p class="tests-filter__title">Жанры</p>
+                                        <button class="js-filter-closer tests-filter__close" type="button" title="Закрыть">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#close" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <!--TODO-->
+                
                                     <div class="tests-filter__inner">
                                         <div class="tests-filter__block">
-                                            <p class="tests-filter__title">жанры</p>
                                             <div class="tests-filter__checkboxes">
                                                 <label class="checkbox">
                                                     <input type="checkbox">
@@ -3603,7 +3646,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <!--TODO-->
+                
                                     <div class="tests-filter__buttons">
                                         <button class="tests-filter__button tests-filter__button--type_1" type="button" title="Сбросить">
                                             <svg aria-hidden="true">
@@ -3618,7 +3661,6 @@
                                             <span>Применить</span>
                                         </button>
                                     </div>
-                                    <!--TODO-->
                                 </div>
                             </div>
                         </div>
@@ -3756,12 +3798,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="js-tests-prev swiper-button-prev" type="button" title="Назад">
+                            <button id="tests_1_prev" class="js-tests-prev swiper-button-prev" type="button" title="Назад">
                                 <svg aria-hidden="true">
                                     <use xlink:href="#arrow_left" />
                                 </svg>
                             </button>
-                            <button class="js-tests-next swiper-button-next" type="button" title="Вперёд">
+                            <button id="tests_1_next" class="js-tests-next swiper-button-next" type="button" title="Вперёд">
                                 <svg aria-hidden="true">
                                     <use xlink:href="#arrow_right" />
                                 </svg>
@@ -3805,92 +3847,106 @@
                             </div>
                         </div>
                 
+                        <!--TODO-->
                         <div class="tests">
-                            <div class="tests__list">
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <div class="test test--type_3" type="button"></div>
+                            <div class="js-tests-slider-2 swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="test test--type_3" type="button"></div>
+                                    </div>
                                 </div>
                             </div>
+                            <button id="tests_2_prev" class="js-tests-prev swiper-button-prev" type="button" title="Назад">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#arrow_left" />
+                                </svg>
+                            </button>
+                            <button id="tests_2_next" class="js-tests-next swiper-button-next" type="button" title="Вперёд">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#arrow_right" />
+                                </svg>
+                            </button>
                         </div>
+                        <!--TODO-->
                     </div>
                 
                     <div class="js-tests-section" data-target="2" style="display:none">
                         <p class="tests-title">Библиотека тестов</p>
                 
                         <div class="tests">
-                            <div class="js-tests-slider-2 swiper-container">
+                            <div class="js-tests-slider-3 swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <button class="test test--type_1 is-active" type="button" title="Выбрано">
@@ -4022,12 +4078,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="js-tests-prev swiper-button-prev" type="button" title="Назад">
+                            <button id="tests_3_prev" class="js-tests-prev swiper-button-prev" type="button" title="Назад">
                                 <svg aria-hidden="true">
                                     <use xlink:href="#arrow_left" />
                                 </svg>
                             </button>
-                            <button class="js-tests-next swiper-button-next" type="button" title="Вперёд">
+                            <button id="tests_3_next" class="js-tests-next swiper-button-next" type="button" title="Вперёд">
                                 <svg aria-hidden="true">
                                     <use xlink:href="#arrow_right" />
                                 </svg>
@@ -4055,98 +4111,116 @@
                             </div>
                         </div>
                 
+                        <!--TODO-->
                         <div class="tests">
-                            <div class="tests__list">
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <button class="test test--type_2" type="button" title="Удалить">
-                                        <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
-                                        <svg aria-hidden="true">
-                                            <use xlink:href="#delete"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="tests__list-item">
-                                    <div class="test test--type_3" type="button"></div>
+                            <div class="js-tests-slider-4 swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button class="test test--type_2" type="button" title="Удалить">
+                                            <img src="images/content/test2.jpg" srcset="images/content/test2@2x.jpg 2x" alt="alt">
+                                            <svg aria-hidden="true">
+                                                <use xlink:href="#delete"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="test test--type_3" type="button"></div>
+                                    </div>
                                 </div>
                             </div>
+                            <button id="tests_4_prev" class="js-tests-prev swiper-button-prev" type="button" title="Назад">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#arrow_left" />
+                                </svg>
+                            </button>
+                            <button id="tests_4_next" class="js-tests-next swiper-button-next" type="button" title="Вперёд">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#arrow_right" />
+                                </svg>
+                            </button>
                         </div>
+                        <!--TODO-->
                     </div>
                 
                     <div class="js-tests-section" data-target="3" style="display:none"></div>
                 </div>
 
                 <div class="js-popup-save popup popup--type_3">
-                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </button>
+                    <!--TODO-->
+                    <div class="popup__title-block popup__title-block--type_1">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
                 
-                    <p class="popup__title">Сохранение конфигурации</p>
+                        <p class="popup__title">Сохранение конфигурации</p>
+                    </div>
+                    <!--TODO-->
                 
                     <div class="save-buttons">
                         <button class="button button--type_1" type="button">
@@ -4155,7 +4229,7 @@
                             </svg>
                             Скопировать ссылку
                         </button>
-                        <button class="button button--type_1" type="button">
+                        <button class="js-popup-opener button button--type_1" type="button" data-popup="js-popup-save-email">
                             <svg aria-hidden="true">
                                 <use xlink:href="#email"></use>
                             </svg>
@@ -4170,14 +4244,53 @@
                     </div>
                 </div>
                 
-                <div class="js-popup-pdf popup popup--type_3">
-                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </button>
+                <div class="js-popup-save-email popup popup--type_3">
+                    <!--TODO-->
+                    <div class="popup__title-block popup__title-block--type_1">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
                 
-                    <p class="popup__title popup__title--type_1">Скачать PDF</p>
+                        <p class="popup__title">Оставьте свой Email, чтобы сохранить конфигурацию</p>
+                    </div>
+                    <!--TODO-->
+                
+                    <div class="consult-form">
+                        <label class="input-label">
+                            <span class="input-label__text">Email*</span>
+                            <input class="js-email-mask input" type="text">
+                        </label>
+                        <label class="input-label">
+                            <span class="input-label__text">Имя*</span>
+                            <input class="input" type="text">
+                        </label>
+                
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox__icon"></span>
+                            Следить за ценой
+                        </label>
+                
+                        <div class="consult-form__button-block">
+                            <button class="button button--type_1" type="submit">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="js-popup-pdf popup popup--type_3">
+                    <!--TODO-->
+                    <div class="popup__title-block">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                
+                        <p class="popup__title">Скачать PDF</p>
+                    </div>
+                    <!--TODO-->
                 
                     <div class="auth-finish">
                         <div class="auth-finish__image">
@@ -4190,13 +4303,17 @@
                 </div>
 
                 <div class="js-popup-share popup popup--type_3">
-                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </button>
+                    <!--TODO-->
+                    <div class="popup__title-block popup__title-block--type_1">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
                 
-                    <p class="popup__title">Поделиться</p>
+                        <p class="popup__title">Поделиться</p>
+                    </div>
+                    <!--TODO-->
                 
                     <div class="share-buttons">
                         <button class="button button--type_1" type="button">
@@ -4231,6 +4348,11 @@
                                     <use xlink:href="#bubble"></use>
                                 </svg>
                             </a>
+                            <a class="share-link" href="#" title="Вконтакте" rel="nofollow noopener noreferrer">
+                                <svg aria-hidden="true">
+                                    <use xlink:href="#vk"></use>
+                                </svg>
+                            </a>
                         </div>
                         <button class="button button--type_1" type="button">
                             <svg aria-hidden="true">
@@ -4242,29 +4364,37 @@
                 </div>
 
                 <div class="js-popup-cart popup popup--type_3">
-                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </button>
+                    <!--TODO-->
+                    <div class="popup__title-block popup__title-block--type_1">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
                 
-                    <p class="popup__title">Перейти в корзину</p>
+                        <p class="popup__title">Перейти в корзину</p>
+                    </div>
+                    <!--TODO-->
                 
                     <div class="cart-buttons">
                         <a class="button button--type_2" href="#">Оформить</a>
                 
-                        <a class="button button--type_2" href="#">Выбрать ещё</a>
+                        <a class="button button--type_1" href="#">Выбрать ещё</a>
                     </div>
                 </div>
 
                 <div class="js-popup-auth popup popup--type_4">
-                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </button>
+                    <!--TODO-->
+                    <div class="popup__title-block popup__title-block--type_1 popup__title-block--type_3">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
                 
-                    <p class="popup__title popup__title--type_3">Чтобы продолжить, авторизуйтесь</p>
+                        <p class="popup__title">Чтобы продолжить, авторизуйтесь</p>
+                    </div>
+                    <!--TODO-->
                 
                     <div class="auth-form">
                         <label class="input-label">
@@ -4280,13 +4410,17 @@
                 </div>
 
                 <div class="js-popup-code popup popup--type_4">
-                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </button>
+                    <!--TODO-->
+                    <div class="popup__title-block popup__title-block--type_3">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
                 
-                    <p class="popup__title popup__title--type_3">Введите код подтверждения</p>
+                        <p class="popup__title">Введите код подтверждения</p>
+                    </div>
+                    <!--TODO-->
                 
                     <p class="code-note">Код подтверждения должен состоять из 6-ти цифр</p>
                 
@@ -4303,13 +4437,17 @@
                 </div>
 
                 <div class="js-popup-auth-finish popup popup--type_3">
-                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </button>
+                    <!--TODO-->
+                    <div class="popup__title-block popup__title-block--type_1">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
                 
-                    <p class="popup__title popup__title--type_1">Успешно!</p>
+                        <p class="popup__title">Успешно!</p>
+                    </div>
+                    <!--TODO-->
                 
                     <div class="auth-finish">
                         <div class="auth-finish__image">
@@ -4322,13 +4460,17 @@
                 </div>
 
                 <div class="js-popup-register popup popup--type_5">
-                    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-                        <svg aria-hidden="true">
-                            <use xlink:href="#close"></use>
-                        </svg>
-                    </button>
+                    <!--TODO-->
+                    <div class="popup__title-block popup__title-block--type_3">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
                 
-                    <p class="popup__title popup__title--type_3">Регистрация</p>
+                        <p class="popup__title">Регистрация</p>
+                    </div>
+                    <!--TODO-->
                 
                     <div class="register-form">
                         <label class="input-label error">
@@ -4364,6 +4506,35 @@
                 
                         <div class="register-form__buttons">
                             <button class="button button--type_2" type="button">Отправить код</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="js-popup-price popup popup--type_3">
+                    <!--TODO-->
+                    <div class="popup__title-block popup__title-block--type_1">
+                        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+                            <svg aria-hidden="true">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </button>
+                
+                        <p class="popup__title">Оставьте свой Email, чтобы следить за стоимостью конфигурации</p>
+                    </div>
+                    <!--TODO-->
+                
+                    <div class="consult-form">
+                        <label class="input-label">
+                            <span class="input-label__text">Email*</span>
+                            <input class="js-email-mask input" type="text">
+                        </label>
+                        <label class="input-label">
+                            <span class="input-label__text">Имя*</span>
+                            <input class="input" type="text">
+                        </label>
+                
+                        <div class="consult-form__button-block">
+                            <button class="button button--type_1" type="submit">Отправить</button>
                         </div>
                     </div>
                 </div>

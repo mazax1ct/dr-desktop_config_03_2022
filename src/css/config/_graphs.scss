@@ -108,7 +108,7 @@
 
     &:not(:first-child) {
         margin-top: 12px;
-        @media(min-width: $hd) and (min-height: 60px) {
+        @media(min-width: $hd) {
             margin-top: 4px;
         }
         @media(min-width: $hd) and (min-height: 720px) {

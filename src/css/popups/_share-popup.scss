@@ -2,10 +2,16 @@
     text-align: center;
 
     .button {
-        min-width: 318px;
+        min-width: 210px;
+        @media(min-width: $hd) {
+            min-width: 318px;
+        }
 
         &:not(:last-child) {
-            margin-bottom: 40px;
+            margin-bottom: 24px;
+            @media(min-width: $hd) {
+                margin-bottom: 40px;
+            }
         }
     }
 }
@@ -13,7 +19,10 @@
 .share-links {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
+    @media(min-width: $hd) {
+        margin-bottom: 40px;
+    }
 }
 
 .share-link {
@@ -24,11 +33,15 @@
     box-shadow: 0 0 4px 0 #D43C38;
     display: flex;
     justify-content: center;
-    height: 44px;
+    height: 32px;
     margin-left: 12px;
     margin-right: 12px;
     transition: background-color 0.3s;
-    width: 44px;
+    width: 32px;
+    @media(min-width: $hd) {
+        height: 44px;
+        width: 44px;
+    }
 
     &:active,
     &:hover {
