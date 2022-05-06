@@ -36,14 +36,11 @@
     @media(min-width: $fhd) and (min-height: 940px) {
         margin-bottom: 12px;
     }
-    @media(min-width: $fhd) and (min-height: 1000px) {
+    @media(min-width: $ufhd) {
         margin-bottom: 24px;
     }
-    @media(min-width: $fhd) and (min-height: 1300px) {
-        margin-bottom: 32px;
-    }
-    @media(min-width: $q) and (min-height: 1900px) {
-        margin-bottom: 56px;
+    @media(min-width: $q) {
+        margin-bottom: 48px;
     }
 
     &__hz {
@@ -109,6 +106,18 @@
     &:not(:first-child) {
         margin-top: 12px;
         @media(min-width: $hd) {
+            margin-top: 8px;
+        }
+        @media(min-width: $ufhd) {
+            margin-top: 16px;
+        }
+        @media(min-width: $q) {
+            margin-top: 24px;
+        }
+    }
+    /*&:not(:first-child) {
+        margin-top: 12px;
+        @media(min-width: $hd) {
             margin-top: 4px;
         }
         @media(min-width: $hd) and (min-height: 720px) {
@@ -126,13 +135,12 @@
         @media(min-width: $ufhd) and (min-height: 1900px) {
             margin-top: 24px;
         }
-    }
-
+    }*/
     &:nth-child(10) {
-        @media(max-height: 739px) {
+        @media(min-width: $hd) and (max-height: 729px) {
             display: none;
         }
-        @media(min-width: $fhd) and (max-height: 930px) {
+        @media(min-width: $fhd) and (max-height: 929px) {
             display: none;
         }
         @media(min-width: $ufhd) and (max-height: 1160px) {
@@ -141,10 +149,10 @@
     }
 
     &:nth-child(9) {
-        @media(max-height: 659px) {
+        @media(min-width: $hd) and (max-height: 689px) {
             display: none;
         }
-        @media(min-width: $fhd) and (max-height: 900px) {
+        @media(min-width: $fhd) and (max-height: 899px) {
             display: none;
         }
         @media(min-width: $ufhd) and (max-height: 1080px) {
@@ -153,10 +161,10 @@
     }
 
     &:nth-child(8) {
-        @media(max-height: 600px) {
+        @media(min-width: $hd) and (max-height: 659px) {
             display: none;
         }
-        @media(min-width: $fhd) and (max-height: 860px) {
+        @media(min-width: $fhd) and (max-height: 859px) {
             display: none;
         }
     }

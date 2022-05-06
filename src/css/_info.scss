@@ -90,5 +90,17 @@
                 width: 18px;
             }
         }
+
+        &--top {
+            top: -38px;
+            @media(min-width: $ufhd) {
+                top: -40px;
+            }
+
+            span {
+                top: 30px;
+                transform: rotate(180deg);
+            }
+        }
     }
 }

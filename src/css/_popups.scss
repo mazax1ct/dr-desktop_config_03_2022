@@ -59,6 +59,9 @@
 
     &.is-open {
         transform: translateY(0);
+        @media(min-width: $q) {
+            transform: translateY(0) scale(2);
+        }
     }
 
     &.overflow {
@@ -96,7 +99,7 @@
 
     &--type_2 {
         @media(min-width: $hd) {
-            max-height: 720px;
+            max-height: 730px;
             padding: 32px 54px;
             width: 1216px;
         }
