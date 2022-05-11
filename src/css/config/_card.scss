@@ -302,6 +302,9 @@
             max-width: 920px;
             width: 80%;
         }
+        @media(min-width: $ufhd) and (max-width: $q - 1) {
+            width: 70%;
+        }
 
         img {
             display: block;

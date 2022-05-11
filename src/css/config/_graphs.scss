@@ -39,7 +39,7 @@
     @media(min-width: $ufhd) {
         margin-bottom: 24px;
     }
-    @media(min-width: $q) {
+    @media(min-width: $q) and (min-height: 2200px) {
         margin-bottom: 48px;
     }
 
@@ -108,10 +108,13 @@
         @media(min-width: $hd) {
             margin-top: 8px;
         }
+        @media(min-width: $fhd) {
+            margin-top: 7px;
+        }
         @media(min-width: $ufhd) {
             margin-top: 16px;
         }
-        @media(min-width: $q) {
+        @media(min-width: $q) and (min-height: 2200px) {
             margin-top: 24px;
         }
     }
@@ -143,28 +146,28 @@
         @media(min-width: $fhd) and (max-height: 929px) {
             display: none;
         }
-        @media(min-width: $ufhd) and (max-height: 1160px) {
+        /*@media(min-width: $ufhd) and (max-height: 1160px) {
             display: none;
-        }
+        }*/
     }
 
     &:nth-child(9) {
         @media(min-width: $hd) and (max-height: 689px) {
             display: none;
         }
-        @media(min-width: $fhd) and (max-height: 899px) {
+        @media(min-width: $fhd) and (max-height: 889px) {
             display: none;
         }
-        @media(min-width: $ufhd) and (max-height: 1080px) {
+        /*@media(min-width: $ufhd) and (max-height: 1080px) {
             display: none;
-        }
+        }*/
     }
 
     &:nth-child(8) {
         @media(min-width: $hd) and (max-height: 659px) {
             display: none;
         }
-        @media(min-width: $fhd) and (max-height: 859px) {
+        @media(min-width: $fhd) and (max-height: 837px) {
             display: none;
         }
     }
@@ -197,13 +200,13 @@
             height: 48px;
             width: 48px;
         }
-        @media(min-width: $ufhd) and (min-height: 1200px) {
-            height: 56px;
-            width: 56px;
+        @media(min-width: $ufhd) and (min-height: 1400px) {
+            height: 56px !important;
+            width: 56px !important;
         }
         @media(min-width: $q) and (min-height: 1700px) {
-            height: 80px;
-            width: 80px;
+            height: 80px !important;
+            width: 80px !important;
         }
 
         &:empty {
