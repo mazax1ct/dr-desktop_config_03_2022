@@ -68,13 +68,14 @@
 
     &__right-block {
         @media(min-width: $hd) {
-            padding-bottom: 12px;
+            padding-bottom: 8px;
             width: 32%;
         }
         @media(min-width: 1500px) {
             width: 38%;
         }
         @media(min-width: $ufhd) {
+            padding-bottom: 12px;
             width: 45.25%;
         }
     }
