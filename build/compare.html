@@ -606,6 +606,11 @@
             <path
               d="M16,26.3c-5.3,0-10.1-2.9-12.3-7.3C3.2,18.1,3,17,3,16c0-1,0.2-2,0.7-3c2.2-4.5,7-7.3,12.3-7.3c5.3,0,10.1,2.9,12.3,7.3c0.5,0.9,0.7,2,0.7,3c0,1-0.2,2.1-0.7,3C26.1,23.5,21.3,26.3,16,26.3z M16,7.7c-4.5,0-8.7,2.4-10.5,6.2C5.2,14.6,5,15.3,5,16s0.2,1.4,0.5,2.1c1.8,3.8,6,6.2,10.5,6.2c4.5,0,8.7-2.4,10.5-6.2c0.3-0.7,0.5-1.4,0.5-2.1c0-0.7-0.2-1.4-0.5-2.1C24.7,10.1,20.5,7.7,16,7.7z" />
         </symbol>
+        <symbol id="search" viewBox="0 0 32 32">
+            <path
+              d="M15,24.4c-2.4,0-4.8-0.9-6.6-2.7c-3.7-3.7-3.7-9.6,0-13.2s9.6-3.7,13.2,0l0,0c3.7,3.7,3.7,9.6,0,13.2C19.8,23.5,17.4,24.4,15,24.4z M15,7.7c-1.9,0-3.8,0.7-5.2,2.2C7,12.7,7,17.4,9.8,20.2c2.9,2.9,7.5,2.9,10.4,0s2.9-7.5,0-10.4C18.8,8.4,16.9,7.7,15,7.7z" />
+            <path d="M25.3,26.3c-0.3,0-0.5-0.1-0.7-0.3l-4.4-4.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l4.4,4.4c0.4,0.4,0.4,1,0,1.4C25.8,26.2,25.6,26.3,25.3,26.3z" />
+        </symbol>
     </svg>
 
     <div class="compare">
@@ -1369,7 +1374,6 @@
         <div class="popup-shade">
             <div class="popup-shade__inner">
                 <div class="js-popup-test popup popup--type_2">
-                    <!--TODO-->
                     <div class="popup__title-block">
                         <button class="js-popup-closer popup__close" type="button" title="Закрыть">
                             <svg aria-hidden="true">
@@ -1379,9 +1383,7 @@
                 
                         <p class="popup__big-title">Тесты</p>
                     </div>
-                    <!--TODO-->
                 
-                    <!--TODO-->
                     <div class="tests-sections">
                         <div class="tests-sections__list">
                             <button class="js-tests tests-sections__button is-active" type="button" data-target="1">Игры</button>
@@ -1389,11 +1391,158 @@
                             <button class="js-tests tests-sections__button" type="button" data-target="3">Создание контента</button>
                         </div>
                     </div>
-                    <!--TODO-->
                 
                     <div class="js-tests-section" data-target="1">
-                        <div class="tests-title-block">
-                            <p class="tests-title">Библиотека игр</p>
+                        <!--TODO-->
+                        <p class="tests-title">Библиотека игр</p>
+                
+                        <div class="tests-search-block">
+                            <div class="tests-search">
+                                <form class="tests-search__form" action="">
+                                    <input class="tests-search__input" type="text" value="" placeholder="Поиск">
+                                    <button class="tests-search__submit" type="button" title="Найти">
+                                        <svg aria-hidden="true">
+                                            <use xlink:href="#search"></use>
+                                        </svg>
+                                    </button>
+                                </form>
+                                <div class="tests-search__dropdown">
+                                    <p class="tests-search__dropdown-title">Результаты поиска: <span>1</span></p>
+                                    <div class="js-tests-slider-5 swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1 is-active" type="button" title="Выбрано">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1" type="button" title="Выбрать">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1" type="button" title="Выбрать">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1" type="button" title="Выбрать">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1" type="button" title="Выбрать">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1" type="button" title="Выбрать">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1" type="button" title="Выбрать">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1" type="button" title="Выбрать">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1" type="button" title="Выбрать">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1" type="button" title="Выбрать">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1" type="button" title="Выбрать">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1" type="button" title="Выбрать">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1" type="button" title="Выбрать">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1" type="button" title="Выбрать">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1" type="button" title="Выбрать">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <button class="test test--type_1" type="button" title="Выбрать">
+                                                    <img src="images/content/test.jpg" srcset="images/content/test@2x.jpg 2x" alt="alt">
+                                                    <svg aria-hidden="true">
+                                                        <use xlink:href="#add"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
                             <div class="tests-filter-block">
                                 <button class="js-filter-opener tests-filter-opener" type="button">
                                     <svg aria-hidden="true">
@@ -1401,9 +1550,7 @@
                                     </svg>
                                     Фильтр игр
                                 </button>
-                
                                 <div class="tests-filter">
-                                    <!--TODO-->
                                     <div class="tests-filter__title-block">
                                         <p class="tests-filter__title">Жанры</p>
                                         <button class="js-filter-closer tests-filter__close" type="button" title="Закрыть">
@@ -1412,7 +1559,6 @@
                                             </svg>
                                         </button>
                                     </div>
-                                    <!--TODO-->
                 
                                     <div class="tests-filter__inner">
                                         <div class="tests-filter__block">
@@ -1513,7 +1659,6 @@
                                             </label>
                                         </div>
                                     </div>
-                
                                     <div class="tests-filter__buttons">
                                         <button class="tests-filter__button tests-filter__button--type_1" type="button" title="Сбросить">
                                             <svg aria-hidden="true">
@@ -1531,6 +1676,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!--TODO-->
                 
                         <div class="tests">
                             <div class="js-tests-slider swiper-container">
@@ -1714,7 +1860,6 @@
                             </div>
                         </div>
                 
-                        <!--TODO-->
                         <div class="tests">
                             <div class="js-tests-slider-2 swiper-container">
                                 <div class="swiper-wrapper">
@@ -1806,7 +1951,6 @@
                                 </svg>
                             </button>
                         </div>
-                        <!--TODO-->
                     </div>
                 
                     <div class="js-tests-section" data-target="2" style="display:none">
@@ -1978,7 +2122,6 @@
                             </div>
                         </div>
                 
-                        <!--TODO-->
                         <div class="tests">
                             <div class="js-tests-slider-4 swiper-container">
                                 <div class="swiper-wrapper">
@@ -2070,7 +2213,6 @@
                                 </svg>
                             </button>
                         </div>
-                        <!--TODO-->
                     </div>
                 
                     <div class="js-tests-section" data-target="3" style="display:none"></div>
