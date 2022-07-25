@@ -55,7 +55,7 @@
         white-space: nowrap;
         width: 36px;
         user-select: none;
-        z-index: 1;
+        z-index: 0;
         @media(min-width: $hd) {
             display: block;
         }
@@ -72,6 +72,7 @@
             position: absolute;
             top: 32px;
             width: 1px;
+            z-index: 0;
             @media(min-width: $fhd) {
                 height: calc(100% - 40px);
             }
@@ -92,6 +93,51 @@
         &:nth-child(3) {
             left: 89.52702%;
         }
+    }
+
+    &__more {
+        display: none;
+        font-size: 12px;
+        font-weight: 500;
+        height: 100%;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        text-align: center;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        width: 156px;
+        user-select: none;
+        z-index: 0;
+        @media(min-width: $hd) {
+            display: block;
+        }
+        @media(min-width: $q) and (min-height: 1700px) {
+            font-size: 16px;
+        }
+
+        &::after {
+            background-color: rgba(#fff, 0.1);
+            content: '';
+            height: calc(100% - 36px);
+            left: 50%;
+            position: absolute;
+            top: 32px;
+            width: 1px;
+            z-index: 0;
+            @media(min-width: $fhd) {
+                height: calc(100% - 40px);
+            }
+            @media(min-width: $ufhd) {
+                height: calc(100% - 52px);
+                top: 40px;
+            }
+        }
+    }
+
+    &__list {
+        position: relative;
+        z-index: 1;
     }
 }
 
@@ -118,27 +164,7 @@
             margin-top: 24px;
         }
     }
-    /*&:not(:first-child) {
-        margin-top: 12px;
-        @media(min-width: $hd) {
-            margin-top: 4px;
-        }
-        @media(min-width: $hd) and (min-height: 720px) {
-            margin-top: 6px;
-        }
-        @media(min-width: $hd) and (min-height: 960px) {
-            margin-top: 8px;
-        }
-        @media(min-width: $ufhd) and (min-height: 1500px) {
-            margin-top: 12px;
-        }
-        @media(min-width: $ufhd) and (min-height: 1800px) {
-            margin-top: 20px;
-        }
-        @media(min-width: $ufhd) and (min-height: 1900px) {
-            margin-top: 24px;
-        }
-    }*/
+
     &:nth-child(10) {
         @media(min-width: $hd) and (max-height: 729px) {
             display: none;
@@ -146,9 +172,6 @@
         @media(min-width: $fhd) and (max-height: 929px) {
             display: none;
         }
-        /*@media(min-width: $ufhd) and (max-height: 1160px) {
-            display: none;
-        }*/
     }
 
     &:nth-child(9) {
@@ -158,9 +181,6 @@
         @media(min-width: $fhd) and (max-height: 889px) {
             display: none;
         }
-        /*@media(min-width: $ufhd) and (max-height: 1080px) {
-            display: none;
-        }*/
     }
 
     &:nth-child(8) {
@@ -225,7 +245,7 @@
         background-color: rgba(#315CB4, 0.1);
         flex-grow: 1;
         height: 30px;
-        margin-left: -30px;
+        margin-left: -26px;
         position: relative;
         z-index: 1;
         @media(min-width: $hd) {
@@ -247,6 +267,10 @@
         position: absolute;
         top: 0;
         z-index: 1;
+
+        &--type_1 {
+            background: linear-gradient(-90deg, #E06C2E 0%, rgba(#0C1117, 0.8) 100%);
+        }
     }
 
     &__bar-title {

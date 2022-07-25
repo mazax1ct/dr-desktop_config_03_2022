@@ -15,7 +15,6 @@ $(document).on('click', '.js-filter-closer', function () {
   return false;
 });
 
-
 //слайдеры тестов
 const testsSlider = new Swiper('.js-tests-slider', {
     loop: true,
@@ -121,10 +120,4 @@ const testsSlider5 = new Swiper('.js-tests-slider-5', {
         spaceBetween: 12
       }
     }
-});
-
-//автосаггест
-$(document).on('focus', '.tests-search__input', function () {
-  $(this).closest('.tests-search').find('.tests-search__dropdown').show();
-  testsSlider5.update();
 });

@@ -1,0 +1,180 @@
+.dropdown {
+    margin-bottom: 12px;
+    position: relative;
+    width: 170px;
+    z-index: 2;
+    @media(min-width: 768px) {
+        margin-bottom: 0;
+        width: auto;
+    }
+
+    &:not(:last-child) {
+        @media(min-width: 768px) {
+            margin-right: 16px;
+        }
+        @media(min-width: 1300px) {
+            margin-right: 24px;
+        }
+    }
+
+    &.is-open {
+        .dropdown__placeholder {
+            border-radius: 4px 4px 0 0;
+        }
+
+        .dropdown__placeholder--arrow {
+            &::after {
+                transform: rotate(-180deg);
+            }
+        }
+
+        .dropdown__dropdown {
+            display: block;
+        }
+    }
+
+    &__placeholder {
+        align-items: center;
+        background-color: #0C1117;
+        border-radius: 4px;
+        border: none;
+        box-shadow: 0 0 4px 0 rgba(#fff, 0.5);
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        font-size: 12px;
+        font-weight: 700;
+        min-height: 32px;
+        min-width: 170px;
+        padding: 6px;
+        width: 100%;
+        @media(min-width: 768px) {
+            height: 40px;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+        @media(min-width: 1900px) {
+            height: 48px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        svg {
+            fill: #fff;
+            height: 20px;
+            margin-left: 8px;
+            width: 20px;
+            @media(min-width: 768px) {
+                margin-left: auto;
+            }
+            @media(min-width: 1900px) {
+                height: 24px;
+                width: 24px;
+            }
+        }
+
+        &--arrow {
+            @media(min-width: 1900px) {
+                padding-right: 24px;
+            }
+
+            &::after {
+                background-image: url("data:image/svg+xml,%3Csvg width='8' height='3' viewBox='0 0 8 3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 3L0.535898 -1.75695e-07L7.4641 4.29987e-07L4 3Z' fill='white'/%3E%3C/svg%3E%0A");
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                content: '';
+                height: 4px;
+                margin-left: 8px;
+                width: 8px;
+                @media(min-width: 768px) {
+                    background-size: 12px 6px;
+                    height: 6px;
+                    margin-left: auto;
+                    width: 12px;
+                }
+                @media(min-width: 1900px) {
+                    left: auto;
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -3px;
+                    right: 14px;
+                }
+            }
+        }
+
+        &--big {
+            @media(min-width: 768px) {
+                min-width: 200px;
+            }
+        }
+    }
+
+    &__dropdown {
+        background-color: #0C1117;
+        border: 1px solid #5474B4;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        display: none;
+        left: 0;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__dropdown-item {
+        align-items: center;
+        background-color: transparent;
+        border-bottom: 1px solid #5474B4;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        cursor: pointer;
+        color: #fff;
+        display: flex;
+        font-size: 12px;
+        font-weight: 700;
+        min-height: 32px;
+        padding: 6px;
+        text-align: left;
+        white-space: nowrap;
+        width: 100%;
+        @media(min-width: 768px) {
+            height: 40px;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+        @media(min-width: 1900px) {
+            height: 48px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        &:last-child {
+            border-bottom: none;
+            border-radius: 0 0 4px 4px;
+        }
+
+        &:hover {
+            background-color: rgba(#5474B4, 0.5);
+        }
+
+        &.is-active {
+            background-color: #5474B4;
+        }
+
+        svg {
+            fill: #fff;
+            height: 20px;
+            margin-left: 8px;
+            width: 20px;
+            @media(min-width: 768px) {
+                margin-left: auto;
+            }
+            @media(min-width: 1900px) {
+                height: 24px;
+                width: 24px;
+            }
+        }
+    }
+}

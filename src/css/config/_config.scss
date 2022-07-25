@@ -85,13 +85,15 @@
         border-radius: 8px 8px 0 0;
         background-color: #0C1117;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+        min-height: 40px;
         padding: 8px;
         position: sticky;
         top: 0;
         z-index: 2;
         @media(min-width: $hd) {
-            align-items: flex-start;
+            //align-items: flex-start;
             border-radius: 0;
             background-color: transparent;
             padding: 0;
@@ -115,6 +117,19 @@
 
         .graphs-closer {
             order: 3;
+        }
+
+        .graphs-switcher {
+            margin-top: 20px;
+            order: 4;
+            width: 100%;
+            @media(min-width: 1200px) {
+                margin-top: 0;
+                text-align: left;
+            }
+            @media(min-width: 1900px) {
+                margin-top: 12px;
+            }
         }
     }
 

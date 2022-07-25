@@ -103,6 +103,9 @@
             padding: 32px 54px;
             width: 1216px;
         }
+        @media(min-width: $hd) and (min-height: 950px) {
+            max-height: 920px;
+        }
     }
 
     &--type_3 {
