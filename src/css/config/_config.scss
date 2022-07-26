@@ -93,9 +93,9 @@
         top: 0;
         z-index: 2;
         @media(min-width: $hd) {
-            //align-items: flex-start;
             border-radius: 0;
             background-color: transparent;
+            min-height: 68px;
             padding: 0;
             position: static;
         }
@@ -104,6 +104,12 @@
             order: 1;
             @media(min-width: $hd) {
                 order: 2;
+            }
+
+            &.hidden {
+                @media(min-width: $hd) {
+                    display: none;
+                }
             }
         }
 
@@ -127,8 +133,45 @@
                 margin-top: 0;
                 text-align: left;
             }
+            @media(min-width: 1200px) and (min-height: 800px) {
+                margin-top: 12px;
+                text-align: left;
+            }
             @media(min-width: 1900px) {
                 margin-top: 12px;
+            }
+        }
+
+        .dropdown {
+            margin-top: 24px;
+            width: 100%;
+            @media(min-width: $hd) {
+                margin-top: 0;
+                width: 240px;
+            }
+            @media(min-width: 1500px) {
+                width: 270px;
+            }
+            @media(min-width: $fhd) {
+                width: 300px;
+            }
+            @media(min-width: 2500px) {
+                width: 400px;
+            }
+
+            &.order-2 {
+                order: 4;
+                @media(min-width: $hd) {
+                    margin-left: auto;
+                    order: 2;
+                }
+            }
+
+            &.order-3 {
+                order: 4;
+                @media(min-width: $hd) {
+                    order: 3;
+                }
             }
         }
     }

@@ -1,12 +1,6 @@
 .dropdown {
-    margin-bottom: 12px;
     position: relative;
-    width: 170px;
-    z-index: 2;
-    @media(min-width: 768px) {
-        margin-bottom: 0;
-        width: auto;
-    }
+    z-index: 1;
 
     &:not(:last-child) {
         @media(min-width: 768px) {
@@ -18,19 +12,25 @@
     }
 
     &.is-open {
+        z-index: 2;
+
         .dropdown__placeholder {
             border-radius: 4px 4px 0 0;
         }
 
         .dropdown__placeholder--arrow {
             &::after {
-                transform: rotate(-180deg);
+                transform: rotate(-180deg) translateY(50%);
             }
         }
 
         .dropdown__dropdown {
             display: block;
         }
+    }
+
+    &.hidden {
+        display: none;
     }
 
     &__placeholder {
@@ -41,94 +41,99 @@
         box-shadow: 0 0 4px 0 rgba(#fff, 0.5);
         color: #fff;
         cursor: pointer;
-        display: flex;
+        display: block;
         font-size: 12px;
         font-weight: 700;
         min-height: 32px;
         min-width: 170px;
-        padding: 6px;
+        overflow: hidden;
+        padding: 6px 16px 6px 6px;
+        text-overflow: ellipsis;
+        text-align: left;
+        white-space: nowrap;
         width: 100%;
-        @media(min-width: 768px) {
+        @media(min-width: 1200px) {
             height: 40px;
-            padding-left: 12px;
-            padding-right: 12px;
+            padding-left: 20px;
+            padding-right: 24px;
         }
         @media(min-width: 1900px) {
+            font-size: 14px;
+        }
+        @media(min-width: 2500px) {
+            font-size: 16px;
             height: 48px;
-            padding-left: 20px;
-            padding-right: 20px;
         }
 
-        svg {
-            fill: #fff;
-            height: 20px;
-            margin-left: 8px;
-            width: 20px;
+        &::after {
+            background-image: url("data:image/svg+xml,%3Csvg width='8' height='3' viewBox='0 0 8 3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 3L0.535898 -1.75695e-07L7.4641 4.29987e-07L4 3Z' fill='white'/%3E%3C/svg%3E%0A");
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            content: '';
+            height: 8px;
+            left: auto;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
             @media(min-width: 768px) {
-                margin-left: auto;
-            }
-            @media(min-width: 1900px) {
-                height: 24px;
-                width: 24px;
-            }
-        }
-
-        &--arrow {
-            @media(min-width: 1900px) {
-                padding-right: 24px;
-            }
-
-            &::after {
-                background-image: url("data:image/svg+xml,%3Csvg width='8' height='3' viewBox='0 0 8 3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 3L0.535898 -1.75695e-07L7.4641 4.29987e-07L4 3Z' fill='white'/%3E%3C/svg%3E%0A");
-                background-position: 50% 50%;
-                background-repeat: no-repeat;
-                content: '';
-                height: 4px;
-                margin-left: 8px;
-                width: 8px;
-                @media(min-width: 768px) {
-                    background-size: 12px 6px;
-                    height: 6px;
-                    margin-left: auto;
-                    width: 12px;
-                }
-                @media(min-width: 1900px) {
-                    left: auto;
-                    position: absolute;
-                    top: 50%;
-                    margin-top: -3px;
-                    right: 14px;
-                }
-            }
-        }
-
-        &--big {
-            @media(min-width: 768px) {
-                min-width: 200px;
+                background-size: 12px 12px;
+                height: 12px;
+                width: 12px;
             }
         }
     }
 
     &__dropdown {
         background-color: #0C1117;
-        border: 1px solid #5474B4;
         border-top: none;
+        box-shadow: 0 0 4px 0 rgba(#fff, 0.5);
         border-radius: 0 0 4px 4px;
         display: none;
         left: 0;
+        max-height: 320px;
+        overflow-y: auto;
         position: absolute;
+        scrollbar-width: thin;
+        scrollbar-color: #5793ea rgba(#5793ea, 0.2);
         top: 100%;
         width: 100%;
         z-index: 1;
+
+        &::-webkit-scrollbar {
+            @media(min-width: $hd) {
+                width: 6px;
+            }
+        }
+
+        &::-webkit-scrollbar-track {
+            @media(min-width: $hd) {
+                background-color: rgba(#5793ea, 0.2);
+                border-radius: 3px;
+            }
+        }
+
+        &::-webkit-scrollbar-thumb {
+            @media(min-width: $hd) {
+                background-color: #5793ea;
+                border-radius: 3px;
+            }
+        }
     }
 
     &__dropdown-item {
+        &:last-child {
+            .dropdown__dropdown-button {
+                border-radius: 0 0 4px 4px;
+            }
+        }
+    }
+
+    &__dropdown-button {
         align-items: center;
         background-color: transparent;
-        border-bottom: 1px solid #5474B4;
-        border-left: none;
-        border-right: none;
-        border-top: none;
+        border: none;
         cursor: pointer;
         color: #fff;
         display: flex;
@@ -139,20 +144,17 @@
         text-align: left;
         white-space: nowrap;
         width: 100%;
-        @media(min-width: 768px) {
+        @media(min-width: 1200px) {
             height: 40px;
-            padding-left: 12px;
-            padding-right: 12px;
-        }
-        @media(min-width: 1900px) {
-            height: 48px;
             padding-left: 20px;
             padding-right: 20px;
         }
-
-        &:last-child {
-            border-bottom: none;
-            border-radius: 0 0 4px 4px;
+        @media(min-width: 1900px) {
+            font-size: 14px;
+        }
+        @media(min-width: 2500px) {
+            font-size: 16px;
+            height: 48px;
         }
 
         &:hover {
@@ -162,19 +164,92 @@
         &.is-active {
             background-color: #5474B4;
         }
+    }
 
-        svg {
-            fill: #fff;
-            height: 20px;
-            margin-left: 8px;
-            width: 20px;
-            @media(min-width: 768px) {
-                margin-left: auto;
+    &__switch {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+    }
+
+    &__switch-inner {
+        background-color: rgba(#fff, 0.1);
+        border-radius: 48px;
+        display: inline-flex;
+        padding: 4px;
+    }
+
+    &__switch-button {
+        border: none;
+        border-radius: 48px;
+        background-color: transparent;
+        color: #fff;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 700;
+        height: 24px;
+        transition: background-color 0.3s;
+        text-transform: uppercase;
+        width: 76px;
+
+        &.is-active {
+            background-color: #5474B4;
+        }
+    }
+
+    &__checkbox-label {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1.33333;
+        padding: 8px;
+        position: relative;
+        z-index: 0;
+        @media(min-width: 1900px) {
+            font-size: 14px;
+        }
+        @media(min-width: 2500px) {
+            font-size: 16px;
+            min-height: 48px;
+        }
+
+        input {
+            position: absolute;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            width: 1px;
+
+            &:checked + .dropdown__checkbox-icon::before {
+                opacity: 1;
             }
-            @media(min-width: 1900px) {
-                height: 24px;
-                width: 24px;
-            }
+        }
+    }
+
+    &__checkbox-icon {
+        background-color: rgba(#5474B4, 0.1);
+        border-radius: 4px;
+        border: 2px solid #5474B4;
+        height: 24px;
+        margin-right: 8px;
+        min-width: 24px;
+        position: relative;
+        width: 24px;
+        z-index: 0;
+
+        &::before {
+            background-color: #5474B4;
+            border-radius: 2px;
+            content: '';
+            height: 16px;
+            left: 50%;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
         }
     }
 }

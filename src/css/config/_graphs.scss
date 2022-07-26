@@ -292,7 +292,7 @@
 
         span {
             &:first-child {
-                font-weight: 800;
+                font-weight: 800 !important;
                 left: -10px;
                 position: absolute;
                 top: -30px;
@@ -300,6 +300,7 @@
                 @media(min-width: $hd) {
                     left: auto;
                     position: static;
+                    padding-left: 0;
                     top: auto;
                 }
             }

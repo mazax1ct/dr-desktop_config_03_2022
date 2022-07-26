@@ -15,12 +15,14 @@ $(document).on('click', '.js-graphs', function () {
   $('.graphs').hide();
   $('.graphs[data-target="'+$(this).attr("data-target")+'"]').show();
 
-  $('.config__title').text($(this).attr('data-title'));
+  $('.config__title-block .config__title').text($(this).attr('data-title'));
 
   if($(this).attr('data-title') == 'Комплектующие') {
     $('.filter-toggler').addClass('hidden');
+    $('.dropdown').removeClass('hidden');
   } else {
      $('.filter-toggler').removeClass('hidden');
+     $('.dropdown').addClass('hidden');
   }
 
   testsSlider.update();
