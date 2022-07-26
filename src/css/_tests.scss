@@ -45,9 +45,14 @@
         position: relative;
         padding: 0;
         scrollbar-width: none;
+        -ms-overflow-style: none;
         @media(min-width: $hd) {
             flex-wrap: wrap;
             overflow-x: visible;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
         }
     }
 

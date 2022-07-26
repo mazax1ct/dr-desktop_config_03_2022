@@ -47,7 +47,7 @@
         min-height: 32px;
         min-width: 170px;
         overflow: hidden;
-        padding: 6px 16px 6px 6px;
+        padding: 6px 24px 6px 6px;
         text-overflow: ellipsis;
         text-align: left;
         white-space: nowrap;
@@ -55,7 +55,6 @@
         @media(min-width: 1200px) {
             height: 40px;
             padding-left: 20px;
-            padding-right: 24px;
         }
         @media(min-width: 1900px) {
             font-size: 14px;
@@ -73,7 +72,7 @@
             height: 8px;
             left: auto;
             position: absolute;
-            right: 5px;
+            right: 12px;
             top: 50%;
             transform: translateY(-50%);
             width: 8px;
