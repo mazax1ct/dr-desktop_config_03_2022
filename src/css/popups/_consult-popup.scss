@@ -8,7 +8,7 @@
     }
 
     .input-label {
-        margin-bottom: 16px;
+        margin-bottom: 24px;
     }
 
     .textarea-label {
@@ -16,9 +16,25 @@
         margin-bottom: 32px;
     }
 
+    .checkbox {
+        margin-bottom: 40px;
+
+        &__icon {
+            border: 2px solid rgba(#fff, 0.5);
+            background-color: rgba(#fff, 0.1);
+
+            &::before {
+                background-color: #D43C38;
+            }
+        }
+    }
+
     .button {
-        max-width: 318px;
+        max-width: 210px;
         width: 100%;
+        @media(min-width: $hd) {
+            max-width: 318px;
+        }
     }
 }
 

@@ -1,9 +1,11 @@
 .specification {
-    columns: 2;
     font-size: 14px;
     line-height: 1.71428;
-    padding-left: 52px;
-    padding-right: 52px;
+    @media(min-width: 768px) {
+        columns: 2;
+        padding-left: 52px;
+        padding-right: 52px;
+    }
 
     &__block {
         width: 50%;

@@ -6,8 +6,12 @@
     flex-direction: column;
     height: 100%;
     margin-left: auto;
+    margin-right: auto;
     max-width: 1086px;
-    padding: 16px 12px;
+    padding: 16px 12px 24px;
+    @media(min-width: $hd) {
+        padding-bottom: 16px;
+    }
     @media(min-width: $fhd) {
         border-radius: 20px;
         padding: 24px;
@@ -22,20 +26,41 @@
 
     &__title-block {
         font-size: 0;
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 8px;
+        padding-right: 8px;
         text-align: center;
+        @media(min-width: $hd) {
+            margin-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 
     &__title {
+        align-items: center;
         color: #fff;
-        display: inline-block;
-        font-size: 24px;
+        display: inline-flex;
+        font-size: 18px;
         font-weight: 900;
+        justify-content: center;
         line-height: 1.33333;
         letter-spacing: 0.3px;
-        margin: 0 0 4px;
+        min-height: 40px;
+        margin: 0 0 16px;
+        padding-left: 48px;
+        padding-right: 48px;
         text-transform: uppercase;
         text-align: center;
         vertical-align: middle;
+        width: 100%;
+        @media(min-width: $hd) {
+            font-size: 24px;
+            margin-bottom: 4px;
+            padding: 0;
+            width: auto;
+        }
         @media(min-width: $fhd) {
             font-size: 32px;
             line-height: 1.75;
@@ -53,14 +78,51 @@
         }
     }
 
+    &__graphs-opener {
+        align-items: center;
+        border-radius: 2px;
+        border: 1px solid #5474B4;
+        background-color: rgba(#5474B4, 0.3);
+        cursor: pointer;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        left: auto;
+        min-width: 40px;
+        padding: 0;
+        position: absolute;
+        right: 8px;
+        top: 0;
+        transition: background-color 0.3s;
+        width: 40px;
+        @media(min-width: $hd) {
+            display: none;
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: #5474B4;
+        }
+
+        svg {
+            fill: #fff;
+            height: 24px;
+            width: 24px;
+        }
+    }
+
     &__rating {
         align-items: center;
-        display: inline-flex;
+        display: none;
         font-size: 18px;
         font-weight: 600;
         line-height: 1.33333;
         margin: 0 12px 4px;
         vertical-align: middle;
+        @media(min-width: $hd) {
+            display: inline-flex;
+        }
         @media(min-width: $fhd) {
             margin-left: 0;
         }
@@ -98,7 +160,7 @@
         font-weight: 600;
         height: 24px;
         line-height: 1.33333;
-        margin: 0 2px 4px;
+        margin: 0 4px 4px;
         padding-left: 8px;
         padding-right: 8px;
         vertical-align: middle;
@@ -128,6 +190,10 @@
         &--type_2 {
             border-color: #47DF58;
             background-color: rgba(#47DF58, 0.3);
+            display: none;
+            @media(min-width: $hd) {
+                display: inline-flex;
+            }
         }
 
         &--type_3 {
@@ -137,11 +203,15 @@
     }
 
     &__buttons {
+        display: none;
         left: auto;
         position: absolute;
         right: 0;
-        top: 0;
+        top: 8px;
         z-index: 1;
+        @media(min-width: $hd) {
+            display: block;
+        }
         @media(min-width: $fhd) {
             top: 56px;
         }
@@ -219,6 +289,10 @@
     }
 
     &__middle-block {
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
         margin-bottom: auto;
         margin-top: auto;
         position: relative;
@@ -228,24 +302,34 @@
     &__image {
         margin-left: auto;
         margin-right: auto;
-        max-width: 920px;
-        width: 80%;
+        width: 97%;
+        @media(min-width: $hd) {
+            height: 100%;
+            position: relative;
+            width: 100%;
+        }
 
         img {
             display: block;
             width: 100%;
+            @media(min-width: $hd) {
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                object-fit: contain;
+            }
         }
     }
 
-    &__image-inner {
-        height: 0;
-        padding-bottom: 100%;
-    }
-
     &__colors {
-        margin: -32px auto 16px;
+        margin: -42px auto 0;
         position: relative;
         z-index: 2;
+        @media(min-width: $hd) {
+            margin-bottom: 16px;
+            margin-top: -32px;
+        }
         @media(min-width: $fhd) {
             margin-top: -96px;
         }
@@ -282,11 +366,23 @@
     }
 
     &__colors-list-item {
-        margin-left: 4px;
-        margin-right: 4px;
+        margin-left: 8px;
+        margin-right: 8px;
+        @media(min-width: $hd) {
+            margin-left: 4px;
+            margin-right: 4px;
+        }
         @media(min-width: $ufhd) {
             margin-left: 8px;
             margin-right: 8px;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
         }
     }
 
@@ -324,12 +420,12 @@
         transition: background-color 0.3s;
         width: 40px;
         @media(min-width: $fhd) {
-            height: 56px;
-            width: 56px;
+            height: 48px;
+            width: 48px;
         }
         @media(min-width: $ufhd) {
-            height: 72px;
-            width: 72px;
+            height: 64px;
+            width: 64px;
         }
 
         &:active,
@@ -341,10 +437,6 @@
             fill: #fff;
             height: 30px;
             width: 30px;
-            @media(min-width: $fhd) {
-                height: 40px;
-                width: 40px;
-            }
             @media(min-width: $ufhd) {
                 height: 48px;
                 width: 48px;
@@ -353,11 +445,14 @@
     }
 
     &__buttons-2 {
-        display: flex;
+        display: none;
         justify-content: center;
         margin-bottom: 12px;
         position: relative;
         z-index: 2;
+        @media(min-width: $hd) {
+            display: flex;
+        }
         @media(min-width: $fhd) {
             margin-bottom: 24px;
         }
@@ -396,7 +491,8 @@
         }
 
         &:nth-child(1),
-        &:nth-child(3) {
+        &:nth-child(3),
+        &:nth-child(4) {
             span {
                 @media(max-width: 1899px) {
                     display: none;
@@ -426,11 +522,39 @@
 
     &__buy-block {
         align-items: center;
+        box-shadow: 0 0 8px 0 #5474B4;
+        bottom: 0;
+        background-color: #0C1117;
         display: flex;
+        height: 80px;
         justify-content: center;
+        left: 0;
+        position: fixed;
+        padding-left: 24px;
+        padding-right: 24px;
+        right: 0;
+        top: auto;
+        z-index: 9;
+        @media(min-width: $hd) {
+            box-shadow: none;
+            background-color: transparent;
+            bottom: auto;
+            height: auto;
+            left: auto;
+            position: static;
+            padding-left: 0;
+            padding-right: 0;
+            right: auto;
+            z-index: auto;
+        }
     }
 
-    &__price-block {}
+    &__price-block {
+        margin-right: auto;
+        @media(min-width: $hd) {
+            margin-right: 0;
+        }
+    }
 
     &__price {
         color: #fff;
@@ -474,23 +598,64 @@
         }
     }
 
+    &__chat-button {
+        align-items: center;
+        border: 1px solid #5474B4;
+        background-color: rgba(#5474B4, 0.3);
+        border-radius: 2px;
+        cursor: pointer;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        margin-right: 16px;
+        padding: 0;
+        transition: background-color 0.3s;
+        width: 40px;
+
+        &:active,
+        &:hover {
+            background-color: #5474B4;
+        }
+        @media(min-width: $hd) {
+            display: none;
+        }
+
+        svg {
+            fill: #fff;
+            height: 30px;
+            width: 30px;
+        }
+    }
+
     &__buy-button {
         align-items: center;
-        background-color: #D43C38;
+        border: 1px solid #5474B4;
+        background-color: rgba(#5474B4, 0.3);
         border-radius: 2px;
-        border: 2px solid #D43C38;
-        box-shadow: 0 4px 4px 0 rgba(#000, 0.25);
-        color: #fff;
         display: flex;
-        font-size: 16px;
-        font-weight: 800;
-        height: 48px;
-        line-height: 1.5;
-        padding: 12px 32px;
+        height: 40px;
+        justify-content: center;
+        margin-right: 16px;
+        padding: 0;
         transition: background-color 0.3s;
-        text-decoration: none;
-        @media(min-width: $fhd) {
+        width: 40px;
+        @media(min-width: $hd) {
+            background-color: #D43C38;
+            border-radius: 2px;
+            border: 2px solid #D43C38;
+            box-shadow: 0 4px 4px 0 rgba(#000, 0.25);
+            color: #fff;
             font-size: 18px;
+            font-weight: 800;
+            height: 48px;
+            line-height: 1.5;
+            margin-right: 0;
+            padding: 16px 32px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            width: auto;
+        }
+        @media(min-width: $fhd) {
             height: 56px;
             padding: 16px 60px;
         }
@@ -505,7 +670,109 @@
 
         &:active,
         &:hover {
-            background-color: rgba(#D43C38, 0.3);
+            background-color: #5474B4;
+            @media(min-width: $hd) {
+                background-color: rgba(#D43C38, 0.3);
+            }
+        }
+
+        svg {
+            fill: #fff;
+            height: 30px;
+            width: 30px;
+            @media(min-width: $hd) {
+                display: none;
+            }
+        }
+
+        span {
+            display: none;
+            @media(min-width: $hd) {
+                display: block;
+            }
+        }
+    }
+
+    &__omni-block {
+        position: relative;
+        @media(min-width: $hd) {
+            display: none;
+        }
+    }
+
+    &__omni-opener {
+        align-items: center;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        padding: 0;
+        transition: background-color 0.3s;
+        width: 40px;
+
+        svg {
+            fill: #fff;
+            height: 30px;
+            width: 30px;
+        }
+    }
+
+    &__omni-dropdown {
+        background-image: url("data:image/svg+xml,%3Csvg width='195' height='316' viewBox='0 0 195 316' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 12C0 5.37259 5.37258 0 12 0H183C189.627 0 195 5.37258 195 12V273.897C195 280.524 189.627 285.897 183 285.897H171.667C170.946 285.897 170.281 286.285 169.926 286.913L153.5 316L135.089 286.829C134.722 286.249 134.084 285.897 133.397 285.897H12C5.37258 285.897 0 280.524 0 273.897V12Z' fill='%230C1117'/%3E%3C/svg%3E%0A");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        bottom: 36px;
+        filter: drop-shadow(0 0 8px #5474B4);
+        display: none;
+        height: 316px;
+        left: auto;
+        position: absolute;
+        padding: 24px 12px;
+        right: -16px;
+        top: auto;
+        width: 195px;
+        z-index: 1;
+
+        &.is-open {
+            display: block;
+        }
+    }
+
+    &__omni-button {
+        align-items: center;
+        bottom: none;
+        background-color: rgba(#5474B4, 0.3);
+        border-radius: 2px;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        font-size: 12px;
+        font-weight: 700;
+        justify-content: center;
+        line-height: 1.33333;
+        min-height: 32px;
+        padding: 0;
+        transition: background-color 0.3s;
+        width: 100%;
+
+        &:active,
+        &:hover {
+            background-color: #5474B4;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        svg {
+            fill: #fff;
+            height: 24px;
+            margin-right: 8px;
+            width: 24px;
         }
     }
 }

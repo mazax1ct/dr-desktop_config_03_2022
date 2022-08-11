@@ -8,6 +8,7 @@
 @import "config/_config.scss";
 @import "_header.scss";
 @import "_info.scss";
+@import "config/_dropdown.scss";
 @import "config/_graphs.scss";
 @import "config/_sections.scss";
 @import "config/_components.scss";
@@ -25,4 +26,5 @@
 @import "popups/_code-popup.scss";
 @import "popups/_auth-finish-popup.scss";
 @import "popups/_register-popup.scss";
+@import "popups/_notice-list.scss";
 @import "plugins/swiper-bundle.min.scss";

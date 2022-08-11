@@ -2,8 +2,8 @@
     .input-label {
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 16px;
-        max-width: 280px;
+        margin-bottom: 24px;
+        max-width: 355px;
     }
 
     &__buttons {
@@ -13,6 +13,10 @@
             font-size: 12px;
             height: 40px;
             width: 196px;
+            @media(min-width: $hd) {
+                font-size: 16px;
+                width: 240px;
+            }
         }
     }
 }

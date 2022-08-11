@@ -54,10 +54,14 @@
         letter-spacing: 0.1px;
         min-height: 32px;
         min-width: 80px;
-        padding: 6px 16px;
+        padding: 6px 8px;
         position: relative;
         text-align: center;
         transition: background-color 0.3s;
+        @media(min-width: $hd) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
         @media(min-width: $ufhd) {
             font-size: 16px;
             line-height: 1.25;
@@ -68,6 +72,25 @@
 
         &:hover {
             background-color: rgba(#5474B4, 0.5);
+        }
+    }
+
+    &--type_2 {
+        box-shadow: 0 0 4px 0 #5474B4;
+        background-color: transparent;
+        padding: 12px 8px;
+        @media(min-width: 768px) {
+            padding: 12px 32px;
+        }
+
+        .btns-group__item-inner {
+            padding-left: 4px;
+            padding-right: 4px;
+            white-space: nowrap;
+            @media(min-width: 768px) {
+                font-size: 16px;
+                min-width: 180px;
+            }
         }
     }
 }

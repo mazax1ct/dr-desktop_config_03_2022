@@ -1,34 +1,46 @@
 .component-title {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 900;
     line-height: 1.25;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
     margin-top: 0;
     text-align: center;
+    @media(min-width: $hd) {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
 }
 
 .component-code {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.14285;
     margin-top: 0;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     text-align: center;
+    @media(min-width: $hd) {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
 }
 
 .component-chars {
     border-radius: 8px;
-    box-shadow: 0 0 12px 0 rgba(#D43C38, 0.5);
+    box-shadow: 0 0 8px 0 rgba(#5793EA, 0.25);
     margin-left: auto;
     margin-right: auto;
     max-width: 666px;
     padding: 8px;
 
     &__title {
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 700;
         line-height: 1.5;
-        margin-top: 32px;
+        margin-top: 16px;
         margin-bottom: 16px;
+        @media(min-width: $hd) {
+            font-size: 18px;
+            margin-top: 32px;
+        }
 
         &:first-child {
             margin-top: 0;
@@ -37,12 +49,18 @@
 
     table {
         border-collapse: collapse;
-        font-size: 18px;
+        font-size: 12px;
         width: 100%;
+        @media(min-width: $hd) {
+            font-size: 18px;
+        }
     }
 
     table td {
-        padding: 4px 16px;
+        padding: 2px 4px;
+        @media(min-width: $hd) {
+            padding: 4px 16px;
+        }
 
         &:last-child {
             text-align: right;

@@ -12,73 +12,156 @@
         bottom: 0;
         display: flex;
         left: 0;
-        overflow-y: auto;
+        overflow: hidden;
         position: absolute;
         right: 0;
         top: 0;
+        @media(min-width: $hd) {
+            overflow-y: auto;
+        }
     }
 }
 
 .popup {
+    bottom: 0;
     background-color: #0C1117;
-    box-shadow: 0 0 12px 0 rgba(#fff, 0.7);
+    box-shadow: 0 0 12px 0 #5474B4;
     border-radius: 8px;
     color: #fff;
     display: none;
-    max-height: 96%;
-    margin: auto;
+    height: calc(100% - 56px);
+    left: 0;
     overflow-y: auto;
-    position: relative;
-    scrollbar-width: thin;
-    scrollbar-color: #5793ea rgba(#5793ea, 0.2);
+    position: fixed;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 24px;
+    right: 0;
+    top: auto;
+    transition: transform 0.3s;
+    transform: translateY(100%);
+    @media(min-width: $hd) {
+        bottom: auto;
+        box-shadow: 0 0 12px 0 rgba(#fff, 0.2);
+        height: auto;
+        left: auto;
+        margin: auto;
+        max-height: 96%;
+        position: relative;
+        right: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #5793ea rgba(#5793ea, 0.2);
+        transform: translateY(0);
+    }
     @media(min-width: $q) {
         transform: scale(2);
     }
 
+    &.is-open {
+        transform: translateY(0);
+        @media(min-width: $q) {
+            transform: translateY(0) scale(2);
+        }
+    }
+
+    &.overflow {
+        overflow: hidden !important;
+    }
+
     &::-webkit-scrollbar {
-        width: 6px;
+        @media(min-width: $hd) {
+            width: 6px;
+        }
     }
 
     &::-webkit-scrollbar-track {
-        background-color: rgba(#5793ea, 0.2);
-        border-radius: 3px;
+        @media(min-width: $hd) {
+            background-color: rgba(#5793ea, 0.2);
+            border-radius: 3px;
+        }
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: #5793ea;
-        border-radius: 3px;
+        @media(min-width: $hd) {
+            background-color: #5793ea;
+            border-radius: 3px;
+        }
     }
 
     &--type_1 {
-        max-height: 700px;
-        padding-top: 24px;
-        padding-bottom: 24px;
-        width: 990px;
+        @media(min-width: $hd) {
+            max-height: 700px;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            width: 990px;
+        }
     }
 
     &--type_2 {
-        max-height: 720px;
-        padding: 32px 54px;
-        width: 1216px;
+        @media(min-width: $hd) {
+            max-height: 98vh;
+            padding: 32px 54px;
+            width: 1216px;
+        }
     }
 
     &--type_3 {
-        min-height: 600px;
-        padding-top: 48px;
-        padding-bottom: 48px;
-        width: 478px;
+        @media(min-width: $hd) {
+            min-height: 600px;
+            padding-top: 48px;
+            padding-bottom: 48px;
+            width: 478px;
+        }
     }
 
     &--type_4 {
-        padding-top: 60px;
-        padding-bottom: 60px;
-        width: 900px;
+        @media(min-width: $hd) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+            width: 900px;
+        }
     }
 
     &--type_5 {
-        padding-top: 24px;
-        padding-bottom: 24px;
-        width: 900px;
+        @media(min-width: $hd) {
+            padding-top: 24px;
+            padding-bottom: 24px;
+            width: 900px;
+        }
+    }
+
+    &__title-block {
+        background-color: #0C1117;
+        border-radius: 8px 8px 0 0;
+        margin-left: -18px;
+        margin-right: -18px;
+        margin-bottom: 16px;
+        position: sticky;
+        padding: 8px 56px;
+        top: 0;
+        z-index: 2;
+        @media(min-width: $hd) {
+            background-color: transparent;
+            border-radius: 0;
+            position: static;
+        }
+
+        &--type_1 {
+            margin-bottom: 64px;
+        }
+
+        &--type_2 {
+            margin-bottom: 0;
+        }
+
+        &--type_3 {
+            .popup__title {
+                @media(min-width: $hd) {
+                    font-size: 32px;
+                    font-weight: 800;
+                }
+            }
+        }
     }
 
     &__close {
@@ -88,15 +171,15 @@
         background-color: rgba(#fff, 0.1);
         cursor: pointer;
         display: flex;
-        height: 32px;
+        height: 40px;
         justify-content: center;
         left: auto;
         padding: 0;
         position: absolute;
-        right: 16px;
-        top: 16px;
+        right: 8px;
+        top: 8px;
         transition: background-color 0.3s;
-        width: 32px;
+        width: 40px;
 
         &:hover {
             background-color: rgba(#fff, 0.3);
@@ -104,40 +187,43 @@
 
         svg {
             fill: #fff;
-            height: 12px;
-            width: 12px;
+            height: 14px;
+            width: 14px;
         }
     }
 
     &__title {
-        font-size: 24px;
+        align-items: center;
+        color: #fff;
+        display: flex;
+        font-size: 18px;
         font-weight: 700;
-        line-height: 1.33333;
-        margin-top: 0;
-        margin-bottom: 64px;
+        justify-content: center;
+        line-height: 1.11111;
+        min-height: 40px;
+        margin: 0;
+        padding-top: 8px;
+        padding-bottom: 8px;
         text-align: center;
-
-        &--type_1 {
-            margin-bottom: 16px;
-        }
-
-        &--type_2 {
-            margin-bottom: 0;
-        }
-
-        &--type_3 {
-            font-size: 32px;
-            font-weight: 800;
-            margin-bottom: 32px;
+        @media(min-width: $hd) {
+            font-size: 24px;
         }
     }
 
     &__big-title {
-        font-size: 32px;
+        align-items: center;
+        color: #fff;
+        display: flex;
+        font-size: 18px;
         font-weight: 700;
-        line-height: 1.5;
-        margin-top: 0;
-        margin-bottom: 12px;
+        justify-content: center;
+        line-height: 1.11111;
+        min-height: 40px;
+        margin: 0;
         text-align: center;
+        @media(min-width: $hd) {
+            font-size: 32px;
+            line-height: 1.5;
+        }
     }
 }

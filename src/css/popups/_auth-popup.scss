@@ -2,20 +2,33 @@
     .input-label {
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 64px;
+        margin-bottom: 24px;
         max-width: 280px;
+        @media(min-width: $hd) {
+            margin-bottom: 64px;
+        }
     }
 
     &__buttons {
+        align-items: center;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        @media(min-width: $hd) {
+            flex-direction: row;
+        }
 
         .button {
             font-size: 12px;
             height: 40px;
-            margin-left: 24px;
-            margin-right: 24px;
+            margin-left: 12px;
+            margin-right: 12px;
+            margin-bottom: 12px;
             width: 196px;
+            @media(min-width: $hd) {
+                font-size: 16px;
+                width: 240px;
+            }
         }
     }
 }

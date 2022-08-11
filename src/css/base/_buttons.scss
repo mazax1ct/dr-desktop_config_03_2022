@@ -5,21 +5,31 @@
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 700;
-    height: 56px;
+    height: 32px;
     justify-content: center;
-    padding: 12px;
+    padding: 4px 8px;
     text-decoration: none;
     transition: background-color 0.3s;
     white-space: nowrap;
+    @media(min-width: $hd) {
+        font-size: 18px;
+        height: 56px;
+        padding: 12px;
+    }
 
     svg {
         fill: #fff;
-        height: 32px;
+        height: 24px;
         margin-right: 8px;
-        min-width: 32px;
-        width: 32px;
+        min-width: 24px;
+        width: 24px;
+        @media(min-width: $hd) {
+            height: 32px;
+            min-width: 32px;
+            width: 32px;
+        }
     }
 
     &--type_1 {

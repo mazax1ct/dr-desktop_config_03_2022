@@ -2,10 +2,16 @@
     text-align: center;
 
     .button {
-        min-width: 318px;
+        min-width: 210px;
+        @media(min-width: $hd) {
+            min-width: 318px;
+        }
 
         &:not(:last-child) {
-            margin-bottom: 32px;
+            margin-bottom: 24px;
+            @media(min-width: $hd) {
+                margin-bottom: 32px;
+            }
         }
     }
 }
@@ -14,16 +20,20 @@
     .input-label {
         margin-left: auto;
         margin-right: auto;
-        max-width: 280px;
-        margin-bottom: 16px;
+        max-width: 355px;
+        margin-bottom: 24px;
     }
 
     &__button-block {
         text-align: center;
 
         .button {
-            margin-top: 100px;
-            width: 318px;
+            margin-top: 40px;
+            width: 210px;
+            @media(min-width: $hd) {
+                margin-top: 100px;
+                width: 318px;
+            }
         }
     }
 }

@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
 
+    //= template/favicon.html
+
     //= template/fonts_preload.html
 
     <link rel="stylesheet" href="css/style.css" />
@@ -22,15 +24,20 @@
         //= template/header.html
 
         <div class="config__inner">
-            <div class="config__left-block">
-                //= template/config__filters-block.html
-
-                //= template/config__graphs-block.html
-
-                //= template/config__config-block.html
-            </div>
             <div class="config__right-block">
                 //= template/config__image-block.html
+            </div>
+
+            <div class="config__left-block">
+                <div class="config__graphs">
+                    //= template/config__filters-block.html
+
+                    //= template/config__graphs-block.html
+
+                    //= template/config__graphs-block_2.html
+                </div>
+
+                //= template/config__config-block.html
             </div>
         </div>
 
@@ -43,7 +50,7 @@
 
                 //= template/popup-detail.html
 
-                //= template/popup-test.html
+                //= template/popup-test_2.html
 
                 //= template/popup-save.html
 
@@ -59,19 +66,27 @@
 
                 //= template/popup-register.html
 
+                //= template/popup-price.html
+
+                //= template/popup-informer.html
             </div>
         </div>
 
-        <!--TODO-->
         //= template/informer.html
-        <!--TODO-->
     </div>
 </body>
 
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/swiper-bundle.min.js"></script>
-<script src="js/main.js"></script>
+<script src="js/popups.js"></script>
+<script src="js/filter.js"></script>
+<script src="js/filter_1.js"></script>
+<script src="js/components.js"></script>
+<script src="js/informer_popover.js"></script>
+<script src="js/tooltips.js"></script>
 <script src="js/inputmask-init.js"></script>
 <script src="js/jquery.inputmask.min.js"></script>
+<script src="js/header.js"></script>
+<script src="js/mobile.js"></script>
 
 </html>

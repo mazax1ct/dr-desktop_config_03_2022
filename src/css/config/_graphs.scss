@@ -1,22 +1,57 @@
+.graphs-closer {
+    align-items: center;
+    border: none;
+    background-color: rgba(#ddd, 0.1);
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    min-width: 40px;
+    padding: 0;
+    width: 40px;
+    @media(min-width: $hd) {
+        display: none;
+    }
+
+    svg {
+        fill: #fff;
+        height: 14px;
+        width: 14px;
+    }
+}
+
 .graphs {
-    padding-top: 20px;
+    background-color: #0C1117;
+    padding: 20px 16px 8px;
     position: relative;
     width: 100%;
     z-index: 1;
-    @media(min-width: $fhd) and (min-height: 940px) {
+    @media(min-width: $hd) {
+        background-color: transparent;
+        display: flex;
+        height: calc(100% - 68px);
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+    @media(min-width: $fhd) {
+        height: calc(100% - 80px);
+    }
+    @media(min-width: $q) {
+        height: calc(100% - 136px);
+    }
+    /*@media(min-width: $fhd) and (min-height: 940px) {
         margin-bottom: 12px;
-    }
-    @media(min-width: $fhd) and (min-height: 1000px) {
+    }*/
+    /*@media(min-width: $ufhd) {
         margin-bottom: 24px;
-    }
-    @media(min-width: $fhd) and (min-height: 1300px) {
-        margin-bottom: 32px;
-    }
-    @media(min-width: $q) and (min-height: 1900px) {
-        margin-bottom: 56px;
-    }
-
+    }*/
+    /*@media(min-width: $q) and (min-height: 2200px) {
+        margin-bottom: 48px;
+    }*/
     &__hz {
+        display: none;
         font-size: 12px;
         font-weight: 500;
         height: 100%;
@@ -27,7 +62,10 @@
         white-space: nowrap;
         width: 36px;
         user-select: none;
-        z-index: 1;
+        z-index: 0;
+        @media(min-width: $hd) {
+            display: block;
+        }
         @media(min-width: $q) and (min-height: 1700px) {
             font-size: 16px;
             width: 56px;
@@ -41,6 +79,7 @@
             position: absolute;
             top: 32px;
             width: 1px;
+            z-index: 0;
             @media(min-width: $fhd) {
                 height: calc(100% - 40px);
             }
@@ -62,61 +101,146 @@
             left: 89.52702%;
         }
     }
+
+    &__more {
+        display: none;
+        font-size: 12px;
+        font-weight: 500;
+        height: 100%;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        text-align: center;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        width: 156px;
+        user-select: none;
+        z-index: 0;
+        @media(min-width: $hd) {
+            display: block;
+        }
+        @media(min-width: $q) and (min-height: 1700px) {
+            font-size: 16px;
+        }
+
+        &::after {
+            background-color: rgba(#fff, 0.1);
+            content: '';
+            height: calc(100% - 36px);
+            left: 50%;
+            position: absolute;
+            top: 32px;
+            width: 1px;
+            z-index: 0;
+            @media(min-width: $fhd) {
+                height: calc(100% - 40px);
+            }
+            @media(min-width: $ufhd) {
+                height: calc(100% - 52px);
+                top: 40px;
+            }
+        }
+    }
+
+    &__list {
+        position: relative;
+        z-index: 1;
+        @media(min-width: $hd) {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            height: 100%;
+            overflow-y: auto;
+            scrollbar-gutter: stable;
+            scrollbar-width: thin;
+            scrollbar-color: transparent transparent;
+        }
+
+        &.scrollable {
+            cursor: url("../images/icons/cursor.svg") 22 22, pointer !important;
+        }
+
+        &::-webkit-scrollbar {
+            @media(min-width: $hd) {
+                width: 6px;
+            }
+        }
+
+        &:hover {
+            @media(min-width: $hd) {
+                scrollbar-color: #5793ea rgba(#5793ea, 0.2);
+            }
+
+            &::-webkit-scrollbar-track {
+                @media(min-width: $hd) {
+                    background-color: rgba(#5793ea, 0.2);
+                    border-radius: 3px;
+                }
+            }
+
+            &::-webkit-scrollbar-thumb {
+                @media(min-width: $hd) {
+                    background-color: #5793ea;
+                    border-radius: 3px;
+                }
+            }
+        }
+    }
 }
 
 .graph {
     align-items: center;
     display: flex;
+    padding-top: 24px;
+    @media(min-width: $hd) {
+        padding-top: 0;
+    }
 
     &:not(:first-child) {
-        margin-top: 4px;
-        @media(min-height: 720px) {
-            margin-top: 6px;
-        }
-        @media(min-height: 960px) {
+        margin-top: 12px;
+        @media(min-width: $hd) {
             margin-top: 8px;
         }
-        @media(min-width: $ufhd) and (min-height: 1500px) {
-            margin-top: 12px;
+        /*@media(min-width: $fhd) {
+            margin-top: 7px;
+        }*/
+        @media(min-width: $ufhd) {
+            margin-top: 16px;
         }
-        @media(min-height: 1800px) {
-            margin-top: 20px;
-        }
-        @media(min-height: 1900px) {
+        @media(min-width: $q) and (min-height: 2200px) {
             margin-top: 24px;
         }
     }
-
-    &:nth-child(10) {
-        @media(max-height: 739px) {
+    /*&:nth-child(10) {
+        @media(min-width: $hd) and (max-height: 729px) {
             display: none;
         }
-        @media(min-width: $fhd) and (max-height: 930px) {
-            display: none;
-        }
-        @media(min-width: $ufhd) and (max-height: 1160px) {
+        @media(min-width: $fhd) and (max-height: 929px) {
             display: none;
         }
     }
 
     &:nth-child(9) {
-        @media(max-height: 659px) {
+        @media(min-width: $hd) and (max-height: 689px) {
             display: none;
         }
-        @media(min-width: $fhd) and (max-height: 900px) {
-            display: none;
-        }
-        @media(min-width: $ufhd) and (max-height: 1080px) {
+        @media(min-width: $fhd) and (max-height: 889px) {
             display: none;
         }
     }
 
     &:nth-child(8) {
-        @media(max-height: 600px) {
+        @media(min-width: $hd) and (max-height: 659px) {
             display: none;
         }
-        @media(min-width: $fhd) and (max-height: 860px) {
+        @media(min-width: $fhd) and (max-height: 837px) {
             display: none;
+        }
+    }*/
+    &--skeleton {
+        display: none;
+        @media(min-width: $hd) {
+            display: flex;
         }
     }
 
@@ -124,24 +248,28 @@
         border-radius: 50%;
         background-color: #293356;
         border: 1px solid #fff;
-        height: 32px;
+        height: 40px;
         overflow: hidden;
         position: relative;
-        width: 32px;
+        width: 40px;
         z-index: 2;
-        @media(min-width: $fhd) {
+        @media(min-width: $hd) {
+            height: 32px;
+            width: 32px;
+        }
+        @media(min-width: 1400px) {
             height: 40px;
             width: 40px;
         }
-        @media(min-width: $ufhd) {
+        @media(min-width: $fhd) {
             height: 48px;
             width: 48px;
         }
-        @media(min-width: $ufhd) and (min-height: 1200px) {
+        @media(min-width: $ufhd) {
             height: 56px;
             width: 56px;
         }
-        @media(min-width: $q) and (min-height: 1700px) {
+        @media(min-width: $q) {
             height: 80px;
             width: 80px;
         }
@@ -161,14 +289,20 @@
         border-radius: 0 84px 84px 0;
         background-color: rgba(#315CB4, 0.1);
         flex-grow: 1;
-        height: 24px;
-        margin-left: -30px;
+        height: 30px;
+        margin-left: -26px;
         position: relative;
         z-index: 1;
-        @media(min-width: $ufhd) {
+        /*@media(min-width: $hd) {
+            height: 24px;
+        }*/
+        @media(min-width: $fhd) {
             height: 32px;
         }
-        @media(min-width: $q) and (min-height: 1700px) {
+        @media(min-width: $ufhd) {
+            height: 40px;
+        }
+        @media(min-width: $q) {
             height: 60px;
         }
     }
@@ -181,6 +315,10 @@
         position: absolute;
         top: 0;
         z-index: 1;
+
+        &--type_1 {
+            background: linear-gradient(-90deg, #E06C2E 0%, rgba(#0C1117, 0.8) 100%);
+        }
     }
 
     &__bar-title {
@@ -202,7 +340,17 @@
 
         span {
             &:first-child {
-                font-weight: 800;
+                font-weight: 800 !important;
+                left: -10px;
+                position: absolute;
+                top: -30px;
+                z-index: 1;
+                @media(min-width: $hd) {
+                    left: auto;
+                    position: static;
+                    padding-left: 0;
+                    top: auto;
+                }
             }
 
             &:last-child {

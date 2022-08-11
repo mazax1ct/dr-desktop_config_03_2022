@@ -1,37 +1,97 @@
 <header class="header">
     <a class="header__logo" href="#" title="На главную"><img src="images/logo.svg" alt="Digital Razor"></a>
+
+    <button class="js-menu-toggler menu-toggler" type="button" title="Меню">
+        <svg class="menu-toggler__icon" aria-hidden="true">
+            <use xlink:href="#personal" />
+        </svg>
+        <svg class="menu-toggler__close" aria-hidden="true">
+            <use xlink:href="#close" />
+        </svg>
+    </button>
+
+    <button class="js-icons-toggler menu-toggler menu-toggler--type_1" type="button" title="Меню">
+        <svg class="menu-toggler__icon" aria-hidden="true">
+            <use xlink:href="#burger" />
+        </svg>
+        <svg class="menu-toggler__close" aria-hidden="true">
+            <use xlink:href="#close" />
+        </svg>
+    </button>
+
     <nav class="header__menu">
         <ul class="header__menu-list">
-            <li class="header__menu-list-item"><a class="header__menu-link" href="#">Сервис</a></li>
-            <li class="header__menu-list-item"><a class="header__menu-link" href="#">Доставка</a></li>
-            <li class="header__menu-list-item"><a class="header__menu-link" href="#">Оплата</a></li>
-            <li class="header__menu-list-item"><a class="header__menu-link" href="#">Сравнение <span class="header__menu-link-qnt">3</span></a></li>
+            <li class="header__menu-list-item">
+                <a class="header__menu-link" href="#">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#m_support" />
+                    </svg>
+                    Сервис
+                </a>
+            </li>
+            <li class="header__menu-list-item">
+                <a class="header__menu-link" href="#">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#m_delivery" />
+                    </svg>
+                    Доставка
+                </a>
+            </li>
+            <li class="header__menu-list-item">
+                <a class="header__menu-link" href="#">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#m_payment" />
+                    </svg>
+                    Оплата
+                </a>
+            </li>
+            <li class="header__menu-list-item">
+                <a class="header__menu-link" href="#">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#compare" />
+                    </svg>
+                    Сравнение
+                    <span class="header__menu-link-qnt">3</span>
+                </a>
+            </li>
         </ul>
     </nav>
 
     <div class="header__icons">
-        <!--TODO-->
-        <a class="js-informer-opener header__icons-link" href="#" title="События">
-            <svg aria-hidden="true">
-                <use xlink:href="#alert" />
-            </svg>
-            <span class="header__icons-link-qnt">1</span>
-        </a>
-        <!--TODO-->
-        <a class="header__icons-link" href="#" title="Помощь">
-            <svg aria-hidden="true">
-                <use xlink:href="#help" />
-            </svg>
-        </a>
-        <a class="js-popup-opener header__icons-link" href="#" title="Личный кабинет" data-popup="js-popup-auth">
-            <svg aria-hidden="true">
-                <use xlink:href="#personal" />
-            </svg>
-        </a>
-        <a class="header__icons-link" href="#" title="Корзина">
-            <svg aria-hidden="true">
-                <use xlink:href="#cart" />
-            </svg>
-        </a>
+        <ul class="header__icons-list">
+            <li class="header__icons-item">
+                <a class="js-informer-opener header__icons-link" href="#" title="События">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#alert" />
+                    </svg>
+                    <span class="header__icons-link-text">События</span>
+                    <span class="header__icons-link-qnt">1</span>
+                </a>
+            </li>
+            <li class="header__icons-item">
+                <a class="js-popup-opener header__icons-link" href="#" title="Помощь" data-popup="js-popup-informer">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#help" />
+                    </svg>
+                    <span class="header__icons-link-text">Помощь</span>
+                </a>
+            </li>
+            <li class="header__icons-item">
+                <a class="js-popup-opener header__icons-link" href="#" title="Личный кабинет" data-popup="js-popup-auth">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#personal" />
+                    </svg>
+                    <span class="header__icons-link-text">Личный кабинет</span>
+                </a>
+            </li>
+            <li class="header__icons-item">
+                <a class="header__icons-link" href="#" title="Корзина">
+                    <svg aria-hidden="true">
+                        <use xlink:href="#cart" />
+                    </svg>
+                    <span class="header__icons-link-text">Корзина</span>
+                </a>
+            </li>
+        </ul>
     </div>
 </header>

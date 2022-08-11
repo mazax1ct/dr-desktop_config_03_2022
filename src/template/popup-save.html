@@ -1,11 +1,15 @@
 <div class="js-popup-save popup popup--type_3">
-    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-        <svg aria-hidden="true">
-            <use xlink:href="#close"></use>
-        </svg>
-    </button>
+    <!--TODO-->
+    <div class="popup__title-block popup__title-block--type_1">
+        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+            <svg aria-hidden="true">
+                <use xlink:href="#close"></use>
+            </svg>
+        </button>
 
-    <p class="popup__title">Сохранение конфигурации</p>
+        <p class="popup__title">Сохранение конфигурации</p>
+    </div>
+    <!--TODO-->
 
     <div class="save-buttons">
         <button class="button button--type_1" type="button">
@@ -14,7 +18,7 @@
             </svg>
             Скопировать ссылку
         </button>
-        <button class="button button--type_1" type="button">
+        <button class="js-popup-opener button button--type_1" type="button" data-popup="js-popup-save-email">
             <svg aria-hidden="true">
                 <use xlink:href="#email"></use>
             </svg>
@@ -29,14 +33,53 @@
     </div>
 </div>
 
-<div class="js-popup-pdf popup popup--type_3">
-    <button class="js-popup-closer popup__close" type="button" title="Закрыть">
-        <svg aria-hidden="true">
-            <use xlink:href="#close"></use>
-        </svg>
-    </button>
+<div class="js-popup-save-email popup popup--type_3">
+    <!--TODO-->
+    <div class="popup__title-block popup__title-block--type_1">
+        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+            <svg aria-hidden="true">
+                <use xlink:href="#close"></use>
+            </svg>
+        </button>
 
-    <p class="popup__title popup__title--type_1">Скачать PDF</p>
+        <p class="popup__title">Оставьте свой Email, чтобы сохранить конфигурацию</p>
+    </div>
+    <!--TODO-->
+
+    <div class="consult-form">
+        <label class="input-label">
+            <span class="input-label__text">Email*</span>
+            <input class="js-email-mask input" type="text">
+        </label>
+        <label class="input-label">
+            <span class="input-label__text">Имя*</span>
+            <input class="input" type="text">
+        </label>
+
+        <label class="checkbox">
+            <input type="checkbox">
+            <span class="checkbox__icon"></span>
+            Следить за ценой
+        </label>
+
+        <div class="consult-form__button-block">
+            <button class="button button--type_1" type="submit">Отправить</button>
+        </div>
+    </div>
+</div>
+
+<div class="js-popup-pdf popup popup--type_3">
+    <!--TODO-->
+    <div class="popup__title-block">
+        <button class="js-popup-closer popup__close" type="button" title="Закрыть">
+            <svg aria-hidden="true">
+                <use xlink:href="#close"></use>
+            </svg>
+        </button>
+
+        <p class="popup__title">Скачать PDF</p>
+    </div>
+    <!--TODO-->
 
     <div class="auth-finish">
         <div class="auth-finish__image">
