@@ -263,8 +263,11 @@ html {
         @media(min-width: $fhd) {
             max-height: calc(100% - 316px);
         }
+        @media(min-width: $ufhd) {
+            max-height: calc(100% - 360px);
+        }
         @media(min-width: $q) {
-            max-height: calc(100% - 508px);
+            max-height: calc(100% - 510px);
         }
 
         &.is-open {
@@ -284,6 +287,12 @@ html {
         }
         @media(min-width: $fhd) {
             min-height: 308px;
+        }
+        @media(min-width: $ufhd) {
+            min-height: 360px;
+        }
+        @media(min-width: $q) {
+            min-height: 510px;
         }
 
         .config__title {
