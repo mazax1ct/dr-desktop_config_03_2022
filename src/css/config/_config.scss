@@ -1,3 +1,10 @@
+body,
+html {
+    @media(min-width: $hd) {
+        height: 100vh;
+    }
+}
+
 .config {
     color: #fff;
     display: flex;
@@ -10,6 +17,7 @@
     max-width: 2560px;
     overflow: hidden;
     @media(min-width: $hd) {
+        height: 100%;
         min-width: 1200px;
         padding-left: 48px;
         padding-right: 48px;
@@ -45,13 +53,22 @@
             display: flex;
             flex-grow: 1;
             flex-direction: row-reverse;
+            height: calc(100% - 64px);
             padding-bottom: 0;
         }
-        @media(min-width: $fhd) and (min-height: 940px) {
-            flex-grow: 0;
+        @media(min-width: $fhd) {
+            height: calc(100% - 88px);
             margin-top: auto;
             margin-bottom: auto;
             padding-top: 16px;
+        }
+        @media(min-width: $ufhd) {
+            height: calc(100% - 96px);
+            max-height: 1400px;
+        }
+        @media(min-width: $q) {
+            height: calc(100% - 120px);
+            max-height: 1740px;
         }
     }
 
@@ -60,6 +77,7 @@
             align-items: flex-start;
             display: flex;
             flex-direction: column;
+            height: 100%;
             padding-right: 32px;
             width: 68%;
         }
@@ -101,6 +119,12 @@
             min-height: 68px;
             padding: 0;
             position: static;
+        }
+        @media(min-width: $fhd) {
+            min-height: 80px;
+        }
+        @media(min-width: $q) {
+            min-height: 136px;
         }
 
         .filter-toggler {
@@ -221,15 +245,26 @@
             border-radius: 0;
             box-shadow: none;
             bottom: auto;
+            display: flex;
+            flex-direction: column;
+            //flex-grow: 1;
             height: auto;
             left: auto;
+            max-height: calc(100% - 212px);
             overflow-y: visible;
             position: static;
+            padding-bottom: 8px;
             right: auto;
             top: auto;
             transform: none;
             width: 100%;
             z-index: auto;
+        }
+        @media(min-width: $fhd) {
+            max-height: calc(100% - 316px);
+        }
+        @media(min-width: $q) {
+            max-height: calc(100% - 508px);
         }
 
         &.is-open {
@@ -244,8 +279,11 @@
         width: 100%;
         z-index: 1;
         @media(min-width: $hd) {
-            min-height: 0;
+            min-height: 212px;
             padding: 0;
+        }
+        @media(min-width: $fhd) {
+            min-height: 308px;
         }
 
         .config__title {

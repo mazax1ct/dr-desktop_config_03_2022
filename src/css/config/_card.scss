@@ -289,6 +289,10 @@
     }
 
     &__middle-block {
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
         margin-bottom: auto;
         margin-top: auto;
         position: relative;
@@ -300,22 +304,22 @@
         margin-right: auto;
         width: 97%;
         @media(min-width: $hd) {
-            max-width: 920px;
-            width: 80%;
-        }
-        @media(min-width: $ufhd) and (max-width: $q - 1) {
-            width: 70%;
+            height: 100%;
+            position: relative;
+            width: 100%;
         }
 
         img {
             display: block;
             width: 100%;
+            @media(min-width: $hd) {
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                object-fit: contain;
+            }
         }
-    }
-
-    &__image-inner {
-        height: 0;
-        padding-bottom: 100%;
     }
 
     &__colors {
