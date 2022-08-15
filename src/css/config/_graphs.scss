@@ -30,13 +30,13 @@
     @media(min-width: $hd) {
         background-color: transparent;
         display: flex;
-        height: calc(100% - 68px);
+        height: calc(100% - 76px);
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 0;
     }
     @media(min-width: $fhd) {
-        height: calc(100% - 80px);
+        height: calc(100% - 88px);
     }
     @media(min-width: $q) {
         height: calc(100% - 136px);

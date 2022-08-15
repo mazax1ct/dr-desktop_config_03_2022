@@ -116,12 +116,12 @@ html {
         @media(min-width: $hd) {
             border-radius: 0;
             background-color: transparent;
-            min-height: 68px;
+            min-height: 76px;
             padding: 0;
             position: static;
         }
         @media(min-width: $fhd) {
-            min-height: 80px;
+            min-height: 88px;
         }
         @media(min-width: $q) {
             min-height: 136px;
@@ -157,11 +157,7 @@ html {
             order: 4;
             width: 100%;
             @media(min-width: 1200px) {
-                margin-top: 0;
-                text-align: left;
-            }
-            @media(min-width: 1200px) and (min-height: 800px) {
-                margin-top: 12px;
+                margin-top: 8px;
                 text-align: left;
             }
             @media(min-width: 1900px) {
