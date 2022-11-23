@@ -10,6 +10,12 @@
     margin-bottom: 24px;
     padding: 8px 36px;
     position: relative;
+    @media(min-width: $hd) {
+        margin-bottom: 12px;
+    }
+    @media(min-width: $fhd) {
+        margin-bottom: 16px;
+    }
 
     &::after,
     &::before {
@@ -101,12 +107,12 @@
     margin-bottom: 16px;
     text-align: center;
     @media(min-width: $hd) {
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 1.33333;
-        margin-top: 0;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
         text-align: center;
+    }
+    @media(min-width: $fhd) {
+        font-size: 24px;
+        margin-bottom: 16px;
     }
 }
 
@@ -142,6 +148,11 @@
     padding-right: 24px;
     transition: background-color 0.3s;
     @media(min-width: $hd) {
+        font-size: 12px;
+        min-height: 32px;
+    }
+    @media(min-width: $fhd) {
+        font-size: 16px;
         min-height: 48px;
     }
 
@@ -197,10 +208,13 @@
         overflow: visible;
         padding: 16px 24px 32px;
         position: absolute;
-        right: -2px;
+        right: -52px;
         top: -2px;
         width: 940px;
         z-index: 2;
+    }
+    @media(min-width: $fhd) {
+        right: -2px;
     }
 
     &.is-open {
@@ -418,12 +432,19 @@
     background-color: #020405;
     border-radius: 8px;
     box-shadow: 0 0 8px 0 rgba(#fff, 0.5);
-    padding: 20px 32px;
+    padding: 8px 32px;
     position: relative;
     z-index: 1;
+    @media(min-width: 768px) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
     @media(min-width: $hd) {
-        padding-left: 44px;
-        padding-right: 44px;
+        padding: 12px 42px;
+    }
+    @media(min-width: $fhd) {
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
 
     &:not(:last-child) {
@@ -503,7 +524,15 @@
     position: relative;
     padding: 0;
     transition: box-shadow 0.3s;
+    @media(min-width: 768px) {
+        min-width: 72px;
+        min-height: 99px;
+    }
     @media(min-width: $hd) {
+        min-width: 90px;
+        min-height: 110px;
+    }
+    @media(min-width: $fhd) {
         min-width: 90px;
         min-height: 124px;
     }
@@ -511,6 +540,16 @@
     img {
         border-radius: 4px;
         display: block;
+        @media(min-width: $hd) {
+            object-fit: cover;
+            object-position: center;
+            width: 90px;
+            height: 110px;
+        }
+        @media(min-width: $fhd) {
+            width: 90px;
+            height: 124px;
+        }
     }
 
     svg {
@@ -722,6 +761,10 @@
     z-index: 2;
     @media(min-width: $hd) {
         display: flex;
+        margin-bottom: 16px;
+    }
+    @media(min-width: $fhd) {
+        margin-bottom: 24px;
     }
 }
 
@@ -755,6 +798,10 @@
         transition: background-color 0.3s;
         width: 100%;
         @media(min-width: $hd) {
+            height: 32px;
+            padding-right: 40px;
+        }
+        @media(min-width: $fhd) {
             height: 48px;
             padding-right: 60px;
         }
@@ -807,6 +854,10 @@
         top: 0;
         width: 40px;
         @media(min-width: $hd) {
+            height: 32px;
+            width: 32px;
+        }
+        @media(min-width: $fhd) {
             height: 48px;
             width: 48px;
         }
@@ -815,6 +866,14 @@
             fill: #fff;
             height: 32px;
             width: 32px;
+            @media(min-width: $hd) {
+                height: 24px;
+                width: 24px;
+            }
+            @media(min-width: $fhd) {
+                height: 32px;
+                width: 32px;
+            }
         }
     }
 
@@ -835,6 +894,15 @@
             width: 48px;
             @media(min-width: $hd) {
                 width: 90px;
+            }
+
+            .test {
+                min-width: 48px;
+                min-height: 0;
+                @media(min-width: $hd) {
+                    min-width: 90px;
+                    width: 90px;
+                }
             }
         }
     }
@@ -911,6 +979,12 @@
 .popup {
     .graphs-switcher {
         margin-bottom: 24px;
+        @media(min-width: $hd) {
+            margin-bottom: 12px;
+        }
+        @media(min-width: $fhd) {
+            margin-bottom: 16px;
+        }
 
         &__button {
             @media(min-width: 1200px) {

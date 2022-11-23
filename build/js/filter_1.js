@@ -40,8 +40,12 @@ const testsSlider6 = new Swiper('.js-tests-slider-6', {
         spaceBetween: 9
       },
       1200: {
+        slidesPerView: 8,
+        spaceBetween: 4
+      },
+      1900: {
         slidesPerView: 10,
-        spaceBetween: 12,
+        spaceBetween: 12
       }
     }
 });
