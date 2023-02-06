@@ -16,6 +16,15 @@ $(document).on('click', '.js-popup-opener', function () {
           testsSlider3.update();
           testsSlider4.update();
         }
+
+        if(popup === 'js-popup-paint') {
+          //обновление свайпера
+          paintsSlider.update();
+          paintsSlider2.update();
+
+          sliderFilter.update();
+          sliderFilter2.update();
+        }
       });
     },200);
   });

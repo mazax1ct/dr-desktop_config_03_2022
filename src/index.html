@@ -69,6 +69,10 @@
                 //= template/popup-price.html
 
                 //= template/popup-informer.html
+
+                <!--TODO-->
+                //= template/popup-paint.html
+                <!--TODO-->
             </div>
         </div>
 
@@ -88,5 +92,12 @@
 <script src="js/jquery.inputmask.min.js"></script>
 <script src="js/header.js"></script>
 <script src="js/mobile.js"></script>
+<script>
+    $(document).on('click', '.like-switch-button', function() {
+        $(this).toggleClass('is-active');
+        return false;
+    });
+</script>
+<script src="js/paints-sliders.js"></script>
 
 </html>

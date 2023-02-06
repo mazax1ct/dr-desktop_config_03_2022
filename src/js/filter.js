@@ -124,6 +124,13 @@ $(document).on('click', '.js-tests', function () {
   testsSlider2.update();
   testsSlider3.update();
   testsSlider4.update();
+
+  paintsSlider.update();
+  paintsSlider2.update();
+
+  sliderFilter.update();
+  sliderFilter2.update();
+
   return false;
 });
 
